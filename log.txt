@@ -37,3 +37,7 @@
 [2026-06-03T13:34:07.307804] Generated players page: players.html (9 players)
 [2026-06-03T13:34:07.369051] Starting tournaments page generation
 [2026-06-03T13:34:07.369560] Generated tournaments page: tournaments.html (1 tournaments)
+[2026-06-03T13:41:34.537594] Starting player pages generation
+[2026-06-03T13:41:34.538278] Generated players page: players.html (9 players)
+[2026-06-03T13:41:34.839794] Starting tournaments page generation
+[2026-06-03T13:41:34.840216] Generated tournaments page: tournaments.html (1 tournaments)

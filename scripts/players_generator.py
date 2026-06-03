@@ -246,12 +246,14 @@ class PlayersGenerator:
         
         .player-details {{
             padding: 20px;
+            overflow-x: auto;
         }}
         
         .match-history {{
             width: 100%;
             border-collapse: collapse;
             font-size: 14px;
+            min-width: 600px;
         }}
         
         .match-history thead {{
@@ -264,6 +266,7 @@ class PlayersGenerator:
             font-weight: 600;
             color: #333;
             border-bottom: 2px solid #ddd;
+            white-space: nowrap;
         }}
         
         .match-history td {{
@@ -274,6 +277,7 @@ class PlayersGenerator:
         .match-history a {{
             color: #667eea;
             text-decoration: none;
+            word-break: break-word;
         }}
         
         .match-history a:hover {{
@@ -283,6 +287,21 @@ class PlayersGenerator:
         
         .match-history tr:hover {{
             background: #fafafa;
+        }}
+        
+        @media (max-width: 768px) {{
+            .player-details {{
+                padding: 15px;
+            }}
+            
+            .match-history {{
+                font-size: 12px;
+            }}
+            
+            .match-history th,
+            .match-history td {{
+                padding: 6px 8px;
+            }}
         }}
         
         .result {{

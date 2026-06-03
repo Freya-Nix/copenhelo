@@ -270,6 +270,7 @@ class TournamentsGenerator:
         
         .tournament-details {{
             padding: 20px;
+            overflow-x: auto;
         }}
         
         .round {{
@@ -286,6 +287,7 @@ class TournamentsGenerator:
             width: 100%;
             border-collapse: collapse;
             font-size: 14px;
+            min-width: 500px;
         }}
         
         .matches-table thead {{
@@ -298,6 +300,7 @@ class TournamentsGenerator:
             font-weight: 600;
             color: #333;
             border-bottom: 2px solid #ddd;
+            white-space: nowrap;
         }}
         
         .matches-table td {{
@@ -307,6 +310,26 @@ class TournamentsGenerator:
         
         .matches-table tbody tr:hover {{
             background: #fafafa;
+        }}
+        
+        @media (max-width: 768px) {{
+            .tournament-details {{
+                padding: 15px;
+            }}
+            
+            .round h3 {{
+                font-size: 14px;
+                margin-bottom: 10px;
+            }}
+            
+            .matches-table {{
+                font-size: 12px;
+            }}
+            
+            .matches-table th,
+            .matches-table td {{
+                padding: 6px 8px;
+            }}
         }}
         
         .match-score {{
