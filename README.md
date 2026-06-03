@@ -1,3 +1,7 @@
+# VIBE CODE WARNING
+
+This is all vibe coded, I wanted to make sure this works before commiting too much time. Don't trust anything and reach out on the Danish Pauper Discord if you have questions
+
 # Copenhelo ELO Rating System
 
 An automated ELO rating system for Magic: The Gathering tournaments. Parses tournament data, calculates ratings, and generates leaderboards.
