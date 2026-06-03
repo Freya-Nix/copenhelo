@@ -1,4 +1,4 @@
-.PHONY: help install sync run-parse run-elo run-leaderboard run recalculate clean shell
+.PHONY: help install sync run-parse run-elo run-leaderboard run-players run recalculate clean shell
 
 VENV_DIR := .venv
 PYTHON := $(VENV_DIR)/bin/python
@@ -11,7 +11,8 @@ help:
 	@echo "  make run-parse     - Parse input tournaments to events/ folder"
 	@echo "  make run-elo       - Run ELO calculator"
 	@echo "  make run-leaderboard - Generate leaderboard"
-	@echo "  make run           - Run parsing, calculator, and leaderboard"
+	@echo "  make run-players   - Generate player detail pages"
+	@echo "  make run           - Run parsing, calculator, leaderboard, and player pages"
 	@echo "  make recalculate   - Recalculate all ratings from scratch"
 	@echo "  make clean         - Remove virtual environment and cache"
 	@echo "  make shell         - Activate virtual environment shell"
@@ -53,7 +54,11 @@ run-leaderboard: $(VENV_DIR)
 	@echo "Generating leaderboard..."
 	$(PYTHON) scripts/leaderboard_generator.py
 
-run: run-parse run-elo run-leaderboard
+run-players: $(VENV_DIR)
+	@echo "Generating player pages..."
+	$(PYTHON) scripts/players_generator.py
+
+run: run-parse run-elo run-leaderboard run-players
 	@echo "✓ All tasks complete"
 
 recalculate: $(VENV_DIR)

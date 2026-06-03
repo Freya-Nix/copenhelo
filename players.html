@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player History - ELO Leaderboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        header a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        header a:hover {
+            text-decoration: underline;
+        }
+        
+        .players {
+            padding: 20px;
+        }
+        
+        details {
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        details[open] {
+            background: #f9f9f9;
+        }
+        
+        .player-summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: #f5f5f5;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        details[open] .player-summary {
+            background: #efefef;
+            border-bottom: 1px solid #d0d0d0;
+        }
+        
+        .player-summary:hover {
+            background: #eee;
+        }
+        
+        .player-name {
+            font-size: 16px;
+            flex: 1;
+        }
+        
+        .player-rating {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin: 0 15px;
+            min-width: 60px;
+            text-align: center;
+        }
+        
+        .player-matches {
+            font-size: 13px;
+            color: #666;
+            min-width: 100px;
+            text-align: right;
+        }
+        
+        .player-details {
+            padding: 20px;
+        }
+        
+        .match-history {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        .match-history thead {
+            background: #f5f5f5;
+        }
+        
+        .match-history th {
+            padding: 10px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .match-history td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .match-history tr:hover {
+            background: #fafafa;
+        }
+        
+        .result {
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-align: center;
+            min-width: 40px;
+        }
+        
+        .result.win {
+            color: #22863a;
+            background: #f0ffe4;
+        }
+        
+        .result.loss {
+            color: #cb2431;
+            background: #ffeef0;
+        }
+        
+        .result.draw {
+            color: #6f42c1;
+            background: #f5f3ff;
+        }
+        
+        .rating-change {
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .rating-change.positive {
+            color: #22863a;
+        }
+        
+        .rating-change.negative {
+            color: #cb2431;
+        }
+        
+        footer {
+            padding: 15px 20px;
+            background: #f5f5f5;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Player History</h1>
+            <a href="leaderboard.html">← Back to Leaderboard</a>
+        </header>
+        
+        <div class="players">
+
+    <details id="casper-albrektsen">
+      <summary class="player-summary">
+        <span class="player-name">Casper Albrektsen</span>
+        <span class="player-rating">1528.5</span>
+        <span class="player-matches">4 matches</span>
+      </summary>
+      <div class="player-details">
+        <table class="match-history">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Round</th>
+              <th>Opponent</th>
+              <th>Result</th>
+              <th>Rating Change</th>
+              <th>New Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>1</td>
+              <td>Edoardo Cravero</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+16.0</span></td>
+              <td>1516.0</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>2</td>
+              <td>Eva Østerby</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+14.5</span></td>
+              <td>1530.5</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>3</td>
+              <td>Erik Christensen</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-18.1</span></td>
+              <td>1512.4</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>4</td>
+              <td>Josef-Nam Nguyen</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+16.1</span></td>
+              <td>1528.5</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </details>
+            
+
+    <details id="erik-christensen">
+      <summary class="player-summary">
+        <span class="player-name">Erik Christensen</span>
+        <span class="player-rating">1519.5</span>
+        <span class="player-matches">3 matches</span>
+      </summary>
+      <div class="player-details">
+        <table class="match-history">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Round</th>
+              <th>Opponent</th>
+              <th>Result</th>
+              <th>Rating Change</th>
+              <th>New Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>1</td>
+              <td>Josef-Nam Nguyen</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-16.0</span></td>
+              <td>1484.0</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>3</td>
+              <td>Casper Albrektsen</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+18.1</span></td>
+              <td>1502.1</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>4</td>
+              <td>Jonas Borgland</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+17.4</span></td>
+              <td>1519.5</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </details>
+            
+
+    <details id="jonas-borgland">
+      <summary class="player-summary">
+        <span class="player-name">Jonas Borgland</span>
+        <span class="player-rating">1516.0</span>
+        <span class="player-matches">3 matches</span>
+      </summary>
+      <div class="player-details">
+        <table class="match-history">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Round</th>
+              <th>Opponent</th>
+              <th>Result</th>
+              <th>Rating Change</th>
+              <th>New Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>2</td>
+              <td>Gregoire  Sanguinetti</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+16.7</span></td>
+              <td>1516.7</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>3</td>
+              <td>Josef-Nam Nguyen</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+16.7</span></td>
+              <td>1533.4</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>4</td>
+              <td>Erik Christensen</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-17.4</span></td>
+              <td>1516.0</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </details>
+            
+
+    <details id="eva-østerby">
+      <summary class="player-summary">
+        <span class="player-name">Eva Østerby</span>
+        <span class="player-rating">1504.2</span>
+        <span class="player-matches">4 matches</span>
+      </summary>
+      <div class="player-details">
+        <table class="match-history">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Round</th>
+              <th>Opponent</th>
+              <th>Result</th>
+              <th>Rating Change</th>
+              <th>New Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>1</td>
+              <td>Gregoire  Sanguinetti</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-16.0</span></td>
+              <td>1484.0</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>2</td>
+              <td>Casper Albrektsen</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-14.5</span></td>
+              <td>1469.5</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>3</td>
+              <td>Edoardo Cravero</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+17.4</span></td>
+              <td>1486.9</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>4</td>
+              <td>Mads thode schultz</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+17.3</span></td>
+              <td>1504.2</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </details>
+            
+
+    <details id="josef-nam-nguyen">
+      <summary class="player-summary">
+        <span class="player-name">Josef-Nam Nguyen</span>
+        <span class="player-rating">1499.2</span>
+        <span class="player-matches">4 matches</span>
+      </summary>
+      <div class="player-details">
+        <table class="match-history">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Round</th>
+              <th>Opponent</th>
+              <th>Result</th>
+              <th>Rating Change</th>
+              <th>New Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>1</td>
+              <td>Erik Christensen</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+16.0</span></td>
+              <td>1516.0</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>2</td>
+              <td>Mads thode schultz</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+16.0</span></td>
+              <td>1532.0</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>3</td>
+              <td>Jonas Borgland</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-16.7</span></td>
+              <td>1515.3</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>4</td>
+              <td>Casper Albrektsen</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-16.1</span></td>
+              <td>1499.2</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </details>
+            
+
+    <details id="mads-thode-schultz">
+      <summary class="player-summary">
+        <span class="player-name">Mads thode schultz</span>
+        <span class="player-rating">1498.7</span>
+        <span class="player-matches">4 matches</span>
+      </summary>
+      <div class="player-details">
+        <table class="match-history">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Round</th>
+              <th>Opponent</th>
+              <th>Result</th>
+              <th>Rating Change</th>
+              <th>New Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>1</td>
+              <td>Christoffer Nielsen</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+16.0</span></td>
+              <td>1516.0</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>2</td>
+              <td>Josef-Nam Nguyen</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-16.0</span></td>
+              <td>1500.0</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>3</td>
+              <td>Gregoire  Sanguinetti</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+16.0</span></td>
+              <td>1516.0</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>4</td>
+              <td>Eva Østerby</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-17.3</span></td>
+              <td>1498.7</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </details>
+            
+
+    <details id="gregoire-sanguinetti">
+      <summary class="player-summary">
+        <span class="player-name">Gregoire  Sanguinetti</span>
+        <span class="player-rating">1498.6</span>
+        <span class="player-matches">4 matches</span>
+      </summary>
+      <div class="player-details">
+        <table class="match-history">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Round</th>
+              <th>Opponent</th>
+              <th>Result</th>
+              <th>Rating Change</th>
+              <th>New Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>1</td>
+              <td>Eva Østerby</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+16.0</span></td>
+              <td>1516.0</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>2</td>
+              <td>Jonas Borgland</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-16.7</span></td>
+              <td>1499.3</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>3</td>
+              <td>Mads thode schultz</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-16.0</span></td>
+              <td>1483.3</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>4</td>
+              <td>Christoffer Nielsen</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+15.3</span></td>
+              <td>1498.6</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </details>
+            
+
+    <details id="edoardo-cravero">
+      <summary class="player-summary">
+        <span class="player-name">Edoardo Cravero</span>
+        <span class="player-rating">1482.6</span>
+        <span class="player-matches">3 matches</span>
+      </summary>
+      <div class="player-details">
+        <table class="match-history">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Round</th>
+              <th>Opponent</th>
+              <th>Result</th>
+              <th>Rating Change</th>
+              <th>New Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>1</td>
+              <td>Casper Albrektsen</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-16.0</span></td>
+              <td>1484.0</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>2</td>
+              <td>Christoffer Nielsen</td>
+              <td><span class="result win">Win</span></td>
+              <td><span class="rating-change positive">+16.0</span></td>
+              <td>1500.0</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>3</td>
+              <td>Eva Østerby</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-17.4</span></td>
+              <td>1482.6</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </details>
+            
+
+    <details id="christoffer-nielsen">
+      <summary class="player-summary">
+        <span class="player-name">Christoffer Nielsen</span>
+        <span class="player-rating">1452.7</span>
+        <span class="player-matches">3 matches</span>
+      </summary>
+      <div class="player-details">
+        <table class="match-history">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Round</th>
+              <th>Opponent</th>
+              <th>Result</th>
+              <th>Rating Change</th>
+              <th>New Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>1</td>
+              <td>Mads thode schultz</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-16.0</span></td>
+              <td>1484.0</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>2</td>
+              <td>Edoardo Cravero</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-16.0</span></td>
+              <td>1468.0</td>
+            </tr>
+            
+
+            <tr>
+              <td>20260530_pauper_baltzer</td>
+              <td>4</td>
+              <td>Gregoire  Sanguinetti</td>
+              <td><span class="result loss">Loss</span></td>
+              <td><span class="rating-change negative">-15.3</span></td>
+              <td>1452.7</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </details>
+            
+        </div>
+        
+        <footer>
+            Last updated: 2026-06-03 13:17:47 UTC
+        </footer>
+    </div>
+    
+    <script>
+        // Auto-expand player if navigated via hash
+        document.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                const details = document.getElementById(hash);
+                if (details) {
+                    details.open = true;
+                    details.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

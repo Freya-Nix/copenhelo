@@ -71,10 +71,12 @@ class LeaderboardGenerator:
         """Generate HTML content for leaderboard."""
         rows = []
         for rank, player in enumerate(sorted_players, 1):
+            # Create anchor-friendly slug for player name
+            slug = self._slugify(player['name'])
             rows.append(f"""
     <tr>
       <td class="rank">{rank}</td>
-      <td class="name"><a href="player-{self._slugify(player['name'])}.html">{player['name']}</a></td>
+      <td class="name"><a href="players.html#{slug}">{player['name']}</a></td>
       <td class="rating">{player['rating']}</td>
       <td class="matches">{len(player['matches'])}</td>
     </tr>
