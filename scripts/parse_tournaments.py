@@ -27,20 +27,14 @@ class EventParser:
         print(message)
     
     def flush_logs(self):
-        """Write all buffered logs to file (prepend to existing)."""
+        """Write all buffered logs to file (append to file)."""
         if not self.log_buffer:
             return
         
-        # Read existing content
-        existing_content = ""
-        if self.log_file.exists():
-            with open(self.log_file, 'r') as f:
-                existing_content = f.read()
-        
-        # Write buffered entries at top
+        # Append entries to end of file
         new_entries = "\n".join(self.log_buffer) + "\n"
-        with open(self.log_file, 'w') as f:
-            f.write(new_entries + existing_content)
+        with open(self.log_file, 'a') as f:
+            f.write(new_entries)
     
     def parse_tournament_file(self, filepath: Path) -> list:
         """
@@ -237,7 +231,7 @@ def main():
                 'file': output_file.name
             })
         
-        parser.log(f"Parsed tournament {tournament_id}: {round_count} rounds, {total_matches} matches -> {output_file}")
+        parser.log(f"Parsed tournament {tournament_id}: {round_count} rounds, {total_matches} matches -> events/{output_file.name}")
         processed_count += 1
     
     parser.log(f"Tournament parsing complete: {processed_count} processed, {skipped_count} skipped")

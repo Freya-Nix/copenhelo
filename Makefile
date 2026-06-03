@@ -1,4 +1,4 @@
-.PHONY: help install sync run-parse run-elo run-leaderboard run-players run recalculate clean shell
+.PHONY: help install sync run-parse run-elo run-leaderboard run-players run-tournaments run recalculate clean shell
 
 VENV_DIR := .venv
 PYTHON := $(VENV_DIR)/bin/python
@@ -6,16 +6,17 @@ UV := $(shell which uv)
 
 help:
 	@echo "Available commands:"
-	@echo "  make install       - Create and setup virtual environment with dependencies"
-	@echo "  make sync          - Sync dependencies from lock file"
-	@echo "  make run-parse     - Parse input tournaments to events/ folder"
-	@echo "  make run-elo       - Run ELO calculator"
-	@echo "  make run-leaderboard - Generate leaderboard"
-	@echo "  make run-players   - Generate player detail pages"
-	@echo "  make run           - Run parsing, calculator, leaderboard, and player pages"
-	@echo "  make recalculate   - Recalculate all ratings from scratch"
-	@echo "  make clean         - Remove virtual environment and cache"
-	@echo "  make shell         - Activate virtual environment shell"
+	@echo "  make install            - Create and setup virtual environment with dependencies"
+	@echo "  make sync               - Sync dependencies from lock file"
+	@echo "  make run-parse          - Parse input tournaments to events/ folder"
+	@echo "  make run-elo            - Run ELO calculator"
+	@echo "  make run-leaderboard    - Generate leaderboard"
+	@echo "  make run-players        - Generate player detail pages"
+	@echo "  make run-tournaments    - Generate tournament detail pages"
+	@echo "  make run                - Run all pipelines (parse, elo, leaderboard, players, tournaments)"
+	@echo "  make recalculate        - Recalculate all ratings from scratch"
+	@echo "  make clean              - Remove virtual environment and cache"
+	@echo "  make shell              - Activate virtual environment shell"
 
 install: $(VENV_DIR)
 	@echo "✓ Virtual environment ready"
@@ -58,7 +59,11 @@ run-players: $(VENV_DIR)
 	@echo "Generating player pages..."
 	$(PYTHON) scripts/players_generator.py
 
-run: run-parse run-elo run-leaderboard run-players
+run-tournaments: $(VENV_DIR)
+	@echo "Generating tournament pages..."
+	$(PYTHON) scripts/tournaments_generator.py
+
+run: run-parse run-elo run-leaderboard run-players run-tournaments
 	@echo "✓ All tasks complete"
 
 recalculate: $(VENV_DIR)

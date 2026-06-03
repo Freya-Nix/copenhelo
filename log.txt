@@ -1,11 +1,13 @@
-[2026-06-03T13:17:47.664603] Starting player pages generation
-[2026-06-03T13:17:47.665235] Generated players page: /Users/g.morgado/repos/copenhelo/players.html (9 players)
-[2026-06-03T13:17:47.613194] Starting leaderboard generation
-[2026-06-03T13:17:47.613808] Generated leaderboard: /Users/g.morgado/repos/copenhelo/leaderboard.html (9 players)
-[2026-06-03T13:17:47.613827] Leaderboard generation complete
-[2026-06-03T13:17:47.561307] Starting ELO calculation
-[2026-06-03T13:17:47.561508] Skipping tournament 20260530_pauper_baltzer (already processed)
-[2026-06-03T13:17:47.562571] ELO calculation complete: 0 processed, 1 skipped
-[2026-06-03T13:17:47.503497] Starting tournament parsing
-[2026-06-03T13:17:47.503688] Skipping tournament 20260530_pauper_baltzer (already parsed)
-[2026-06-03T13:17:47.503699] Tournament parsing complete: 0 processed, 1 skipped
+[2026-06-03T13:27:51.738181] Starting tournament parsing
+[2026-06-03T13:27:51.738353] Skipping tournament 20260530_pauper_baltzer (already parsed)
+[2026-06-03T13:27:51.738358] Tournament parsing complete: 0 processed, 1 skipped
+[2026-06-03T13:27:51.808644] Starting ELO calculation
+[2026-06-03T13:27:51.808822] Skipping tournament 20260530_pauper_baltzer (already processed)
+[2026-06-03T13:27:51.810181] ELO calculation complete: 0 processed, 1 skipped
+[2026-06-03T13:27:51.877614] Starting leaderboard generation
+[2026-06-03T13:27:51.878280] Generated leaderboard: leaderboard.html (9 players)
+[2026-06-03T13:27:51.878291] Leaderboard generation complete
+[2026-06-03T13:27:51.944343] Starting player pages generation
+[2026-06-03T13:27:51.944863] Generated players page: players.html (9 players)
+[2026-06-03T13:27:52.004408] Starting tournaments page generation
+[2026-06-03T13:27:52.004849] Generated tournaments page: tournaments.html (1 tournaments)

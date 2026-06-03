@@ -25,20 +25,14 @@ class LeaderboardGenerator:
         print(message)
     
     def flush_logs(self):
-        """Write all buffered logs to file (prepend to existing)."""
+        """Write all buffered logs to file (append to file)."""
         if not self.log_buffer:
             return
         
-        # Read existing content
-        existing_content = ""
-        if self.log_file.exists():
-            with open(self.log_file, 'r') as f:
-                existing_content = f.read()
-        
-        # Write buffered entries at top
+        # Append entries to end of file
         new_entries = "\n".join(self.log_buffer) + "\n"
-        with open(self.log_file, 'w') as f:
-            f.write(new_entries + existing_content)
+        with open(self.log_file, 'a') as f:
+            f.write(new_entries)
     
     def load_players(self) -> Dict[str, Dict]:
         """Load player data from JSON."""
@@ -65,7 +59,7 @@ class LeaderboardGenerator:
         with open(output_file, 'w') as f:
             f.write(html)
         
-        self.log(f"Generated leaderboard: {output_file} ({len(sorted_players)} players)")
+        self.log(f"Generated leaderboard: leaderboard.html ({len(sorted_players)} players)")
     
     def _generate_html(self, sorted_players: List[Dict]) -> str:
         """Generate HTML content for leaderboard."""
@@ -128,6 +122,22 @@ class LeaderboardGenerator:
     .header p {{
       font-size: 1.1em;
       opacity: 0.9;
+      margin-bottom: 15px;
+    }}
+    
+    .header nav {{
+      margin-top: 15px;
+    }}
+    
+    .header a {{
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-size: 14px;
+      margin: 0 15px;
+    }}
+    
+    .header a:hover {{
+      text-decoration: underline;
     }}
     
     table {{
@@ -210,6 +220,10 @@ class LeaderboardGenerator:
     <div class="header">
       <h1>ELO Leaderboard</h1>
       <p>Tournament Ratings</p>
+      <nav>
+        <a href="players.html">Players</a>
+        <a href="tournaments.html">Tournaments</a>
+      </nav>
     </div>
     
     <table>

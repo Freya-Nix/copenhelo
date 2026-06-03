@@ -26,20 +26,14 @@ class PlayersGenerator:
         print(message)
     
     def _flush_logs(self):
-        """Write all buffered logs to file (prepend to existing)."""
+        """Write all buffered logs to file (append to file)."""
         if not self.log_buffer:
             return
         
-        # Read existing content
-        existing_content = ""
-        if self.log_file.exists():
-            with open(self.log_file, 'r') as f:
-                existing_content = f.read()
-        
-        # Write buffered entries at top
+        # Append entries to end of file
         new_entries = "\n".join(self.log_buffer) + "\n"
-        with open(self.log_file, 'w') as f:
-            f.write(new_entries + existing_content)
+        with open(self.log_file, 'a') as f:
+            f.write(new_entries)
     
     def _load_players(self) -> List[Dict]:
         """Load player data from JSON."""
@@ -91,7 +85,7 @@ class PlayersGenerator:
             
             rows.append(f"""
             <tr>
-              <td>{tournament_id}</td>
+              <td><a href="tournaments.html#{tournament_id}">{tournament_id}</a></td>
               <td>{round_num}</td>
               <td>{opponent}</td>
               <td><span class="result {result_class}">{result_text}</span></td>
@@ -185,6 +179,7 @@ class PlayersGenerator:
             color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
             font-size: 14px;
+            margin: 0 10px;
         }}
         
         header a:hover {{
@@ -276,6 +271,16 @@ class PlayersGenerator:
             border-bottom: 1px solid #eee;
         }}
         
+        .match-history a {{
+            color: #667eea;
+            text-decoration: none;
+        }}
+        
+        .match-history a:hover {{
+            text-decoration: underline;
+            color: #764ba2;
+        }}
+        
         .match-history tr:hover {{
             background: #fafafa;
         }}
@@ -331,6 +336,7 @@ class PlayersGenerator:
         <header>
             <h1>Player History</h1>
             <a href="leaderboard.html">← Back to Leaderboard</a>
+            <a href="tournaments.html">Tournaments</a>
         </header>
         
         <div class="players">
@@ -366,7 +372,7 @@ class PlayersGenerator:
         output_path = self.output_dir.parent / 'players.html'
         output_path.write_text(html_content, encoding='utf-8')
         
-        self.log(f"Generated players page: {output_path} ({len(players)} players)")
+        self.log(f"Generated players page: players.html ({len(players)} players)")
         self._flush_logs()
 
 

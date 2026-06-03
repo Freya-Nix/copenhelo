@@ -229,24 +229,18 @@ class TournamentDataProcessor:
             json.dump(self.tournaments, f, indent=2, default=str)
     
     def flush_logs(self):
-        """Write all buffered logs to file (prepend to existing)."""
+        """Write all buffered logs to file (append to file)."""
         log_file = Path('log.txt')
         if not self.log_buffer:
             return
         
-        # Read existing content
-        existing_content = ""
-        if log_file.exists():
-            with open(log_file, 'r') as f:
-                existing_content = f.read()
-        
-        # Write buffered entries at top
+        # Append entries to end of file
         new_entries = "\n".join(self.log_buffer) + "\n"
-        with open(log_file, 'w') as f:
-            f.write(new_entries + existing_content)
+        with open(log_file, 'a') as f:
+            f.write(new_entries)
         
-        print(f"Saved {len(self.players)} players to {self.players_file}")
-        print(f"Saved {len(self.tournaments)} tournaments to {self.tournaments_file}")
+        print(f"Saved {len(self.players)} players to output/players.json")
+        print(f"Saved {len(self.tournaments)} tournaments to output/tournaments.json")
 
 
 def main():

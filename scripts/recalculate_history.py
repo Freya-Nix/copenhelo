@@ -34,20 +34,14 @@ def main():
         print(msg)
     
     def flush_logs():
-        """Write all buffered logs to file (prepend to existing)."""
+        """Write all buffered logs to file (append to file)."""
         if not log_buffer:
             return
         
-        # Read existing content
-        existing_content = ""
-        if log_file.exists():
-            with open(log_file, 'r') as f:
-                existing_content = f.read()
-        
-        # Write buffered entries at top
+        # Append entries to end of file
         new_entries = "\n".join(log_buffer) + "\n"
-        with open(log_file, 'w') as f:
-            f.write(new_entries + existing_content)
+        with open(log_file, 'a') as f:
+            f.write(new_entries)
     
     log_message("=" * 60)
     log_message("RECALCULATING HISTORY FROM SCRATCH")
