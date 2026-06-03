@@ -11,3 +11,29 @@
 [2026-06-03T13:27:51.944863] Generated players page: players.html (9 players)
 [2026-06-03T13:27:52.004408] Starting tournaments page generation
 [2026-06-03T13:27:52.004849] Generated tournaments page: tournaments.html (1 tournaments)
+[2026-06-03T13:30:04.927096] Starting tournament parsing
+[2026-06-03T13:30:04.927271] Skipping tournament 20260530_pauper_baltzer (already parsed)
+[2026-06-03T13:30:04.927276] Tournament parsing complete: 0 processed, 1 skipped
+[2026-06-03T13:30:04.993112] Starting ELO calculation
+[2026-06-03T13:30:04.993269] Skipping tournament 20260530_pauper_baltzer (already processed)
+[2026-06-03T13:30:04.994353] ELO calculation complete: 0 processed, 1 skipped
+[2026-06-03T13:30:05.051807] Starting leaderboard generation
+[2026-06-03T13:30:05.052363] Generated leaderboard: leaderboard.html (9 players)
+[2026-06-03T13:30:05.052374] Leaderboard generation complete
+[2026-06-03T13:30:05.121808] Starting player pages generation
+[2026-06-03T13:30:05.122401] Generated players page: players.html (9 players)
+[2026-06-03T13:30:05.183797] Starting tournaments page generation
+[2026-06-03T13:30:05.184251] Generated tournaments page: tournaments.html (1 tournaments)
+[2026-06-03T13:34:07.102309] Starting tournament parsing
+[2026-06-03T13:34:07.102465] Skipping tournament 20260530_pauper_baltzer (already parsed)
+[2026-06-03T13:34:07.102470] Tournament parsing complete: 0 processed, 1 skipped
+[2026-06-03T13:34:07.174468] Starting ELO calculation
+[2026-06-03T13:34:07.174607] Skipping tournament 20260530_pauper_baltzer (already processed)
+[2026-06-03T13:34:07.175616] ELO calculation complete: 0 processed, 1 skipped
+[2026-06-03T13:34:07.239375] Starting leaderboard generation
+[2026-06-03T13:34:07.240009] Generated leaderboard: leaderboard.html (9 players)
+[2026-06-03T13:34:07.240020] Leaderboard generation complete
+[2026-06-03T13:34:07.307192] Starting player pages generation
+[2026-06-03T13:34:07.307804] Generated players page: players.html (9 players)
+[2026-06-03T13:34:07.369051] Starting tournaments page generation
+[2026-06-03T13:34:07.369560] Generated tournaments page: tournaments.html (1 tournaments)

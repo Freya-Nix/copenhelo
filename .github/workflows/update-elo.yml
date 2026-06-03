@@ -49,16 +49,14 @@ jobs:
           
           echo "$INPUT_HASH" > output/.input-hash
       
-      - name: Run ELO calculator
+      - name: Run Pipeline
         if: steps.check-changes.outputs.has-changes == 'true'
         run: |
           python scripts/parse_tournaments.py
           python scripts/elo_calculator.py
-      
-      - name: Generate leaderboard
-        if: steps.check-changes.outputs.has-changes == 'true'
-        run: |
           python scripts/leaderboard_generator.py
+          python scripts/players_generator.py
+          python scripts/tournaments_generator.py
       
       - name: Commit and push changes
         if: steps.check-changes.outputs.has-changes == 'true'
@@ -66,7 +64,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-          git add output/
+          git add output/ *.html log.txt
           
           if ! git diff --cached --quiet; then
             git commit -m "Update ELO ratings [automated]"
