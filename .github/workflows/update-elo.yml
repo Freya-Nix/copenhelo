@@ -52,6 +52,7 @@ jobs:
       - name: Run ELO calculator
         if: steps.check-changes.outputs.has-changes == 'true'
         run: |
+          python scripts/parse_tournaments.py
           python scripts/elo_calculator.py
       
       - name: Generate leaderboard

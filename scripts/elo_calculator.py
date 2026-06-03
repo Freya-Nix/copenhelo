@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ELO Rating Calculator for Tournaments
-Parses EventLink HTML files and calculates ELO ratings.
+Reads parsed tournament data from events/ and calculates ratings.
 """
 
 import json
@@ -10,14 +10,13 @@ import re
 from pathlib import Path
 from typing import Dict, List, Tuple
 from datetime import datetime
-from bs4 import BeautifulSoup
 import math
 
 
 class ELOCalculator:
     """Standard chess ELO rating calculator."""
     
-    DEFAULT_RATING = 1600
+    DEFAULT_RATING = 1500
     K_FACTOR = 32
     
     @staticmethod
@@ -45,121 +44,31 @@ class ELOCalculator:
         return round(new_rating, 1)
 
 
-class TournamentParser:
-    """Parses EventLink HTML tournament files."""
-    
-    @staticmethod
-    def parse_tournament_file(filepath: Path) -> List[Dict]:
-        """
-        Parse a tournament HTML file and extract match data.
-        
-        Args:
-            filepath: Path to .htm file
-            
-        Returns:
-            List of match dictionaries with keys: player1, player2, result, has_bye
-        """
-        with open(filepath, 'r', encoding='utf-8') as f:
-            html_content = f.read()
-        
-        soup = BeautifulSoup(html_content, 'html.parser')
-        matches = []
-        
-        # Find pairings table
-        table = soup.find('table', class_='pairings-table')
-        if not table:
-            print(f"Warning: No pairings table found in {filepath}")
-            return matches
-        
-        tbody = table.find('tbody')
-        if not tbody:
-            return matches
-        
-        # Parse each match row
-        for row in tbody.find_all('tr'):
-            cells = row.find_all('td', class_='pairings-table__cell')
-            if len(cells) < 6:
-                continue
-            
-            # Extract player 1
-            player1_cell = cells[2]
-            player1_name = TournamentParser._extract_player_name(player1_cell)
-            if not player1_name:
-                continue
-            
-            # Extract score
-            result_cell = cells[3]
-            result = TournamentParser._extract_match_result(result_cell)
-            
-            # Extract player 2 or bye
-            player2_cell = cells[4]
-            bye_div = player2_cell.find('div', class_='bye')
-            
-            if bye_div:
-                # Player 1 got a bye
-                matches.append({
-                    'player1': player1_name,
-                    'player2': None,
-                    'result': None,
-                    'has_bye': True
-                })
-            else:
-                player2_name = TournamentParser._extract_player_name(player2_cell)
-                if player2_name:
-                    matches.append({
-                        'player1': player1_name,
-                        'player2': player2_name,
-                        'result': result,
-                        'has_bye': False
-                    })
-        
-        return matches
-    
-    @staticmethod
-    def _extract_player_name(cell) -> str:
-        """Extract player name from table cell."""
-        team_div = cell.find('div', class_='team')
-        if not team_div:
-            return None
-        
-        name_span = team_div.find('span', class_='team__text')
-        if name_span:
-            # Get the innermost span with the actual name
-            name_elem = name_span.find('span')
-            if name_elem:
-                return name_elem.get_text(strip=True)
-        
-        return None
-    
-    @staticmethod
-    def _extract_match_result(cell) -> Tuple[int, int]:
-        """
-        Extract match result from result cell.
-        Returns tuple (player1_wins, player2_wins) or None if no result.
-        """
-        scores = cell.find_all('div', class_='box-score')
-        if len(scores) >= 2:
-            try:
-                p1_score = int(scores[0].get_text(strip=True))
-                p2_score = int(scores[1].get_text(strip=True))
-                return (p1_score, p2_score)
-            except (ValueError, AttributeError):
-                pass
-        
-        return None
-
-
 class TournamentDataProcessor:
     """Process tournament data and calculate ratings."""
     
-    def __init__(self, output_dir: Path):
+    def __init__(self, output_dir: Path, log_func=None):
         self.output_dir = output_dir
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.players_file = output_dir / 'players.json'
         self.tournaments_file = output_dir / 'tournaments.json'
+        self.log_buffer = []  # Buffer for logs
+        self.log_func = log_func or self._default_log
         
         self.players: Dict[str, Dict] = self._load_or_init_players()
         self.tournaments: Dict[str, Dict] = self._load_or_init_tournaments()
+    
+    def _default_log(self, msg: str):
+        """Default log function."""
+        self.log_buffer.append(msg)
+        print(msg)
+    
+    def log(self, msg: str):
+        """Buffer log message."""
+        timestamp = datetime.now().isoformat()
+        log_entry = f"[{timestamp}] {msg}"
+        self.log_buffer.append(log_entry)
+        print(msg)
     
     def _load_or_init_players(self) -> Dict[str, Dict]:
         """Load existing player data or initialize empty dict."""
@@ -240,13 +149,16 @@ class TournamentDataProcessor:
                     if p1_wins > p2_wins:
                         p1_score = 1.0
                         p2_score = 0.0
+                        result_code = 'W'
                     elif p1_wins < p2_wins:
                         p1_score = 0.0
                         p2_score = 1.0
+                        result_code = 'L'
                     else:
                         # Draw
                         p1_score = 0.5
                         p2_score = 0.5
+                        result_code = 'D'
                     
                     # Calculate new ratings
                     p1_new_rating = ELOCalculator.calculate_new_rating(
@@ -258,6 +170,14 @@ class TournamentDataProcessor:
                         p2_rating_before,
                         p1_rating_before,
                         p2_score
+                    )
+                    
+                    p1_rating_change = round(p1_new_rating - p1_rating_before, 1)
+                    p2_rating_change = round(p2_new_rating - p2_rating_before, 1)
+                    
+                    # Log the match
+                    self.log(
+                        f"    {p1_name} ({result_code}) {p2_name} [{p1_rating_change:+.1f} {p2_rating_change:+.1f}]"
                     )
                     
                     # Update ratings
@@ -272,7 +192,7 @@ class TournamentDataProcessor:
                         'result_code': 'W' if p1_score == 1.0 else ('D' if p1_score == 0.5 else 'L'),
                         'rating_before': p1_rating_before,
                         'rating_after': p1_new_rating,
-                        'rating_change': round(p1_new_rating - p1_rating_before, 1),
+                        'rating_change': p1_rating_change,
                         'score': (p1_wins, p2_wins)
                     })
                     self.players[p2_name]['history'].append({
@@ -282,7 +202,7 @@ class TournamentDataProcessor:
                         'result_code': 'W' if p2_score == 1.0 else ('D' if p2_score == 0.5 else 'L'),
                         'rating_before': p2_rating_before,
                         'rating_after': p2_new_rating,
-                        'rating_change': round(p2_new_rating - p2_rating_before, 1),
+                        'rating_change': p2_rating_change,
                         'score': (p2_wins, p1_wins)
                     })
                     
@@ -307,6 +227,23 @@ class TournamentDataProcessor:
         
         with open(self.tournaments_file, 'w') as f:
             json.dump(self.tournaments, f, indent=2, default=str)
+    
+    def flush_logs(self):
+        """Write all buffered logs to file (prepend to existing)."""
+        log_file = Path('log.txt')
+        if not self.log_buffer:
+            return
+        
+        # Read existing content
+        existing_content = ""
+        if log_file.exists():
+            with open(log_file, 'r') as f:
+                existing_content = f.read()
+        
+        # Write buffered entries at top
+        new_entries = "\n".join(self.log_buffer) + "\n"
+        with open(log_file, 'w') as f:
+            f.write(new_entries + existing_content)
         
         print(f"Saved {len(self.players)} players to {self.players_file}")
         print(f"Saved {len(self.tournaments)} tournaments to {self.tournaments_file}")
@@ -315,39 +252,53 @@ class TournamentDataProcessor:
 def main():
     """Main entry point."""
     repo_root = Path(__file__).parent.parent
-    input_dir = repo_root / 'input'
+    events_dir = repo_root / 'events'
     output_dir = repo_root / 'output'
+    log_file = repo_root / 'log.txt'
     
     processor = TournamentDataProcessor(output_dir)
     
-    # Find all tournament directories
-    for tournament_dir in sorted(input_dir.iterdir()):
-        if not tournament_dir.is_dir():
+    processor.log("Starting ELO calculation")
+    
+    # Find all tournament JSON files
+    if not events_dir.exists():
+        processor.log("Error: events/ directory not found. Run parse_tournaments.py first.")
+        processor.flush_logs()
+        return
+    
+    processed_count = 0
+    skipped_count = 0
+    
+    for tournament_file in sorted(events_dir.glob('*.json')):
+        tournament_id = tournament_file.stem
+        
+        # Check if already processed
+        if tournament_id in processor.tournaments:
+            processor.log(f"Skipping tournament {tournament_id} (already processed)")
+            skipped_count += 1
             continue
         
-        tournament_id = tournament_dir.name
-        print(f"\nProcessing tournament: {tournament_id}")
+        try:
+            with open(tournament_file, 'r') as f:
+                tournament_data = json.load(f)
+            
+            processor.log(f"Processing tournament: {tournament_id}")
+            
+            # Process each round
+            for round_key, round_data in tournament_data['rounds'].items():
+                round_num = int(round_key)
+                matches = round_data['matches']
+                processor.process_tournament(tournament_id, round_num, matches)
+                processor.log(f"  Round {round_num}: {len(matches)} matches")
+            
+            processed_count += 1
         
-        # Find all round files
-        round_files = sorted(
-            tournament_dir.glob('r*.htm'),
-            key=lambda p: int(re.search(r'r(\d+)', p.name).group(1))
-        )
-        
-        for round_file in round_files:
-            match = re.search(r'r(\d+)', round_file.name)
-            if not match:
-                continue
-            
-            round_num = int(match.group(1))
-            print(f"  Round {round_num}...", end=' ')
-            
-            matches = TournamentParser.parse_tournament_file(round_file)
-            processor.process_tournament(tournament_id, round_num, matches)
-            
-            print(f"({len(matches)} matches)")
+        except Exception as e:
+            processor.log(f"Error processing {tournament_id}: {str(e)}")
     
     processor.save()
+    processor.log(f"ELO calculation complete: {processed_count} processed, {skipped_count} skipped")
+    processor.flush_logs()
 
 
 if __name__ == '__main__':

@@ -5,15 +5,40 @@ Generate HTML leaderboard from player data.
 
 import json
 from pathlib import Path
+from datetime import datetime
 from typing import List, Dict
 
 
 class LeaderboardGenerator:
     """Generate HTML leaderboards from player data."""
     
-    def __init__(self, output_dir: Path):
+    def __init__(self, output_dir: Path, log_file: Path = None):
         self.output_dir = output_dir
         self.players_file = output_dir / 'players.json'
+        self.log_file = log_file or Path('log.txt')
+        self.log_buffer = []
+    
+    def log(self, message: str):
+        """Buffer message to be logged at end."""
+        timestamp = datetime.now().isoformat()
+        self.log_buffer.append(f"[{timestamp}] {message}")
+        print(message)
+    
+    def flush_logs(self):
+        """Write all buffered logs to file (prepend to existing)."""
+        if not self.log_buffer:
+            return
+        
+        # Read existing content
+        existing_content = ""
+        if self.log_file.exists():
+            with open(self.log_file, 'r') as f:
+                existing_content = f.read()
+        
+        # Write buffered entries at top
+        new_entries = "\n".join(self.log_buffer) + "\n"
+        with open(self.log_file, 'w') as f:
+            f.write(new_entries + existing_content)
     
     def load_players(self) -> Dict[str, Dict]:
         """Load player data from JSON."""
@@ -40,7 +65,7 @@ class LeaderboardGenerator:
         with open(output_file, 'w') as f:
             f.write(html)
         
-        print(f"Generated leaderboard: {output_file}")
+        self.log(f"Generated leaderboard: {output_file} ({len(sorted_players)} players)")
     
     def _generate_html(self, sorted_players: List[Dict]) -> str:
         """Generate HTML content for leaderboard."""
@@ -223,9 +248,13 @@ def main():
     """Main entry point."""
     repo_root = Path(__file__).parent.parent
     output_dir = repo_root / 'output'
+    log_file = repo_root / 'log.txt'
     
-    generator = LeaderboardGenerator(output_dir)
+    generator = LeaderboardGenerator(output_dir, log_file)
+    generator.log("Starting leaderboard generation")
     generator.generate_leaderboard()
+    generator.log("Leaderboard generation complete")
+    generator.flush_logs()
 
 
 if __name__ == '__main__':

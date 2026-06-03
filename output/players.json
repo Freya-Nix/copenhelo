@@ -1,10 +1,10 @@
 {
   "Mads thode schultz": {
     "name": "Mads thode schultz",
-    "rating": 1598.7,
+    "rating": 1498.7,
     "matches": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Christoffer Nielsen",
         "result": [
@@ -13,7 +13,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Josef-Nam Nguyen",
         "result": [
@@ -22,7 +22,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Gregoire  Sanguinetti",
         "result": [
@@ -31,7 +31,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Eva \u00d8sterby",
         "result": [
@@ -42,12 +42,12 @@
     ],
     "history": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Christoffer Nielsen",
         "result_code": "W",
-        "rating_before": 1600,
-        "rating_after": 1616.0,
+        "rating_before": 1500,
+        "rating_after": 1516.0,
         "rating_change": 16.0,
         "score": [
           2,
@@ -55,12 +55,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Josef-Nam Nguyen",
         "result_code": "L",
-        "rating_before": 1616.0,
-        "rating_after": 1600.0,
+        "rating_before": 1516.0,
+        "rating_after": 1500.0,
         "rating_change": -16.0,
         "score": [
           1,
@@ -68,12 +68,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Gregoire  Sanguinetti",
         "result_code": "W",
-        "rating_before": 1600.0,
-        "rating_after": 1616.0,
+        "rating_before": 1500.0,
+        "rating_after": 1516.0,
         "rating_change": 16.0,
         "score": [
           2,
@@ -81,12 +81,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Eva \u00d8sterby",
         "result_code": "L",
-        "rating_before": 1616.0,
-        "rating_after": 1598.7,
+        "rating_before": 1516.0,
+        "rating_after": 1498.7,
         "rating_change": -17.3,
         "score": [
           0,
@@ -97,10 +97,10 @@
   },
   "Christoffer Nielsen": {
     "name": "Christoffer Nielsen",
-    "rating": 1552.7,
+    "rating": 1452.7,
     "matches": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Mads thode schultz",
         "result": [
@@ -109,7 +109,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Edoardo Cravero",
         "result": [
@@ -118,7 +118,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Gregoire  Sanguinetti",
         "result": [
@@ -129,12 +129,12 @@
     ],
     "history": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Mads thode schultz",
         "result_code": "L",
-        "rating_before": 1600,
-        "rating_after": 1584.0,
+        "rating_before": 1500,
+        "rating_after": 1484.0,
         "rating_change": -16.0,
         "score": [
           0,
@@ -142,12 +142,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Edoardo Cravero",
         "result_code": "L",
-        "rating_before": 1584.0,
-        "rating_after": 1568.0,
+        "rating_before": 1484.0,
+        "rating_after": 1468.0,
         "rating_change": -16.0,
         "score": [
           1,
@@ -155,12 +155,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Gregoire  Sanguinetti",
         "result_code": "L",
-        "rating_before": 1568.0,
-        "rating_after": 1552.7,
+        "rating_before": 1468.0,
+        "rating_after": 1452.7,
         "rating_change": -15.3,
         "score": [
           0,
@@ -171,10 +171,10 @@
   },
   "Josef-Nam Nguyen": {
     "name": "Josef-Nam Nguyen",
-    "rating": 1599.2,
+    "rating": 1499.2,
     "matches": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Erik Christensen",
         "result": [
@@ -183,7 +183,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Mads thode schultz",
         "result": [
@@ -192,7 +192,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Jonas Borgland",
         "result": [
@@ -201,7 +201,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Casper Albrektsen",
         "result": [
@@ -212,12 +212,12 @@
     ],
     "history": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Erik Christensen",
         "result_code": "W",
-        "rating_before": 1600,
-        "rating_after": 1616.0,
+        "rating_before": 1500,
+        "rating_after": 1516.0,
         "rating_change": 16.0,
         "score": [
           2,
@@ -225,12 +225,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Mads thode schultz",
         "result_code": "W",
-        "rating_before": 1616.0,
-        "rating_after": 1632.0,
+        "rating_before": 1516.0,
+        "rating_after": 1532.0,
         "rating_change": 16.0,
         "score": [
           2,
@@ -238,12 +238,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Jonas Borgland",
         "result_code": "L",
-        "rating_before": 1632.0,
-        "rating_after": 1615.3,
+        "rating_before": 1532.0,
+        "rating_after": 1515.3,
         "rating_change": -16.7,
         "score": [
           1,
@@ -251,12 +251,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Casper Albrektsen",
         "result_code": "L",
-        "rating_before": 1615.3,
-        "rating_after": 1599.2,
+        "rating_before": 1515.3,
+        "rating_after": 1499.2,
         "rating_change": -16.1,
         "score": [
           1,
@@ -267,10 +267,10 @@
   },
   "Erik Christensen": {
     "name": "Erik Christensen",
-    "rating": 1619.5,
+    "rating": 1519.5,
     "matches": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Josef-Nam Nguyen",
         "result": [
@@ -279,7 +279,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Casper Albrektsen",
         "result": [
@@ -288,7 +288,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Jonas Borgland",
         "result": [
@@ -299,12 +299,12 @@
     ],
     "history": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Josef-Nam Nguyen",
         "result_code": "L",
-        "rating_before": 1600,
-        "rating_after": 1584.0,
+        "rating_before": 1500,
+        "rating_after": 1484.0,
         "rating_change": -16.0,
         "score": [
           0,
@@ -312,12 +312,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Casper Albrektsen",
         "result_code": "W",
-        "rating_before": 1584.0,
-        "rating_after": 1602.1,
+        "rating_before": 1484.0,
+        "rating_after": 1502.1,
         "rating_change": 18.1,
         "score": [
           2,
@@ -325,12 +325,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Jonas Borgland",
         "result_code": "W",
-        "rating_before": 1602.1,
-        "rating_after": 1619.5,
+        "rating_before": 1502.1,
+        "rating_after": 1519.5,
         "rating_change": 17.4,
         "score": [
           2,
@@ -341,10 +341,10 @@
   },
   "Casper Albrektsen": {
     "name": "Casper Albrektsen",
-    "rating": 1628.5,
+    "rating": 1528.5,
     "matches": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Edoardo Cravero",
         "result": [
@@ -353,7 +353,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Eva \u00d8sterby",
         "result": [
@@ -362,7 +362,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Erik Christensen",
         "result": [
@@ -371,7 +371,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Josef-Nam Nguyen",
         "result": [
@@ -382,12 +382,12 @@
     ],
     "history": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Edoardo Cravero",
         "result_code": "W",
-        "rating_before": 1600,
-        "rating_after": 1616.0,
+        "rating_before": 1500,
+        "rating_after": 1516.0,
         "rating_change": 16.0,
         "score": [
           2,
@@ -395,12 +395,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Eva \u00d8sterby",
         "result_code": "W",
-        "rating_before": 1616.0,
-        "rating_after": 1630.5,
+        "rating_before": 1516.0,
+        "rating_after": 1530.5,
         "rating_change": 14.5,
         "score": [
           2,
@@ -408,12 +408,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Erik Christensen",
         "result_code": "L",
-        "rating_before": 1630.5,
-        "rating_after": 1612.4,
+        "rating_before": 1530.5,
+        "rating_after": 1512.4,
         "rating_change": -18.1,
         "score": [
           0,
@@ -421,12 +421,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Josef-Nam Nguyen",
         "result_code": "W",
-        "rating_before": 1612.4,
-        "rating_after": 1628.5,
+        "rating_before": 1512.4,
+        "rating_after": 1528.5,
         "rating_change": 16.1,
         "score": [
           2,
@@ -437,10 +437,10 @@
   },
   "Edoardo Cravero": {
     "name": "Edoardo Cravero",
-    "rating": 1582.6,
+    "rating": 1482.6,
     "matches": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Casper Albrektsen",
         "result": [
@@ -449,7 +449,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Christoffer Nielsen",
         "result": [
@@ -458,7 +458,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Eva \u00d8sterby",
         "result": [
@@ -469,12 +469,12 @@
     ],
     "history": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Casper Albrektsen",
         "result_code": "L",
-        "rating_before": 1600,
-        "rating_after": 1584.0,
+        "rating_before": 1500,
+        "rating_after": 1484.0,
         "rating_change": -16.0,
         "score": [
           0,
@@ -482,12 +482,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Christoffer Nielsen",
         "result_code": "W",
-        "rating_before": 1584.0,
-        "rating_after": 1600.0,
+        "rating_before": 1484.0,
+        "rating_after": 1500.0,
         "rating_change": 16.0,
         "score": [
           2,
@@ -495,12 +495,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Eva \u00d8sterby",
         "result_code": "L",
-        "rating_before": 1600.0,
-        "rating_after": 1582.6,
+        "rating_before": 1500.0,
+        "rating_after": 1482.6,
         "rating_change": -17.4,
         "score": [
           1,
@@ -511,10 +511,10 @@
   },
   "Gregoire  Sanguinetti": {
     "name": "Gregoire  Sanguinetti",
-    "rating": 1598.6,
+    "rating": 1498.6,
     "matches": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Eva \u00d8sterby",
         "result": [
@@ -523,7 +523,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Jonas Borgland",
         "result": [
@@ -532,7 +532,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Mads thode schultz",
         "result": [
@@ -541,7 +541,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Christoffer Nielsen",
         "result": [
@@ -552,12 +552,12 @@
     ],
     "history": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Eva \u00d8sterby",
         "result_code": "W",
-        "rating_before": 1600,
-        "rating_after": 1616.0,
+        "rating_before": 1500,
+        "rating_after": 1516.0,
         "rating_change": 16.0,
         "score": [
           2,
@@ -565,12 +565,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Jonas Borgland",
         "result_code": "L",
-        "rating_before": 1616.0,
-        "rating_after": 1599.3,
+        "rating_before": 1516.0,
+        "rating_after": 1499.3,
         "rating_change": -16.7,
         "score": [
           1,
@@ -578,12 +578,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Mads thode schultz",
         "result_code": "L",
-        "rating_before": 1599.3,
-        "rating_after": 1583.3,
+        "rating_before": 1499.3,
+        "rating_after": 1483.3,
         "rating_change": -16.0,
         "score": [
           1,
@@ -591,12 +591,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Christoffer Nielsen",
         "result_code": "W",
-        "rating_before": 1583.3,
-        "rating_after": 1598.6,
+        "rating_before": 1483.3,
+        "rating_after": 1498.6,
         "rating_change": 15.3,
         "score": [
           2,
@@ -607,10 +607,10 @@
   },
   "Eva \u00d8sterby": {
     "name": "Eva \u00d8sterby",
-    "rating": 1604.2,
+    "rating": 1504.2,
     "matches": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Gregoire  Sanguinetti",
         "result": [
@@ -619,7 +619,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Casper Albrektsen",
         "result": [
@@ -628,7 +628,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Edoardo Cravero",
         "result": [
@@ -637,7 +637,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Mads thode schultz",
         "result": [
@@ -648,12 +648,12 @@
     ],
     "history": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 1,
         "opponent": "Gregoire  Sanguinetti",
         "result_code": "L",
-        "rating_before": 1600,
-        "rating_after": 1584.0,
+        "rating_before": 1500,
+        "rating_after": 1484.0,
         "rating_change": -16.0,
         "score": [
           1,
@@ -661,12 +661,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Casper Albrektsen",
         "result_code": "L",
-        "rating_before": 1584.0,
-        "rating_after": 1569.5,
+        "rating_before": 1484.0,
+        "rating_after": 1469.5,
         "rating_change": -14.5,
         "score": [
           0,
@@ -674,12 +674,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Edoardo Cravero",
         "result_code": "W",
-        "rating_before": 1569.5,
-        "rating_after": 1586.9,
+        "rating_before": 1469.5,
+        "rating_after": 1486.9,
         "rating_change": 17.4,
         "score": [
           2,
@@ -687,12 +687,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Mads thode schultz",
         "result_code": "W",
-        "rating_before": 1586.9,
-        "rating_after": 1604.2,
+        "rating_before": 1486.9,
+        "rating_after": 1504.2,
         "rating_change": 17.3,
         "score": [
           2,
@@ -703,10 +703,10 @@
   },
   "Jonas Borgland": {
     "name": "Jonas Borgland",
-    "rating": 1616.0,
+    "rating": 1516.0,
     "matches": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Gregoire  Sanguinetti",
         "result": [
@@ -715,7 +715,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Josef-Nam Nguyen",
         "result": [
@@ -724,7 +724,7 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Erik Christensen",
         "result": [
@@ -735,12 +735,12 @@
     ],
     "history": [
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 2,
         "opponent": "Gregoire  Sanguinetti",
         "result_code": "W",
-        "rating_before": 1600,
-        "rating_after": 1616.7,
+        "rating_before": 1500,
+        "rating_after": 1516.7,
         "rating_change": 16.7,
         "score": [
           2,
@@ -748,12 +748,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 3,
         "opponent": "Josef-Nam Nguyen",
         "result_code": "W",
-        "rating_before": 1616.7,
-        "rating_after": 1633.4,
+        "rating_before": 1516.7,
+        "rating_after": 1533.4,
         "rating_change": 16.7,
         "score": [
           2,
@@ -761,12 +761,12 @@
         ]
       },
       {
-        "tournament": "3005",
+        "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Erik Christensen",
         "result_code": "L",
-        "rating_before": 1633.4,
-        "rating_after": 1616.0,
+        "rating_before": 1533.4,
+        "rating_after": 1516.0,
         "rating_change": -17.4,
         "score": [
           1,

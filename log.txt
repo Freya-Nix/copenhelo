@@ -1,0 +1,43 @@
+[2026-06-03T13:02:40.791497] Starting leaderboard generation
+[2026-06-03T13:02:40.792025] Generated leaderboard: /Users/g.morgado/repos/copenhelo/output/index.html (9 players)
+[2026-06-03T13:02:40.792035] Leaderboard generation complete
+[2026-06-03T13:02:40.723512] Starting ELO calculation
+[2026-06-03T13:02:40.723684] Skipping tournament 20260530_pauper_baltzer (already processed)
+[2026-06-03T13:02:40.724778] ELO calculation complete: 0 processed, 1 skipped
+[2026-06-03T13:02:40.646673] Starting tournament parsing
+[2026-06-03T13:02:40.646862] Skipping tournament 20260530_pauper_baltzer (already parsed)
+[2026-06-03T13:02:40.646867] Tournament parsing complete: 0 processed, 1 skipped
+[2026-06-03T13:02:22.972500] Starting leaderboard generation
+[2026-06-03T13:02:22.973018] Generated leaderboard: /Users/g.morgado/repos/copenhelo/output/index.html (9 players)
+[2026-06-03T13:02:22.973035] Leaderboard generation complete
+[2026-06-03T13:02:22.910890] Starting ELO calculation
+[2026-06-03T13:02:22.911141] Processing tournament: 20260530_pauper_baltzer
+[2026-06-03T13:02:22.911165]     Mads thode schultz (W) Christoffer Nielsen [+16.0 -16.0]
+[2026-06-03T13:02:22.911177]     Josef-Nam Nguyen (W) Erik Christensen [+16.0 -16.0]
+[2026-06-03T13:02:22.911186]     Casper Albrektsen (W) Edoardo Cravero [+16.0 -16.0]
+[2026-06-03T13:02:22.911193]     Gregoire  Sanguinetti (W) Eva Østerby [+16.0 -16.0]
+[2026-06-03T13:02:22.911199]   Round 1: 5 matches
+[2026-06-03T13:02:22.911209]     Gregoire  Sanguinetti (L) Jonas Borgland [-16.7 +16.7]
+[2026-06-03T13:02:22.911216]     Josef-Nam Nguyen (W) Mads thode schultz [+16.0 -16.0]
+[2026-06-03T13:02:22.911223]     Casper Albrektsen (W) Eva Østerby [+14.5 -14.5]
+[2026-06-03T13:02:22.911230]     Edoardo Cravero (W) Christoffer Nielsen [+16.0 -16.0]
+[2026-06-03T13:02:22.911234]   Round 2: 5 matches
+[2026-06-03T13:02:22.911241]     Josef-Nam Nguyen (L) Jonas Borgland [-16.7 +16.7]
+[2026-06-03T13:02:22.911251]     Casper Albrektsen (L) Erik Christensen [-18.1 +18.1]
+[2026-06-03T13:02:22.911258]     Gregoire  Sanguinetti (L) Mads thode schultz [-16.0 +16.0]
+[2026-06-03T13:02:22.911264]     Edoardo Cravero (L) Eva Østerby [-17.4 +17.4]
+[2026-06-03T13:02:22.911269]   Round 3: 5 matches
+[2026-06-03T13:02:22.911275]     Jonas Borgland (L) Erik Christensen [-17.4 +17.4]
+[2026-06-03T13:02:22.911281]     Josef-Nam Nguyen (L) Casper Albrektsen [-16.1 +16.1]
+[2026-06-03T13:02:22.911289]     Mads thode schultz (L) Eva Østerby [-17.3 +17.3]
+[2026-06-03T13:02:22.911295]     Gregoire  Sanguinetti (W) Christoffer Nielsen [+15.3 -15.3]
+[2026-06-03T13:02:22.911299]   Round 4: 5 matches
+[2026-06-03T13:02:22.912460] ELO calculation complete: 1 processed, 0 skipped
+[2026-06-03T13:02:22.790901] Starting tournament parsing
+[2026-06-03T13:02:22.791067] Parsing tournament: 20260530_pauper_baltzer
+[2026-06-03T13:02:22.798754]   Parsed round 1: 5 matches
+[2026-06-03T13:02:22.805825]   Parsed round 2: 5 matches
+[2026-06-03T13:02:22.813452]   Parsed round 3: 5 matches
+[2026-06-03T13:02:22.820793]   Parsed round 4: 5 matches
+[2026-06-03T13:02:22.821434] Parsed tournament 20260530_pauper_baltzer: 4 rounds, 20 matches -> /Users/g.morgado/repos/copenhelo/events/20260530_pauper_baltzer.json
+[2026-06-03T13:02:22.821444] Tournament parsing complete: 1 processed, 0 skipped
