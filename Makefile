@@ -62,7 +62,7 @@ final_standings_reset: $(VENV_DIR)
 	@echo "Extracting tournaments from HTML..."
 	cd $(FSV) && $(PYTHON) extract_standings.py ../input/*.htm 2>/dev/null || true
 	@echo "Calculating ELO ratings..."
-	cd $(FSV) && $(PYTHON) elo_calculator.py
+	cd $(FSV) && $(PYTHON) elo_calculator.py $(if $(INCLUDE_DUMMY),--include-dummy,)
 	@echo "Generating leaderboard..."
 	cd $(FSV) && $(PYTHON) leaderboard_generator.py
 	@echo "✓ Pipeline complete: dummy.html"

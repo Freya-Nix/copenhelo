@@ -10,7 +10,15 @@ Run the full pipeline:
 make final_standings_reset
 ```
 
-This clears output, extracts all HTML tournaments, calculates ratings, and generates the leaderboard.
+This clears output, extracts all HTML tournaments, calculates ratings (excluding dummy tournaments by default), and generates the leaderboard.
+
+### Including Dummy Tournaments
+
+To include test/dummy tournaments in the calculation:
+
+```bash
+make final_standings_reset INCLUDE_DUMMY=1
+```
 
 Or run steps individually:
 
@@ -18,8 +26,11 @@ Or run steps individually:
 # 1. Extract tournaments from HTML
 python extract_standings.py input/*.htm
 
-# 2. Calculate ratings
+# 2. Calculate ratings (exclude dummy by default)
 python elo_calculator.py
+
+# 2b. Or include dummy tournaments
+python elo_calculator.py --include-dummy
 
 # 3. Generate leaderboard
 python leaderboard_generator.py
@@ -50,6 +61,12 @@ Ratings process tournaments chronologically from `parsed_events.csv`. Dummy tour
 In `elo_calculator.py`:
 - `K_FACTOR = 64` — Rating volatility (higher = bigger swings)
 - `DEFAULT_RATING = 1500` — Starting rating
+
+**Dummy Tournament Filtering:**
+- By default, tournaments with "dummy" in their name are skipped
+- Use `--include-dummy` flag to process them (dev/testing only)
+- From Make: `make final_standings_reset INCLUDE_DUMMY=1`
+- From CLI: `python elo_calculator.py --include-dummy`
 
 ## Data Reset
 

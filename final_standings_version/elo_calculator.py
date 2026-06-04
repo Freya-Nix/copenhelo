@@ -7,6 +7,7 @@ Reads extracted standings and updates player ratings and tournament data.
 import json
 import math
 import csv
+import argparse
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List
@@ -410,6 +411,11 @@ def process_all_standings(events_dir: Path, output_dir: Path, exclude_dummy: boo
 
 def main():
     """Main entry point."""
+    parser = argparse.ArgumentParser(description='Calculate ELO ratings from tournament standings')
+    parser.add_argument('--include-dummy', action='store_true', 
+                       help='Include dummy tournaments (for testing/dev only)')
+    args = parser.parse_args()
+    
     script_dir = Path(__file__).parent
     events_dir = script_dir / "events"
     output_dir = script_dir / "output"
@@ -419,7 +425,8 @@ def main():
         print("Run extract_standings.py first")
         return
     
-    process_all_standings(events_dir, output_dir)
+    exclude_dummy = not args.include_dummy
+    process_all_standings(events_dir, output_dir, exclude_dummy=exclude_dummy)
 
 
 if __name__ == '__main__':
