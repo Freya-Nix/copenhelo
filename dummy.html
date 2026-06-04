@@ -1,0 +1,2588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dummy Tournament Leaderboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    
+    .header p {
+      font-size: 1.1em;
+      opacity: 0.9;
+      margin-bottom: 15px;
+    }
+    
+    .table-wrapper {
+      overflow-x: auto;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    thead {
+      background: #f8f9fa;
+      border-bottom: 2px solid #dee2e6;
+    }
+    
+    th {
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+      color: #333;
+    }
+    
+    td {
+      padding: 15px;
+      border-bottom: 1px solid #dee2e6;
+    }
+    
+    .player-row {
+      cursor: pointer;
+      user-select: none;
+    }
+    
+    .player-row:hover {
+      background: #f8f9fa;
+    }
+    
+    .rank {
+      font-weight: 600;
+      color: #667eea;
+      width: 60px;
+    }
+    
+    .name {
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .expand-icon {
+      display: inline-block;
+      transition: transform 0.2s;
+      font-size: 0.8em;
+      color: #667eea;
+    }
+    
+    .player-row.expanded .expand-icon {
+      transform: rotate(90deg);
+    }
+    
+    .rating {
+      text-align: right;
+      font-weight: 600;
+      color: #764ba2;
+      width: 100px;
+    }
+    
+    .matches {
+      text-align: center;
+      color: #666;
+      width: 80px;
+    }
+    
+    .history-row {
+      background: #f8f9fa;
+    }
+    
+    .history-row td {
+      padding: 20px 15px;
+      border-bottom: none;
+    }
+    
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9em;
+    }
+    
+    .history-table thead {
+      background: #e9ecef;
+    }
+    
+    .history-table th {
+      padding: 10px;
+      text-align: left;
+      font-weight: 600;
+      color: #333;
+      border-bottom: 1px solid #dee2e6;
+    }
+    
+    .history-table td {
+      padding: 10px;
+      border-bottom: 1px solid #dee2e6;
+    }
+    
+    .history-table tr:hover {
+      background: #e9ecef;
+    }
+    
+    .num {
+      text-align: right;
+      font-family: 'Courier New', monospace;
+    }
+    
+    .positive {
+      color: #28a745;
+      font-weight: 600;
+    }
+    
+    .negative {
+      color: #dc3545;
+      font-weight: 600;
+    }
+    
+    .footer {
+      background: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+      color: #666;
+      font-size: 0.9em;
+      border-top: 1px solid #dee2e6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Dummy Tournament Leaderboard</h1>
+      <p>Click player names to see their tournament history</p>
+    </div>
+    
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th class="rank">Rank</th>
+            <th class="name">Player</th>
+            <th class="rating">Rating</th>
+          <th class="tournaments">Tournaments</th>
+          </tr>
+        </thead>
+        <tbody>
+
+    <tr class="player-row" onclick="toggleHistory('player-1')">
+      <td class="rank">1</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Foo Bar
+      </td>
+      <td class="rating">1716.3</td>
+      <td class="tournaments">6</td>
+    </tr>
+    <tr class="history-row" id="player-1" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>1</td>
+            <td>5-0-0</td>
+            <td>15</td>
+            <td class="num">1500.0</td>
+            <td class="num">1564.0</td>
+            <td class="num positive">+64.0</td>
+          </tr>
+            
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>16</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1564.0</td>
+            <td class="num">1516.1</td>
+            <td class="num negative">-47.9</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>1</td>
+            <td>5-0-0</td>
+            <td>15</td>
+            <td class="num">1516.1</td>
+            <td class="num">1577.3</td>
+            <td class="num positive">+61.2</td>
+          </tr>
+            
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>1</td>
+            <td>5-0-0</td>
+            <td>15</td>
+            <td class="num">1577.3</td>
+            <td class="num">1631.6</td>
+            <td class="num positive">+54.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>1</td>
+            <td>5-0-0</td>
+            <td>15</td>
+            <td class="num">1631.6</td>
+            <td class="num">1677.9</td>
+            <td class="num positive">+46.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>1</td>
+            <td>5-0-0</td>
+            <td>15</td>
+            <td class="num">1677.9</td>
+            <td class="num">1716.3</td>
+            <td class="num positive">+38.4</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-2')">
+      <td class="rank">2</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Frederikke Stejlgaard
+      </td>
+      <td class="rating">1633.0</td>
+      <td class="tournaments">6</td>
+    </tr>
+    <tr class="history-row" id="player-2" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>12</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1500.0</td>
+            <td class="num">1488.7</td>
+            <td class="num negative">-11.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>2</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1488.7</td>
+            <td class="num">1503.5</td>
+            <td class="num positive">+14.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>2</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1503.5</td>
+            <td class="num">1544.0</td>
+            <td class="num positive">+40.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>2</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1544.0</td>
+            <td class="num">1578.4</td>
+            <td class="num positive">+34.4</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>2</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1578.4</td>
+            <td class="num">1608.3</td>
+            <td class="num positive">+29.9</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>3</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1608.3</td>
+            <td class="num">1633.0</td>
+            <td class="num positive">+24.7</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-3')">
+      <td class="rank">3</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Christian Hansen
+      </td>
+      <td class="rating">1602.0</td>
+      <td class="tournaments">7</td>
+    </tr>
+    <tr class="history-row" id="player-3" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>11</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1500.0</td>
+            <td class="num">1488.7</td>
+            <td class="num negative">-11.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>3</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1488.7</td>
+            <td class="num">1480.9</td>
+            <td class="num negative">-7.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>8</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1480.9</td>
+            <td class="num">1495.4</td>
+            <td class="num positive">+14.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>3</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1495.4</td>
+            <td class="num">1537.3</td>
+            <td class="num positive">+41.9</td>
+          </tr>
+            
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>3</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1537.3</td>
+            <td class="num">1572.9</td>
+            <td class="num positive">+35.6</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>3</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1572.9</td>
+            <td class="num">1603.7</td>
+            <td class="num positive">+30.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>4</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1603.7</td>
+            <td class="num">1602.0</td>
+            <td class="num negative">-1.7</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-4')">
+      <td class="rank">4</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Jonathan Mohr
+      </td>
+      <td class="rating">1595.7</td>
+      <td class="tournaments">6</td>
+    </tr>
+    <tr class="history-row" id="player-4" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>3</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1500.0</td>
+            <td class="num">1538.5</td>
+            <td class="num positive">+38.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>7</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1538.5</td>
+            <td class="num">1544.8</td>
+            <td class="num positive">+6.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>7</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1544.8</td>
+            <td class="num">1551.0</td>
+            <td class="num positive">+6.2</td>
+          </tr>
+            
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>4</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1551.0</td>
+            <td class="num">1557.0</td>
+            <td class="num positive">+6.0</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>5</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1557.0</td>
+            <td class="num">1563.3</td>
+            <td class="num positive">+6.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>2</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1563.3</td>
+            <td class="num">1595.7</td>
+            <td class="num positive">+32.4</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-5')">
+      <td class="rank">5</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Erik Christensen
+      </td>
+      <td class="rating">1566.5</td>
+      <td class="tournaments">1</td>
+    </tr>
+    <tr class="history-row" id="player-5" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>1</td>
+            <td>5-0-0</td>
+            <td>15</td>
+            <td class="num">1500.0</td>
+            <td class="num">1566.5</td>
+            <td class="num positive">+66.5</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-6')">
+      <td class="rank">6</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Leo Dyrkjøb
+      </td>
+      <td class="rating">1562.9</td>
+      <td class="tournaments">7</td>
+    </tr>
+    <tr class="history-row" id="player-6" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>2</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1500.0</td>
+            <td class="num">1538.5</td>
+            <td class="num positive">+38.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>4</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1538.5</td>
+            <td class="num">1544.8</td>
+            <td class="num positive">+6.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>9</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1544.8</td>
+            <td class="num">1533.4</td>
+            <td class="num negative">-11.4</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>4</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1533.4</td>
+            <td class="num">1541.5</td>
+            <td class="num positive">+8.1</td>
+          </tr>
+            
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>6</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1541.5</td>
+            <td class="num">1549.1</td>
+            <td class="num positive">+7.6</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>7</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1549.1</td>
+            <td class="num">1556.7</td>
+            <td class="num positive">+7.6</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>5</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1556.7</td>
+            <td class="num">1562.9</td>
+            <td class="num positive">+6.2</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-7')">
+      <td class="rank">7</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        gui morgado
+      </td>
+      <td class="rating">1554.1</td>
+      <td class="tournaments">7</td>
+    </tr>
+    <tr class="history-row" id="player-7" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>8</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1500.0</td>
+            <td class="num">1511.3</td>
+            <td class="num positive">+11.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>5</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1511.3</td>
+            <td class="num">1522.2</td>
+            <td class="num positive">+10.9</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>10</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1522.2</td>
+            <td class="num">1514.7</td>
+            <td class="num negative">-7.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>5</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1514.7</td>
+            <td class="num">1526.0</td>
+            <td class="num positive">+11.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>7</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1526.0</td>
+            <td class="num">1536.3</td>
+            <td class="num positive">+10.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>6</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1536.3</td>
+            <td class="num">1546.1</td>
+            <td class="num positive">+9.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>6</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1546.1</td>
+            <td class="num">1554.1</td>
+            <td class="num positive">+8.0</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-8')">
+      <td class="rank">8</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Freya Gade Ravnsborg
+      </td>
+      <td class="rating">1553.2</td>
+      <td class="tournaments">5</td>
+    </tr>
+    <tr class="history-row" id="player-8" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>8</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1500.0</td>
+            <td class="num">1512.8</td>
+            <td class="num positive">+12.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>8</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1512.8</td>
+            <td class="num">1524.4</td>
+            <td class="num positive">+11.6</td>
+          </tr>
+            
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>5</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1524.4</td>
+            <td class="num">1534.9</td>
+            <td class="num positive">+10.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>4</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1534.9</td>
+            <td class="num">1544.9</td>
+            <td class="num positive">+10.0</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>7</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1544.9</td>
+            <td class="num">1553.2</td>
+            <td class="num positive">+8.3</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-9')">
+      <td class="rank">9</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Jørgen Hoel
+      </td>
+      <td class="rating">1545.7</td>
+      <td class="tournaments">7</td>
+    </tr>
+    <tr class="history-row" id="player-9" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>9</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1500.0</td>
+            <td class="num">1496.3</td>
+            <td class="num negative">-3.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>6</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1496.3</td>
+            <td class="num">1509.8</td>
+            <td class="num positive">+13.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>11</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1509.8</td>
+            <td class="num">1496.8</td>
+            <td class="num negative">-13.0</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>6</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1496.8</td>
+            <td class="num">1511.2</td>
+            <td class="num positive">+14.4</td>
+          </tr>
+            
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>8</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1511.2</td>
+            <td class="num">1524.0</td>
+            <td class="num positive">+12.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>8</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1524.0</td>
+            <td class="num">1535.9</td>
+            <td class="num positive">+11.9</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>8</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1535.9</td>
+            <td class="num">1545.7</td>
+            <td class="num positive">+9.8</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-10')">
+      <td class="rank">10</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Erika C
+      </td>
+      <td class="rating">1527.9</td>
+      <td class="tournaments">7</td>
+    </tr>
+    <tr class="history-row" id="player-10" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>4</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1500.0</td>
+            <td class="num">1511.3</td>
+            <td class="num positive">+11.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>9</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1511.3</td>
+            <td class="num">1522.2</td>
+            <td class="num positive">+10.9</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>3</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1522.2</td>
+            <td class="num">1556.9</td>
+            <td class="num positive">+34.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>9</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1556.9</td>
+            <td class="num">1546.1</td>
+            <td class="num negative">-10.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>9</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1546.1</td>
+            <td class="num">1538.0</td>
+            <td class="num negative">-8.1</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>9</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1538.0</td>
+            <td class="num">1532.5</td>
+            <td class="num negative">-5.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>9</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1532.5</td>
+            <td class="num">1527.9</td>
+            <td class="num negative">-4.6</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-11')">
+      <td class="rank">11</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Emma Gad
+      </td>
+      <td class="rating">1523.0</td>
+      <td class="tournaments">4</td>
+    </tr>
+    <tr class="history-row" id="player-11" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>2</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1500.0</td>
+            <td class="num">1538.5</td>
+            <td class="num positive">+38.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>10</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1538.5</td>
+            <td class="num">1530.8</td>
+            <td class="num negative">-7.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>10</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1530.8</td>
+            <td class="num">1526.6</td>
+            <td class="num negative">-4.2</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>10</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1526.6</td>
+            <td class="num">1523.0</td>
+            <td class="num negative">-3.6</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-12')">
+      <td class="rank">12</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Austin McKeand
+      </td>
+      <td class="rating">1505.0</td>
+      <td class="tournaments">5</td>
+    </tr>
+    <tr class="history-row" id="player-12" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>7</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1500.0</td>
+            <td class="num">1511.3</td>
+            <td class="num positive">+11.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>1</td>
+            <td>5-0-0</td>
+            <td>15</td>
+            <td class="num">1511.3</td>
+            <td class="num">1574.9</td>
+            <td class="num positive">+63.6</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>16</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1574.9</td>
+            <td class="num">1526.2</td>
+            <td class="num negative">-48.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>11</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1526.2</td>
+            <td class="num">1513.9</td>
+            <td class="num negative">-12.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>12</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1513.9</td>
+            <td class="num">1505.0</td>
+            <td class="num negative">-8.9</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-13')">
+      <td class="rank">13</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        John Smith
+      </td>
+      <td class="rating">1497.9</td>
+      <td class="tournaments">1</td>
+    </tr>
+    <tr class="history-row" id="player-13" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>10</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1500.0</td>
+            <td class="num">1497.9</td>
+            <td class="num negative">-2.1</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-14')">
+      <td class="rank">14</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Aslak Hansen
+      </td>
+      <td class="rating">1494.6</td>
+      <td class="tournaments">4</td>
+    </tr>
+    <tr class="history-row" id="player-14" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>11</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1500.0</td>
+            <td class="num">1490.3</td>
+            <td class="num negative">-9.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>5</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1490.3</td>
+            <td class="num">1503.2</td>
+            <td class="num positive">+12.9</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>11</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1503.2</td>
+            <td class="num">1493.9</td>
+            <td class="num negative">-9.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>10</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1493.9</td>
+            <td class="num">1494.6</td>
+            <td class="num positive">+0.7</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-15')">
+      <td class="rank">15</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Jennifer Sorensen
+      </td>
+      <td class="rating">1492.1</td>
+      <td class="tournaments">1</td>
+    </tr>
+    <tr class="history-row" id="player-15" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>12</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1500.0</td>
+            <td class="num">1492.1</td>
+            <td class="num negative">-7.9</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-16')">
+      <td class="rank">16</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Søren Kierkegaard
+      </td>
+      <td class="rating">1491.9</td>
+      <td class="tournaments">3</td>
+    </tr>
+    <tr class="history-row" id="player-16" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>5</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1500.0</td>
+            <td class="num">1511.3</td>
+            <td class="num positive">+11.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>13</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1511.3</td>
+            <td class="num">1498.1</td>
+            <td class="num negative">-13.2</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>13</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1498.1</td>
+            <td class="num">1491.9</td>
+            <td class="num negative">-6.2</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-17')">
+      <td class="rank">17</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        devin anglin
+      </td>
+      <td class="rating">1491.8</td>
+      <td class="tournaments">4</td>
+    </tr>
+    <tr class="history-row" id="player-17" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>10</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1500.0</td>
+            <td class="num">1496.3</td>
+            <td class="num negative">-3.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>14</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1496.3</td>
+            <td class="num">1487.2</td>
+            <td class="num negative">-9.1</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>7</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1487.2</td>
+            <td class="num">1500.6</td>
+            <td class="num positive">+13.4</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>14</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1500.6</td>
+            <td class="num">1491.8</td>
+            <td class="num negative">-8.8</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-18')">
+      <td class="rank">18</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Georg Brandes
+      </td>
+      <td class="rating">1484.1</td>
+      <td class="tournaments">2</td>
+    </tr>
+    <tr class="history-row" id="player-18" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>13</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1500.0</td>
+            <td class="num">1488.7</td>
+            <td class="num negative">-11.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>14</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1488.7</td>
+            <td class="num">1484.1</td>
+            <td class="num negative">-4.6</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-19')">
+      <td class="rank">19</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Christian X
+      </td>
+      <td class="rating">1484.0</td>
+      <td class="tournaments">2</td>
+    </tr>
+    <tr class="history-row" id="player-19" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>14</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1500.0</td>
+            <td class="num">1488.7</td>
+            <td class="num negative">-11.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>14</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1488.7</td>
+            <td class="num">1484.0</td>
+            <td class="num negative">-4.7</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-20')">
+      <td class="rank">20</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Yuxiang Zhuang
+      </td>
+      <td class="rating">1483.7</td>
+      <td class="tournaments">5</td>
+    </tr>
+    <tr class="history-row" id="player-20" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>12</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1500.0</td>
+            <td class="num">1490.3</td>
+            <td class="num negative">-9.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>6</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1490.3</td>
+            <td class="num">1503.2</td>
+            <td class="num positive">+12.9</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>12</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1503.2</td>
+            <td class="num">1493.9</td>
+            <td class="num negative">-9.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>11</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1493.9</td>
+            <td class="num">1488.4</td>
+            <td class="num negative">-5.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>11</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1488.4</td>
+            <td class="num">1483.7</td>
+            <td class="num negative">-4.7</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-21')">
+      <td class="rank">21</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Mads Duppnt
+      </td>
+      <td class="rating">1481.6</td>
+      <td class="tournaments">4</td>
+    </tr>
+    <tr class="history-row" id="player-21" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>6</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1500.0</td>
+            <td class="num">1511.3</td>
+            <td class="num positive">+11.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>13</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1511.3</td>
+            <td class="num">1499.7</td>
+            <td class="num negative">-11.6</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>12</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1499.7</td>
+            <td class="num">1488.4</td>
+            <td class="num negative">-11.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>13</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1488.4</td>
+            <td class="num">1481.6</td>
+            <td class="num negative">-6.8</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-22')">
+      <td class="rank">22</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Princess Alexandra
+      </td>
+      <td class="rating">1464.9</td>
+      <td class="tournaments">1</td>
+    </tr>
+    <tr class="history-row" id="player-22" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>16</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1500.0</td>
+            <td class="num">1464.9</td>
+            <td class="num negative">-35.1</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-23')">
+      <td class="rank">23</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Esben Roenne Green
+      </td>
+      <td class="rating">1464.0</td>
+      <td class="tournaments">1</td>
+    </tr>
+    <tr class="history-row" id="player-23" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>17</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1500.0</td>
+            <td class="num">1464.0</td>
+            <td class="num negative">-36.0</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-24')">
+      <td class="rank">24</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Jane Doe
+      </td>
+      <td class="rating">1463.0</td>
+      <td class="tournaments">1</td>
+    </tr>
+    <tr class="history-row" id="player-24" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>17</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1500.0</td>
+            <td class="num">1463.0</td>
+            <td class="num negative">-37.0</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-25')">
+      <td class="rank">25</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Garret O'Connell
+      </td>
+      <td class="rating">1461.3</td>
+      <td class="tournaments">4</td>
+    </tr>
+    <tr class="history-row" id="player-25" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260215_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>15</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1500.0</td>
+            <td class="num">1471.0</td>
+            <td class="num negative">-29.0</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>4</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1471.0</td>
+            <td class="num">1487.2</td>
+            <td class="num positive">+16.2</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-06-04</td>
+            <td>15</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1487.2</td>
+            <td class="num">1461.4</td>
+            <td class="num negative">-25.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>12</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1461.4</td>
+            <td class="num">1461.3</td>
+            <td class="num negative">-0.1</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-26')">
+      <td class="rank">26</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Viggo Adamsen
+      </td>
+      <td class="rating">1460.1</td>
+      <td class="tournaments">3</td>
+    </tr>
+    <tr class="history-row" id="player-26" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>14</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1500.0</td>
+            <td class="num">1488.7</td>
+            <td class="num negative">-11.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>15</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1488.7</td>
+            <td class="num">1460.0</td>
+            <td class="num negative">-28.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>13</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1460.0</td>
+            <td class="num">1460.1</td>
+            <td class="num positive">+0.1</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-27')">
+      <td class="rank">27</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Poul Henningsen
+      </td>
+      <td class="rating">1460.1</td>
+      <td class="tournaments">2</td>
+    </tr>
+    <tr class="history-row" id="player-27" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>17</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1500.0</td>
+            <td class="num">1461.4</td>
+            <td class="num negative">-38.6</td>
+          </tr>
+            
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>13</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1461.4</td>
+            <td class="num">1460.1</td>
+            <td class="num negative">-1.3</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-28')">
+      <td class="rank">28</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Birger Jarl
+      </td>
+      <td class="rating">1459.6</td>
+      <td class="tournaments">2</td>
+    </tr>
+    <tr class="history-row" id="player-28" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>14</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1500.0</td>
+            <td class="num">1492.1</td>
+            <td class="num negative">-7.9</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>16</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1492.1</td>
+            <td class="num">1459.6</td>
+            <td class="num negative">-32.5</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-29')">
+      <td class="rank">29</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Margrethe II
+      </td>
+      <td class="rating">1448.9</td>
+      <td class="tournaments">2</td>
+    </tr>
+    <tr class="history-row" id="player-29" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>15</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1500.0</td>
+            <td class="num">1469.5</td>
+            <td class="num negative">-30.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>15</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1469.5</td>
+            <td class="num">1448.9</td>
+            <td class="num negative">-20.6</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-30')">
+      <td class="rank">30</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Frederik VIII
+      </td>
+      <td class="rating">1443.6</td>
+      <td class="tournaments">2</td>
+    </tr>
+    <tr class="history-row" id="player-30" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>15</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1500.0</td>
+            <td class="num">1472.9</td>
+            <td class="num negative">-27.1</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>16</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1472.9</td>
+            <td class="num">1443.6</td>
+            <td class="num negative">-29.3</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-31')">
+      <td class="rank">31</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Peder the Great
+      </td>
+      <td class="rating">1436.9</td>
+      <td class="tournaments">2</td>
+    </tr>
+    <tr class="history-row" id="player-31" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260410_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>17</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1500.0</td>
+            <td class="num">1464.9</td>
+            <td class="num negative">-35.1</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>17</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1464.9</td>
+            <td class="num">1436.9</td>
+            <td class="num negative">-28.0</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-32')">
+      <td class="rank">32</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Tycho Brahe
+      </td>
+      <td class="rating">1434.2</td>
+      <td class="tournaments">2</td>
+    </tr>
+    <tr class="history-row" id="player-32" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>16</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1500.0</td>
+            <td class="num">1461.5</td>
+            <td class="num negative">-38.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260712_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>17</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1461.5</td>
+            <td class="num">1434.2</td>
+            <td class="num negative">-27.3</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-33')">
+      <td class="rank">33</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Absalon
+      </td>
+      <td class="rating">1415.6</td>
+      <td class="tournaments">3</td>
+    </tr>
+    <tr class="history-row" id="player-33" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260110_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>17</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1500.0</td>
+            <td class="num">1461.5</td>
+            <td class="num negative">-38.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260218_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>16</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1461.5</td>
+            <td class="num">1429.5</td>
+            <td class="num negative">-32.0</td>
+          </tr>
+            
+          <tr>
+            <td>20260920_pauper_dummy</td>
+            <td>2026-06-04</td>
+            <td>15</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1429.5</td>
+            <td class="num">1415.6</td>
+            <td class="num negative">-13.9</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="footer">
+      <p>Generated from final_standings_version ELO data</p>
+    </div>
+  </div>
+  
+  <script>
+    function toggleHistory(playerId) {
+      const row = document.getElementById(playerId);
+      const playerRow = row.previousElementSibling;
+      
+      if (row.style.display === 'none') {
+        row.style.display = 'table-row';
+        playerRow.classList.add('expanded');
+      } else {
+        row.style.display = 'none';
+        playerRow.classList.remove('expanded');
+      }
+    }
+  </script>
+</body>
+</html>
