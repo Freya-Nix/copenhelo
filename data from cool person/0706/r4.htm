@@ -1,0 +1,3767 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Google Tag Manager -->
+    <script async="" src="r4_files/google-analytics_analytics.js"></script><script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-N95QB9XL')
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 'Font Awesome 7 Free';
+  --fa-font-regular: normal 400 1em/1 'Font Awesome 7 Free';
+  --fa-font-light: normal 300 1em/1 'Font Awesome 7 Pro';
+  --fa-font-thin: normal 100 1em/1 'Font Awesome 7 Pro';
+  --fa-font-duotone: normal 900 1em/1 'Font Awesome 7 Duotone';
+  --fa-font-duotone-regular: normal 400 1em/1 'Font Awesome 7 Duotone';
+  --fa-font-duotone-light: normal 300 1em/1 'Font Awesome 7 Duotone';
+  --fa-font-duotone-thin: normal 100 1em/1 'Font Awesome 7 Duotone';
+  --fa-font-brands: normal 400 1em/1 'Font Awesome 7 Brands';
+  --fa-font-sharp-solid: normal 900 1em/1 'Font Awesome 7 Sharp';
+  --fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 7 Sharp';
+  --fa-font-sharp-light: normal 300 1em/1 'Font Awesome 7 Sharp';
+  --fa-font-sharp-thin: normal 100 1em/1 'Font Awesome 7 Sharp';
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 'Font Awesome 7 Sharp Duotone';
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 'Font Awesome 7 Sharp Duotone';
+  --fa-font-sharp-duotone-light: normal 300 1em/1 'Font Awesome 7 Sharp Duotone';
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 'Font Awesome 7 Sharp Duotone';
+  --fa-font-slab-regular: normal 400 1em/1 'Font Awesome 7 Slab';
+  --fa-font-slab-press-regular: normal 400 1em/1 'Font Awesome 7 Slab Press';
+  --fa-font-whiteboard-semibold: normal 600 1em/1 'Font Awesome 7 Whiteboard';
+  --fa-font-thumbprint-light: normal 300 1em/1 'Font Awesome 7 Thumbprint';
+  --fa-font-notdog-solid: normal 900 1em/1 'Font Awesome 7 Notdog';
+  --fa-font-notdog-duo-solid: normal 900 1em/1 'Font Awesome 7 Notdog Duo';
+  --fa-font-etch-solid: normal 900 1em/1 'Font Awesome 7 Etch';
+  --fa-font-graphite-thin: normal 100 1em/1 'Font Awesome 7 Graphite';
+  --fa-font-jelly-regular: normal 400 1em/1 'Font Awesome 7 Jelly';
+  --fa-font-jelly-fill-regular: normal 400 1em/1 'Font Awesome 7 Jelly Fill';
+  --fa-font-jelly-duo-regular: normal 400 1em/1 'Font Awesome 7 Jelly Duo';
+  --fa-font-chisel-regular: normal 400 1em/1 'Font Awesome 7 Chisel';
+  --fa-font-utility-semibold: normal 600 1em/1 'Font Awesome 7 Utility';
+  --fa-font-utility-duo-semibold: normal 600 1em/1 'Font Awesome 7 Utility Duo';
+  --fa-font-utility-fill-semibold: normal 600 1em/1 'Font Awesome 7 Utility Fill';
+}
+
+.svg-inline--fa {
+  box-sizing: content-box;
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285714em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left,
+.svg-inline--fa .fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-pull-right,
+.svg-inline--fa .fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.fa-layers .svg-inline--fa {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xs {
+  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-sm {
+  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-lg {
+  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xl {
+  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-2xl {
+  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-width-auto {
+  --fa-width: auto;
+}
+
+.fa-fw,
+.fa-width-fixed {
+  --fa-width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-inline-start: var(--fa-li-margin, 2.5em);
+  padding-inline-start: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+/* Heads Up: Bordered Icons will not be supported in the future!
+  - This feature will be deprecated in the next major release of Font Awesome (v8)!
+  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.
+*/
+/* Notes:
+* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)
+* --@{v.$css-prefix}-border-padding =
+  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)
+  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)
+*/
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.0625em);
+  box-sizing: var(--fa-border-box-sizing, content-box);
+  padding: var(--fa-border-padding, 0.1875em 0.25em);
+}
+
+.fa-pull-left,
+.fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right,
+.fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+  .fa-bounce,
+  .fa-fade,
+  .fa-beat-fade,
+  .fa-flip,
+  .fa-pulse,
+  .fa-shake,
+  .fa-spin,
+  .fa-spin-pulse {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.svg-inline--fa.fa-inverse {
+  fill: var(--fa-inverse, #fff);
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  --fa-width: 1.25em;
+  height: 1em;
+  width: var(--fa-width);
+}
+.svg-inline--fa.fa-stack-2x {
+  --fa-width: 2.5em;
+  height: 2em;
+  width: var(--fa-width);
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  z-index: var(--fa-stack-z-index, auto);
+}</style><link rel="icon" href="https://eventlink.wizards.com/assets/favicon-Ee9YMnt4.ico">
+    <link href="r4_files/css.css" rel="stylesheet">
+    <link rel="stylesheet" href="r4_files/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <script>
+      !(function () {
+        ;((window.semaphore = window.semaphore || []),
+          (window.ketch = function () {
+            window.semaphore.push(arguments)
+          }))
+        var e = new URLSearchParams(document.location.search),
+          o = e.has('property') ? e.get('property') : 'eventlink',
+          n = document.createElement('script')
+        ;((n.type = 'text/javascript'),
+          (n.src = 'https://global.ketchcdn.com/web/v3/config/hasbro/'.concat(o, '/boot.js')),
+          (n.defer = n.async = !0),
+          document.getElementsByTagName('head')[0].appendChild(n))
+      })()
+    </script><script type="text/javascript" src="r4_files/boot.js" async="" defer="defer"></script>
+    <script type="module" crossorigin="" src="r4_files/index-BKs1eNNG.js"></script>
+    <link rel="modulepreload" crossorigin="" href="https://eventlink.wizards.com/assets/appsettings-BTmWMl83.js">
+    <link rel="stylesheet" crossorigin="" href="r4_files/index-DrXFsnyB.css">
+  <script type="text/javascript" async="" defer="defer" src="r4_files/ketch-sdk.js"></script><style>#lanyard_root {
+  *, ::before, ::after {
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x:  ;
+    --tw-pan-y:  ;
+    --tw-pinch-zoom:  ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-gradient-from-position:  ;
+    --tw-gradient-via-position:  ;
+    --tw-gradient-to-position:  ;
+    --tw-ordinal:  ;
+    --tw-slashed-zero:  ;
+    --tw-numeric-figure:  ;
+    --tw-numeric-spacing:  ;
+    --tw-numeric-fraction:  ;
+    --tw-ring-inset:  ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur:  ;
+    --tw-brightness:  ;
+    --tw-contrast:  ;
+    --tw-grayscale:  ;
+    --tw-hue-rotate:  ;
+    --tw-invert:  ;
+    --tw-saturate:  ;
+    --tw-sepia:  ;
+    --tw-drop-shadow:  ;
+    --tw-backdrop-blur:  ;
+    --tw-backdrop-brightness:  ;
+    --tw-backdrop-contrast:  ;
+    --tw-backdrop-grayscale:  ;
+    --tw-backdrop-hue-rotate:  ;
+    --tw-backdrop-invert:  ;
+    --tw-backdrop-opacity:  ;
+    --tw-backdrop-saturate:  ;
+    --tw-backdrop-sepia:  ;
+    --tw-contain-size:  ;
+    --tw-contain-layout:  ;
+    --tw-contain-paint:  ;
+    --tw-contain-style:  ;
+  }
+  ::backdrop {
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x:  ;
+    --tw-pan-y:  ;
+    --tw-pinch-zoom:  ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-gradient-from-position:  ;
+    --tw-gradient-via-position:  ;
+    --tw-gradient-to-position:  ;
+    --tw-ordinal:  ;
+    --tw-slashed-zero:  ;
+    --tw-numeric-figure:  ;
+    --tw-numeric-spacing:  ;
+    --tw-numeric-fraction:  ;
+    --tw-ring-inset:  ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur:  ;
+    --tw-brightness:  ;
+    --tw-contrast:  ;
+    --tw-grayscale:  ;
+    --tw-hue-rotate:  ;
+    --tw-invert:  ;
+    --tw-saturate:  ;
+    --tw-sepia:  ;
+    --tw-drop-shadow:  ;
+    --tw-backdrop-blur:  ;
+    --tw-backdrop-brightness:  ;
+    --tw-backdrop-contrast:  ;
+    --tw-backdrop-grayscale:  ;
+    --tw-backdrop-hue-rotate:  ;
+    --tw-backdrop-invert:  ;
+    --tw-backdrop-opacity:  ;
+    --tw-backdrop-saturate:  ;
+    --tw-backdrop-sepia:  ;
+    --tw-contain-size:  ;
+    --tw-contain-layout:  ;
+    --tw-contain-paint:  ;
+    --tw-contain-style:  ;
+  }
+}
+#lanyard_root * .ketch-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+#lanyard_root * .ketch-pointer-events-none {
+  pointer-events: none;
+}
+#lanyard_root * .ketch-pointer-events-auto {
+  pointer-events: auto;
+}
+#lanyard_root * .ketch-fixed {
+  position: fixed;
+}
+#lanyard_root * .ketch-absolute {
+  position: absolute;
+}
+#lanyard_root * .ketch-relative {
+  position: relative;
+}
+#lanyard_root * .ketch-inset-0 {
+  inset: 0;
+}
+#lanyard_root * .ketch-inset-y-0 {
+  top: 0;
+  bottom: 0;
+}
+#lanyard_root * .\!ketch-left-0 {
+  left: 0 !important;
+}
+#lanyard_root * .\!ketch-right-0 {
+  right: 0 !important;
+}
+#lanyard_root * .ketch-bottom-0 {
+  bottom: 0;
+}
+#lanyard_root * .ketch-bottom-1 {
+  bottom: 4px;
+}
+#lanyard_root * .ketch-bottom-2\/4 {
+  bottom: 50%;
+}
+#lanyard_root * .ketch-bottom-\[50\%\] {
+  bottom: 50%;
+}
+#lanyard_root * .ketch-bottom-auto {
+  bottom: auto;
+}
+#lanyard_root * .ketch-end-\[2px\] {
+  inset-inline-end: 2px;
+}
+#lanyard_root * .ketch-left-0 {
+  left: 0;
+}
+#lanyard_root * .ketch-left-1 {
+  left: 4px;
+}
+#lanyard_root * .ketch-left-auto {
+  left: auto;
+}
+#lanyard_root * .ketch-right-0 {
+  right: 0;
+}
+#lanyard_root * .ketch-right-1 {
+  right: 4px;
+}
+#lanyard_root * .ketch-start-\[2px\] {
+  inset-inline-start: 2px;
+}
+#lanyard_root * .ketch-top-0 {
+  top: 0;
+}
+#lanyard_root * .ketch-top-1 {
+  top: 4px;
+}
+#lanyard_root * .ketch-top-\[2px\] {
+  top: 2px;
+}
+#lanyard_root * .ketch-top-\[4px\] {
+  top: 4px;
+}
+#lanyard_root * .-ketch-z-10 {
+  z-index: -10;
+}
+#lanyard_root * .ketch-z-0 {
+  z-index: 0;
+}
+#lanyard_root * .ketch-z-10 {
+  z-index: 10;
+}
+#lanyard_root * .ketch-z-ketch-max-z-index {
+  z-index: 2147483647;
+}
+#lanyard_root * .ketch-col-span-1 {
+  grid-column: span 1 / span 1;
+}
+#lanyard_root * .ketch-col-span-12 {
+  grid-column: span 12 / span 12;
+}
+#lanyard_root * .ketch-col-span-2 {
+  grid-column: span 2 / span 2;
+}
+#lanyard_root * .ketch-row-span-1 {
+  grid-row: span 1 / span 1;
+}
+#lanyard_root * .\!ketch-m-0 {
+  margin: 0 !important;
+}
+#lanyard_root * .ketch-m-0 {
+  margin: 0;
+}
+#lanyard_root * .ketch-mx-16 {
+  margin-left: 64px;
+  margin-right: 64px;
+}
+#lanyard_root * .ketch-mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+#lanyard_root * .ketch-my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#lanyard_root * .ketch-my-2 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+#lanyard_root * .ketch-my-4 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+#lanyard_root * .ketch-mb-1 {
+  margin-bottom: 4px;
+}
+#lanyard_root * .ketch-mb-2 {
+  margin-bottom: 8px;
+}
+#lanyard_root * .ketch-mb-3 {
+  margin-bottom: 12px;
+}
+#lanyard_root * .ketch-mb-4 {
+  margin-bottom: 16px;
+}
+#lanyard_root * .ketch-mb-6 {
+  margin-bottom: 24px;
+}
+#lanyard_root * .ketch-mb-8 {
+  margin-bottom: 32px;
+}
+#lanyard_root * .ketch-ml-0 {
+  margin-left: 0;
+}
+#lanyard_root * .ketch-ml-1 {
+  margin-left: 4px;
+}
+#lanyard_root * .ketch-ml-2\.5 {
+  margin-left: 10px;
+}
+#lanyard_root * .ketch-ml-4 {
+  margin-left: 16px;
+}
+#lanyard_root * .ketch-ml-\[18px\] {
+  margin-left: 18px;
+}
+#lanyard_root * .ketch-ml-\[24px\] {
+  margin-left: 24px;
+}
+#lanyard_root * .ketch-ml-auto {
+  margin-left: auto;
+}
+#lanyard_root * .ketch-mr-4 {
+  margin-right: 16px;
+}
+#lanyard_root * .ketch-mr-auto {
+  margin-right: auto;
+}
+#lanyard_root * .ketch-mt-1 {
+  margin-top: 4px;
+}
+#lanyard_root * .ketch-mt-3 {
+  margin-top: 12px;
+}
+#lanyard_root * .ketch-mt-4 {
+  margin-top: 16px;
+}
+#lanyard_root * .ketch-mt-5 {
+  margin-top: 20px;
+}
+#lanyard_root * .ketch-mt-8 {
+  margin-top: 32px;
+}
+#lanyard_root * .ketch-box-border {
+  box-sizing: border-box;
+}
+#lanyard_root * .\!ketch-block {
+  display: block !important;
+}
+#lanyard_root * .ketch-block {
+  display: block;
+}
+#lanyard_root * .ketch-inline-block {
+  display: inline-block;
+}
+#lanyard_root * .ketch-inline {
+  display: inline;
+}
+#lanyard_root * .\!ketch-flex {
+  display: flex !important;
+}
+#lanyard_root * .ketch-flex {
+  display: flex;
+}
+#lanyard_root * .ketch-inline-flex {
+  display: inline-flex;
+}
+#lanyard_root * .ketch-grid {
+  display: grid;
+}
+#lanyard_root * .ketch-hidden {
+  display: none;
+}
+#lanyard_root * .ketch-aspect-\[1024\/480\] {
+  aspect-ratio: 1024/480;
+}
+#lanyard_root * .ketch-h-0 {
+  height: 0;
+}
+#lanyard_root * .ketch-h-10 {
+  height: 40px;
+}
+#lanyard_root * .ketch-h-11 {
+  height: 44px;
+}
+#lanyard_root * .ketch-h-12 {
+  height: 48px;
+}
+#lanyard_root * .ketch-h-16 {
+  height: 64px;
+}
+#lanyard_root * .ketch-h-24 {
+  height: 96px;
+}
+#lanyard_root * .ketch-h-4 {
+  height: 16px;
+}
+#lanyard_root * .ketch-h-5 {
+  height: 20px;
+}
+#lanyard_root * .ketch-h-6 {
+  height: 24px;
+}
+#lanyard_root * .ketch-h-9 {
+  height: 36px;
+}
+#lanyard_root * .ketch-h-\[17px\] {
+  height: 17px;
+}
+#lanyard_root * .ketch-h-\[20px\] {
+  height: 20px;
+}
+#lanyard_root * .ketch-h-\[22px\] {
+  height: 22px;
+}
+#lanyard_root * .ketch-h-\[30px\] {
+  height: 30px;
+}
+#lanyard_root * .ketch-h-\[50\%\] {
+  height: 50%;
+}
+#lanyard_root * .ketch-h-auto {
+  height: auto;
+}
+#lanyard_root * .ketch-h-dvh {
+  height: 100dvh;
+}
+#lanyard_root * .ketch-h-full {
+  height: 100%;
+}
+#lanyard_root * .ketch-h-px {
+  height: 1px;
+}
+#lanyard_root * .ketch-max-h-10 {
+  max-height: 40px;
+}
+#lanyard_root * .ketch-max-h-44 {
+  max-height: 176px;
+}
+#lanyard_root * .ketch-max-h-6 {
+  max-height: 24px;
+}
+#lanyard_root * .ketch-max-h-60 {
+  max-height: 240px;
+}
+#lanyard_root * .ketch-max-h-9 {
+  max-height: 36px;
+}
+#lanyard_root * .ketch-max-h-\[30px\] {
+  max-height: 30px;
+}
+#lanyard_root * .ketch-max-h-\[48px\] {
+  max-height: 48px;
+}
+#lanyard_root * .ketch-max-h-\[64px\] {
+  max-height: 64px;
+}
+#lanyard_root * .ketch-max-h-\[69px\] {
+  max-height: 69px;
+}
+#lanyard_root * .ketch-max-h-\[75\%\] {
+  max-height: 75%;
+}
+#lanyard_root * .ketch-max-h-\[90\%\] {
+  max-height: 90%;
+}
+#lanyard_root * .ketch-max-h-dvh {
+  max-height: 100dvh;
+}
+#lanyard_root * .ketch-max-h-full {
+  max-height: 100%;
+}
+#lanyard_root * .ketch-min-h-0 {
+  min-height: 0;
+}
+#lanyard_root * .ketch-min-h-10 {
+  min-height: 40px;
+}
+#lanyard_root * .ketch-min-h-11 {
+  min-height: 44px;
+}
+#lanyard_root * .ketch-min-h-12 {
+  min-height: 48px;
+}
+#lanyard_root * .ketch-min-h-7 {
+  min-height: 28px;
+}
+#lanyard_root * .ketch-min-h-8 {
+  min-height: 32px;
+}
+#lanyard_root * .ketch-min-h-\[125px\] {
+  min-height: 125px;
+}
+#lanyard_root * .ketch-min-h-\[57px\] {
+  min-height: 57px;
+}
+#lanyard_root * .ketch-min-h-\[75px\] {
+  min-height: 75px;
+}
+#lanyard_root * .ketch-min-h-full {
+  min-height: 100%;
+}
+#lanyard_root * .ketch-min-h-lvh {
+  min-height: 100lvh;
+}
+#lanyard_root * .\!ketch-w-full {
+  width: 100% !important;
+}
+#lanyard_root * .ketch-w-10 {
+  width: 40px;
+}
+#lanyard_root * .ketch-w-11 {
+  width: 44px;
+}
+#lanyard_root * .ketch-w-16 {
+  width: 64px;
+}
+#lanyard_root * .ketch-w-24 {
+  width: 96px;
+}
+#lanyard_root * .ketch-w-4 {
+  width: 16px;
+}
+#lanyard_root * .ketch-w-48 {
+  width: 192px;
+}
+#lanyard_root * .ketch-w-5 {
+  width: 20px;
+}
+#lanyard_root * .ketch-w-6 {
+  width: 24px;
+}
+#lanyard_root * .ketch-w-9 {
+  width: 36px;
+}
+#lanyard_root * .ketch-w-\[115px\] {
+  width: 115px;
+}
+#lanyard_root * .ketch-w-\[134px\] {
+  width: 134px;
+}
+#lanyard_root * .ketch-w-\[224px\] {
+  width: 224px;
+}
+#lanyard_root * .ketch-w-\[30px\] {
+  width: 30px;
+}
+#lanyard_root * .ketch-w-\[328px\] {
+  width: 328px;
+}
+#lanyard_root * .ketch-w-\[calc\(100\%-8px\)\] {
+  width: calc(100% - 8px);
+}
+#lanyard_root * .ketch-w-auto {
+  width: auto;
+}
+#lanyard_root * .ketch-w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#lanyard_root * .ketch-w-full {
+  width: 100%;
+}
+#lanyard_root * .ketch-w-px {
+  width: 1px;
+}
+#lanyard_root * .ketch-min-w-0 {
+  min-width: 0;
+}
+#lanyard_root * .ketch-min-w-10 {
+  min-width: 40px;
+}
+#lanyard_root * .ketch-min-w-5 {
+  min-width: 20px;
+}
+#lanyard_root * .ketch-min-w-\[484px\] {
+  min-width: 484px;
+}
+#lanyard_root * .ketch-min-w-full {
+  min-width: 100%;
+}
+#lanyard_root * .ketch-max-w-5xl {
+  max-width: 64rem;
+}
+#lanyard_root * .ketch-max-w-6 {
+  max-width: 24px;
+}
+#lanyard_root * .ketch-max-w-9 {
+  max-width: 36px;
+}
+#lanyard_root * .ketch-max-w-\[140px\] {
+  max-width: 140px;
+}
+#lanyard_root * .ketch-max-w-\[200px\] {
+  max-width: 200px;
+}
+#lanyard_root * .ketch-max-w-\[268px\] {
+  max-width: 268px;
+}
+#lanyard_root * .ketch-max-w-\[30px\] {
+  max-width: 30px;
+}
+#lanyard_root * .ketch-max-w-\[400px\] {
+  max-width: 400px;
+}
+#lanyard_root * .ketch-max-w-\[560px\] {
+  max-width: 560px;
+}
+#lanyard_root * .ketch-max-w-full {
+  max-width: 100%;
+}
+#lanyard_root * .ketch-max-w-md {
+  max-width: 28rem;
+}
+#lanyard_root * .ketch-max-w-none {
+  max-width: none;
+}
+#lanyard_root * .ketch-flex-1 {
+  flex: 1 1 0%;
+}
+#lanyard_root * .ketch-flex-shrink-0 {
+  flex-shrink: 0;
+}
+#lanyard_root * .ketch-shrink {
+  flex-shrink: 1;
+}
+#lanyard_root * .ketch-shrink-0 {
+  flex-shrink: 0;
+}
+#lanyard_root * .ketch-flex-grow {
+  flex-grow: 1;
+}
+#lanyard_root * .ketch-flex-grow-0 {
+  flex-grow: 0;
+}
+#lanyard_root * .ketch-grow {
+  flex-grow: 1;
+}
+#lanyard_root * .ketch-grow-0 {
+  flex-grow: 0;
+}
+#lanyard_root * .ketch-border-collapse {
+  border-collapse: collapse;
+}
+#lanyard_root * .ketch-translate-y-2\/4 {
+  --tw-translate-y: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+#lanyard_root * .ketch-translate-y-\[50\%\] {
+  --tw-translate-y: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+@keyframes ketch-backdropFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#lanyard_root * .ketch-animate-backdropFadeOut {
+  animation: ketch-backdropFadeOut 0.4s forwards;
+}
+@keyframes ketch-bannerAnimateCenter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#lanyard_root * .ketch-animate-bannerAnimateCenter {
+  animation: ketch-bannerAnimateCenter 0.4s forwards;
+}
+@keyframes ketch-bannerAnimateTop {
+  from {
+    transform: translateY(-900px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+#lanyard_root * .ketch-animate-bannerAnimateTop {
+  animation: ketch-bannerAnimateTop 0.4s forwards;
+}
+@keyframes ketch-bannerDesktopAnimate {
+  from {
+    transform: translateY(900px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+#lanyard_root * .ketch-animate-bannerDesktopAnimate {
+  animation: ketch-bannerDesktopAnimate 0.4s forwards;
+}
+@keyframes ketch-bannerDismissBottom {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(900px);
+  }
+}
+#lanyard_root * .ketch-animate-bannerDismissBottom {
+  animation: ketch-bannerDismissBottom 0.4s forwards;
+}
+@keyframes ketch-bannerDismissCenter {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+#lanyard_root * .ketch-animate-bannerDismissCenter {
+  animation: ketch-bannerDismissCenter 0.4s forwards;
+}
+@keyframes ketch-bannerMobileBottomAnimate {
+  from {
+    transform: translateY(900px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+#lanyard_root * .ketch-animate-bannerMobileBottomAnimate {
+  animation: ketch-bannerMobileBottomAnimate 0.4s forwards;
+}
+@keyframes ketch-bannerMobileDismissBottom {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(900px);
+  }
+}
+#lanyard_root * .ketch-animate-bannerMobileDismissBottom {
+  animation: ketch-bannerMobileDismissBottom 0.4s forwards;
+}
+@keyframes ketch-fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#lanyard_root * .ketch-animate-fadeIn {
+  animation: ketch-fadeIn 0.5s ease-in-out;
+}
+@keyframes ketch-modalAnimatedLeft {
+  from {
+    left: -900px;
+  }
+  to {
+    left: 4px;
+  }
+}
+#lanyard_root * .ketch-animate-modalAnimatedLeft {
+  animation: ketch-modalAnimatedLeft 0.4s forwards;
+}
+@keyframes ketch-modalAnimatedRight {
+  from {
+    right: -900px;
+  }
+  to {
+    right: 4px;
+  }
+}
+#lanyard_root * .ketch-animate-modalAnimatedRight {
+  animation: ketch-modalAnimatedRight 0.4s forwards;
+}
+#lanyard_root * .ketch-animate-none {
+  animation: none;
+}
+@keyframes ketch-pulseOpacity {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+#lanyard_root * .ketch-animate-pulseOpacity {
+  animation: ketch-pulseOpacity 2s ease-in-out infinite;
+}
+#lanyard_root * .ketch-cursor-default {
+  cursor: default;
+}
+#lanyard_root * .ketch-cursor-pointer {
+  cursor: pointer;
+}
+#lanyard_root * .ketch-resize-none {
+  resize: none;
+}
+#lanyard_root * .ketch-list-disc {
+  list-style-type: disc;
+}
+#lanyard_root * .ketch-list-none {
+  list-style-type: none;
+}
+#lanyard_root * .ketch-appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+#lanyard_root * .ketch-auto-rows-min {
+  grid-auto-rows: min-content;
+}
+#lanyard_root * .ketch-grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+#lanyard_root * .ketch-grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+#lanyard_root * .ketch-grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+#lanyard_root * .ketch-grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+#lanyard_root * .ketch-grid-rows-\[auto_auto_1fr\] {
+  grid-template-rows: auto auto 1fr;
+}
+#lanyard_root * .ketch-flex-row {
+  flex-direction: row;
+}
+#lanyard_root * .ketch-flex-col {
+  flex-direction: column;
+}
+#lanyard_root * .ketch-flex-col-reverse {
+  flex-direction: column-reverse;
+}
+#lanyard_root * .ketch-flex-wrap {
+  flex-wrap: wrap;
+}
+#lanyard_root * .ketch-items-start {
+  align-items: flex-start;
+}
+#lanyard_root * .ketch-items-end {
+  align-items: flex-end;
+}
+#lanyard_root * .\!ketch-items-center {
+  align-items: center !important;
+}
+#lanyard_root * .ketch-items-center {
+  align-items: center;
+}
+#lanyard_root * .ketch-items-stretch {
+  align-items: stretch;
+}
+#lanyard_root * .\!ketch-justify-start {
+  justify-content: flex-start !important;
+}
+#lanyard_root * .ketch-justify-end {
+  justify-content: flex-end;
+}
+#lanyard_root * .ketch-justify-center {
+  justify-content: center;
+}
+#lanyard_root * .\!ketch-justify-between {
+  justify-content: space-between !important;
+}
+#lanyard_root * .ketch-justify-between {
+  justify-content: space-between;
+}
+#lanyard_root * .ketch-justify-stretch {
+  justify-content: stretch;
+}
+#lanyard_root * .ketch-justify-items-center {
+  justify-items: center;
+}
+#lanyard_root * .ketch-gap-0 {
+  gap: 0;
+}
+#lanyard_root * .ketch-gap-1 {
+  gap: 4px;
+}
+#lanyard_root * .ketch-gap-1\.5 {
+  gap: 6px;
+}
+#lanyard_root * .ketch-gap-12 {
+  gap: 48px;
+}
+#lanyard_root * .ketch-gap-16 {
+  gap: 64px;
+}
+#lanyard_root * .ketch-gap-2 {
+  gap: 8px;
+}
+#lanyard_root * .ketch-gap-3 {
+  gap: 12px;
+}
+#lanyard_root * .ketch-gap-4 {
+  gap: 16px;
+}
+#lanyard_root * .ketch-gap-5 {
+  gap: 20px;
+}
+#lanyard_root * .ketch-gap-6 {
+  gap: 24px;
+}
+#lanyard_root * .ketch-gap-8 {
+  gap: 32px;
+}
+#lanyard_root * .ketch-gap-\[-2px\] {
+  gap: -2px;
+}
+#lanyard_root * .ketch-gap-x-6 {
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+#lanyard_root * .ketch-gap-y-4 {
+  row-gap: 16px;
+}
+#lanyard_root * :is(.ketch-space-x-1 > :not([hidden]) ~ :not([hidden])) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(4px * var(--tw-space-x-reverse));
+  margin-left: calc(4px * calc(1 - var(--tw-space-x-reverse)));
+}
+#lanyard_root * .ketch-self-start {
+  align-self: flex-start;
+}
+#lanyard_root * .ketch-overflow-auto {
+  overflow: auto;
+}
+#lanyard_root * .ketch-overflow-hidden {
+  overflow: hidden;
+}
+#lanyard_root * .ketch-overflow-y-auto {
+  overflow-y: auto;
+}
+#lanyard_root * .ketch-overflow-y-scroll {
+  overflow-y: scroll;
+}
+#lanyard_root * .ketch-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#lanyard_root * .ketch-whitespace-nowrap {
+  white-space: nowrap;
+}
+#lanyard_root * .ketch-whitespace-break-spaces {
+  white-space: break-spaces;
+}
+#lanyard_root * .ketch-break-words {
+  overflow-wrap: break-word;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-banner-buttons-primary-cornerRadius\] {
+  border-radius: var(--k-banner-buttons-primary-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-banner-buttons-secondary-cornerRadius\] {
+  border-radius: var(--k-banner-buttons-secondary-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-banner-buttons-tertiary-cornerRadius\] {
+  border-radius: var(--k-banner-buttons-tertiary-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-banner-container-cornerRadius\] {
+  border-radius: var(--k-banner-container-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-banner-gpcBanner-cornerRadius\] {
+  border-radius: var(--k-banner-gpcBanner-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-banner-header-returnButton-cornerRadius\] {
+  border-radius: var(--k-banner-header-returnButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-consentGate-actionBlock-button-cornerRadius\] {
+  border-radius: var(--k-consentGate-actionBlock-button-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-consentGate-consentBlock-button-cornerRadius\] {
+  border-radius: var(--k-consentGate-consentBlock-button-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-consentGate-consentBlock-purposes-list-bulkActionButtons-acceptAllButton-cornerRadius\] {
+  border-radius: var(--k-consentGate-consentBlock-purposes-list-bulkActionButtons-acceptAllButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-consentGate-consentBlock-purposes-list-bulkActionButtons-rejectAllButton-cornerRadius\] {
+  border-radius: var(--k-consentGate-consentBlock-purposes-list-bulkActionButtons-rejectAllButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-consentGate-consentBlock-purposes-list-items-cornerRadius\] {
+  border-radius: var(--k-consentGate-consentBlock-purposes-list-items-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-consentGate-container-cornerRadius\] {
+  border-radius: var(--k-consentGate-container-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-consentGate-header-closeButton-cornerRadius\] {
+  border-radius: var(--k-consentGate-header-closeButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-modal-container-cornerRadius\] {
+  border-radius: var(--k-modal-container-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-modal-footer-actionButton-cornerRadius\] {
+  border-radius: var(--k-modal-footer-actionButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-modal-gpcBanner-cornerRadius\] {
+  border-radius: var(--k-modal-gpcBanner-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-modal-header-returnButton-cornerRadius\] {
+  border-radius: var(--k-modal-header-returnButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-modal-purposeList-purposeListItems-purposeCornerRadius\] {
+  border-radius: var(--k-modal-purposeList-purposeListItems-purposeCornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-modal-purposeListHeader-acceptAllButton-cornerRadius\] {
+  border-radius: var(--k-modal-purposeListHeader-acceptAllButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-modal-purposeListHeader-rejectAllButton-cornerRadius\] {
+  border-radius: var(--k-modal-purposeListHeader-rejectAllButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-exitButton-cornerRadius\] {
+  border-radius: var(--k-preference-exitButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-navigation-layout-cornerRadius\] {
+  border-radius: var(--k-preference-navigation-layout-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-navigation-layout-item-cornerRadius\] {
+  border-radius: var(--k-preference-navigation-layout-item-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-purposes-footer-actionButton-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-purposes-footer-actionButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-purposes-gpcBanner-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-purposes-gpcBanner-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-purposes-purposeList-purposeListItems-purposeCornerRadius\] {
+  border-radius: var(--k-preference-tabs-purposes-purposeList-purposeListItems-purposeCornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-purposes-purposeListHeader-acceptAllButton-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-purposes-purposeListHeader-acceptAllButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-purposes-purposeListHeader-rejectAllButton-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-purposes-purposeListHeader-rejectAllButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-requests-home-dsrPortalLink-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-requests-home-dsrPortalLink-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-requests-home-rightsList-item-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-requests-home-rightsList-item-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-requests-rightForm-actionButton-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-requests-rightForm-actionButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-requests-rightForm-form-fields-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-requests-rightForm-form-fields-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-requests-rightForm-header-returnButton-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-requests-rightForm-header-returnButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-requests-submitted-footer-actionButton-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-requests-submitted-footer-actionButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-requests-submitted-header-returnButton-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-requests-submitted-header-returnButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-subscriptions-footer-actionButton-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-subscriptions-footer-actionButton-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-subscriptions-list-layout-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-subscriptions-list-layout-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-\[--k-preference-tabs-subscriptions-unsubscribeAll-cornerRadius\] {
+  border-radius: var(--k-preference-tabs-subscriptions-unsubscribeAll-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-none {
+  border-radius: 0px !important;
+}
+#lanyard_root * .ketch-rounded-3xl {
+  border-radius: 1.5rem;
+}
+#lanyard_root * .ketch-rounded-\[3px\] {
+  border-radius: 3px;
+}
+#lanyard_root * .ketch-rounded-full {
+  border-radius: 9999px;
+}
+#lanyard_root * .ketch-rounded-inherit {
+  border-radius: inherit;
+}
+#lanyard_root * .ketch-rounded-none {
+  border-radius: 0px;
+}
+#lanyard_root * .\!ketch-rounded-tl-\[--k-preference-navigation-layout-item-cornerRadius\] {
+  border-top-left-radius: var(--k-preference-navigation-layout-item-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-rounded-tr-\[--k-preference-navigation-layout-item-cornerRadius\] {
+  border-top-right-radius: var(--k-preference-navigation-layout-item-cornerRadius) !important;
+}
+#lanyard_root * .\!ketch-border-\[1px\] {
+  border-width: 1px !important;
+}
+#lanyard_root * .ketch-border {
+  border-width: 1px;
+}
+#lanyard_root * .ketch-border-0 {
+  border-width: 0px;
+}
+#lanyard_root * .ketch-border-2 {
+  border-width: 2px;
+}
+#lanyard_root * .ketch-border-\[1\.5px\] {
+  border-width: 1.5px;
+}
+#lanyard_root * .ketch-border-x-0 {
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+#lanyard_root * .ketch-border-b {
+  border-bottom-width: 1px;
+}
+#lanyard_root * .ketch-border-l-0 {
+  border-left-width: 0px;
+}
+#lanyard_root * .ketch-border-r-0 {
+  border-right-width: 0px;
+}
+#lanyard_root * .ketch-border-t-0 {
+  border-top-width: 0px;
+}
+#lanyard_root * .\!ketch-border-solid {
+  border-style: solid !important;
+}
+#lanyard_root * .ketch-border-solid {
+  border-style: solid;
+}
+#lanyard_root * .ketch-border-none {
+  border-style: none;
+}
+#lanyard_root * .\!ketch-border-\[--k-banner-buttons-primary-background-color\] {
+  border-color: var(--k-banner-buttons-primary-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-banner-buttons-secondary-background-color\] {
+  border-color: var(--k-banner-buttons-secondary-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-banner-buttons-tertiary-background-color\] {
+  border-color: var(--k-banner-buttons-tertiary-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-banner-gpcBanner-outline-color\] {
+  border-color: var(--k-banner-gpcBanner-outline-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-consentGate-actionBlock-button-outline-color\] {
+  border-color: var(--k-consentGate-actionBlock-button-outline-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-consentGate-consentBlock-button-background-color\] {
+  border-color: var(--k-consentGate-consentBlock-button-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-consentGate-consentBlock-purposes-list-bulkActionButtons-acceptAllButton-background-color\] {
+  border-color: var(--k-consentGate-consentBlock-purposes-list-bulkActionButtons-acceptAllButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-consentGate-consentBlock-purposes-list-bulkActionButtons-rejectAllButton-background-color\] {
+  border-color: var(--k-consentGate-consentBlock-purposes-list-bulkActionButtons-rejectAllButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-consentGate-consentBlock-purposes-list-items-purposeOutline-color\] {
+  border-color: var(--k-consentGate-consentBlock-purposes-list-items-purposeOutline-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-consentGate-consentBlock-purposes-list-switchButtons-off-background-color\] {
+  border-color: var(--k-consentGate-consentBlock-purposes-list-switchButtons-off-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-consentGate-header-closeButton-icon-color\] {
+  border-color: var(--k-consentGate-header-closeButton-icon-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-modal-footer-actionButton-background-color\] {
+  border-color: var(--k-modal-footer-actionButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-modal-gpcBanner-outline-color\] {
+  border-color: var(--k-modal-gpcBanner-outline-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-modal-purposeList-purposeListItems-purposeOutline-color\] {
+  border-color: var(--k-modal-purposeList-purposeListItems-purposeOutline-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-modal-purposeList-switchButtons-off-background-color\] {
+  border-color: var(--k-modal-purposeList-switchButtons-off-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-modal-purposeListHeader-acceptAllButton-background-color\] {
+  border-color: var(--k-modal-purposeListHeader-acceptAllButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-modal-purposeListHeader-rejectAllButton-background-color\] {
+  border-color: var(--k-modal-purposeListHeader-rejectAllButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-purposes-footer-actionButton-background-color\] {
+  border-color: var(--k-preference-tabs-purposes-footer-actionButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-purposes-gpcBanner-outline-color\] {
+  border-color: var(--k-preference-tabs-purposes-gpcBanner-outline-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-purposes-purposeList-purposeListItems-purposeOutline-color\] {
+  border-color: var(--k-preference-tabs-purposes-purposeList-purposeListItems-purposeOutline-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-purposes-purposeList-switchButtons-off-background-color\] {
+  border-color: var(--k-preference-tabs-purposes-purposeList-switchButtons-off-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-purposes-purposeListHeader-acceptAllButton-background-color\] {
+  border-color: var(--k-preference-tabs-purposes-purposeListHeader-acceptAllButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-purposes-purposeListHeader-rejectAllButton-background-color\] {
+  border-color: var(--k-preference-tabs-purposes-purposeListHeader-rejectAllButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-requests-rightForm-actionButton-background-color\] {
+  border-color: var(--k-preference-tabs-requests-rightForm-actionButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-requests-rightForm-form-checkboxes-error-background-color\] {
+  border-color: var(--k-preference-tabs-requests-rightForm-form-checkboxes-error-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-requests-rightForm-form-checkboxes-unselected-background-color\] {
+  border-color: var(--k-preference-tabs-requests-rightForm-form-checkboxes-unselected-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-requests-rightForm-form-fields-error-outline-color\] {
+  border-color: var(--k-preference-tabs-requests-rightForm-form-fields-error-outline-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-requests-rightForm-form-fields-inactive-outline-color\] {
+  border-color: var(--k-preference-tabs-requests-rightForm-form-fields-inactive-outline-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-requests-submitted-footer-actionButton-outline-color\] {
+  border-color: var(--k-preference-tabs-requests-submitted-footer-actionButton-outline-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-subscriptions-footer-actionButton-background-color\] {
+  border-color: var(--k-preference-tabs-subscriptions-footer-actionButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-subscriptions-list-checkbox-unselected-outline-color\] {
+  border-color: var(--k-preference-tabs-subscriptions-list-checkbox-unselected-outline-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-preference-tabs-subscriptions-list-layout-underline-color\] {
+  border-color: var(--k-preference-tabs-subscriptions-list-layout-underline-color) !important;
+}
+#lanyard_root * .\!ketch-border-\[--k-tabs-subscriptions-list-checkbox-error-text-color\] {
+  border-color: var(--k-tabs-subscriptions-list-checkbox-error-text-color) !important;
+}
+#lanyard_root * .ketch-border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+#lanyard_root * .ketch-border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+#lanyard_root * .ketch-border-gray-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+#lanyard_root * .ketch-border-ketch-error {
+  border-color: rgba(252, 60, 96, 1);
+}
+#lanyard_root * .\!ketch-bg-\[--k-banner-buttons-primary-background-color\] {
+  background-color: var(--k-banner-buttons-primary-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-banner-buttons-secondary-background-color\] {
+  background-color: var(--k-banner-buttons-secondary-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-banner-buttons-tertiary-background-color\] {
+  background-color: var(--k-banner-buttons-tertiary-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-banner-container-backdrop-background-color\] {
+  background-color: var(--k-banner-container-backdrop-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-banner-container-background-color\] {
+  background-color: var(--k-banner-container-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-banner-gpcBanner-fill-color\] {
+  background-color: var(--k-banner-gpcBanner-fill-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-banner-header-returnButton-background-color\] {
+  background-color: var(--k-banner-header-returnButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-consentGate-actionBlock-button-background-color\] {
+  background-color: var(--k-consentGate-actionBlock-button-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-consentGate-consentBlock-button-background-color\] {
+  background-color: var(--k-consentGate-consentBlock-button-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-consentGate-consentBlock-purposes-list-bulkActionButtons-acceptAllButton-background-color\] {
+  background-color: var(--k-consentGate-consentBlock-purposes-list-bulkActionButtons-acceptAllButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-consentGate-consentBlock-purposes-list-bulkActionButtons-rejectAllButton-background-color\] {
+  background-color: var(--k-consentGate-consentBlock-purposes-list-bulkActionButtons-rejectAllButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-consentGate-consentBlock-purposes-list-items-purposeFill-color\] {
+  background-color: var(--k-consentGate-consentBlock-purposes-list-items-purposeFill-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-consentGate-consentBlock-purposes-list-switchButtons-off-background-color\] {
+  background-color: var(--k-consentGate-consentBlock-purposes-list-switchButtons-off-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-consentGate-container-background-color\] {
+  background-color: var(--k-consentGate-container-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-consentGate-header-background\] {
+  background-color: var(--k-consentGate-header-background) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-consentGate-header-closeButton-background-color\] {
+  background-color: var(--k-consentGate-header-closeButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-modal-container-backdrop-background-color\] {
+  background-color: var(--k-modal-container-backdrop-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-modal-container-background-color\] {
+  background-color: var(--k-modal-container-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-modal-footer-actionButton-background-color\] {
+  background-color: var(--k-modal-footer-actionButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-modal-footer-background-color\] {
+  background-color: var(--k-modal-footer-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-modal-gpcBanner-fill-color\] {
+  background-color: var(--k-modal-gpcBanner-fill-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-modal-header-background-color\] {
+  background-color: var(--k-modal-header-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-modal-header-returnButton-background-color\] {
+  background-color: var(--k-modal-header-returnButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-modal-purposeList-purposeListItems-purposeFill-color\] {
+  background-color: var(--k-modal-purposeList-purposeListItems-purposeFill-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-modal-purposeList-switchButtons-off-background-color\] {
+  background-color: var(--k-modal-purposeList-switchButtons-off-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-modal-purposeListHeader-acceptAllButton-background-color\] {
+  background-color: var(--k-modal-purposeListHeader-acceptAllButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-modal-purposeListHeader-rejectAllButton-background-color\] {
+  background-color: var(--k-modal-purposeListHeader-rejectAllButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-container-background-color\] {
+  background-color: var(--k-preference-container-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-exitButton-background-color\] {
+  background-color: var(--k-preference-exitButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-header-background-color\] {
+  background-color: var(--k-preference-header-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-navigation-layout-background-color\] {
+  background-color: var(--k-preference-navigation-layout-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-navigation-layout-item-selectedBackground-color\] {
+  background-color: var(--k-preference-navigation-layout-item-selectedBackground-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-navigation-layout-item-unselectedBackground-color\] {
+  background-color: var(--k-preference-navigation-layout-item-unselectedBackground-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-purposes-footer-actionButton-background-color\] {
+  background-color: var(--k-preference-tabs-purposes-footer-actionButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-purposes-footer-background-color\] {
+  background-color: var(--k-preference-tabs-purposes-footer-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-purposes-gpcBanner-fill-color\] {
+  background-color: var(--k-preference-tabs-purposes-gpcBanner-fill-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-purposes-purposeList-purposeListItems-purposeFill-color\] {
+  background-color: var(--k-preference-tabs-purposes-purposeList-purposeListItems-purposeFill-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-purposes-purposeList-switchButtons-off-background-color\] {
+  background-color: var(--k-preference-tabs-purposes-purposeList-switchButtons-off-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-purposes-purposeListHeader-acceptAllButton-background-color\] {
+  background-color: var(--k-preference-tabs-purposes-purposeListHeader-acceptAllButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-purposes-purposeListHeader-rejectAllButton-background-color\] {
+  background-color: var(--k-preference-tabs-purposes-purposeListHeader-rejectAllButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-requests-home-dsrPortalLink-background-color\] {
+  background-color: var(--k-preference-tabs-requests-home-dsrPortalLink-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-requests-home-rightsList-item-background-color\] {
+  background-color: var(--k-preference-tabs-requests-home-rightsList-item-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-requests-rightForm-actionButton-background-color\] {
+  background-color: var(--k-preference-tabs-requests-rightForm-actionButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-requests-rightForm-form-checkboxes-unselected-background-color\] {
+  background-color: var(--k-preference-tabs-requests-rightForm-form-checkboxes-unselected-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-requests-rightForm-form-fields-error-background-color\] {
+  background-color: var(--k-preference-tabs-requests-rightForm-form-fields-error-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-requests-rightForm-form-fields-inactive-background-color\] {
+  background-color: var(--k-preference-tabs-requests-rightForm-form-fields-inactive-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-requests-rightForm-header-returnButton-background-color\] {
+  background-color: var(--k-preference-tabs-requests-rightForm-header-returnButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-requests-submitted-footer-actionButton-background-color\] {
+  background-color: var(--k-preference-tabs-requests-submitted-footer-actionButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-requests-submitted-footer-background-color\] {
+  background-color: var(--k-preference-tabs-requests-submitted-footer-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-requests-submitted-header-returnButton-background-color\] {
+  background-color: var(--k-preference-tabs-requests-submitted-header-returnButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-subscriptions-footer-actionButton-background-color\] {
+  background-color: var(--k-preference-tabs-subscriptions-footer-actionButton-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-subscriptions-footer-background-color\] {
+  background-color: var(--k-preference-tabs-subscriptions-footer-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-subscriptions-list-checkbox-unselected-background-color\] {
+  background-color: var(--k-preference-tabs-subscriptions-list-checkbox-unselected-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-subscriptions-list-layout-background-color\] {
+  background-color: var(--k-preference-tabs-subscriptions-list-layout-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-subscriptions-list-switchButton-off-background-color\] {
+  background-color: var(--k-preference-tabs-subscriptions-list-switchButton-off-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-subscriptions-list-switchButton-off-thumb-color\] {
+  background-color: var(--k-preference-tabs-subscriptions-list-switchButton-off-thumb-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-subscriptions-list-switchButton-on-thumb-color\] {
+  background-color: var(--k-preference-tabs-subscriptions-list-switchButton-on-thumb-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-subscriptions-unsubscribeAll-background-color\] {
+  background-color: var(--k-preference-tabs-subscriptions-unsubscribeAll-background-color) !important;
+}
+#lanyard_root * .\!ketch-bg-\[--k-preference-tabs-subscriptions-unsubscribeAll-switchButton-off-background-color\] {
+  background-color: var(--k-preference-tabs-subscriptions-unsubscribeAll-switchButton-off-background-color) !important;
+}
+#lanyard_root * .ketch-bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+#lanyard_root * .ketch-bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+#lanyard_root * .ketch-bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+#lanyard_root * .ketch-bg-inherit {
+  background-color: inherit;
+}
+#lanyard_root * .ketch-bg-ketch-black-black-10 {
+  background-color: rgba(7, 26, 36, 0.1);
+}
+#lanyard_root * .ketch-bg-ketch-black-black-100 {
+  background-color: rgba(7, 26, 36, 1);
+}
+#lanyard_root * .ketch-bg-ketch-white-24 {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+#lanyard_root * .ketch-bg-orange-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 215 170 / var(--tw-bg-opacity));
+}
+#lanyard_root * .ketch-bg-orange-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
+}
+#lanyard_root * .ketch-bg-orange-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+}
+#lanyard_root * .ketch-bg-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+#lanyard_root * .ketch-bg-slate-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+#lanyard_root * .ketch-bg-transparent {
+  background-color: transparent;
+}
+#lanyard_root * .ketch-bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+#lanyard_root * .\!ketch-fill-\[--k-banner-header-returnButton-icon-color\] {
+  fill: var(--k-banner-header-returnButton-icon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-consentGate-actionBlock-button-icon-color\] {
+  fill: var(--k-consentGate-actionBlock-button-icon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-consentGate-consentBlock-purposes-list-items-arrowIcon-color\] {
+  fill: var(--k-consentGate-consentBlock-purposes-list-items-arrowIcon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-consentGate-consentBlock-purposes-list-items-purposeLinks-color\] {
+  fill: var(--k-consentGate-consentBlock-purposes-list-items-purposeLinks-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-consentGate-header-closeButton-icon-color\] {
+  fill: var(--k-consentGate-header-closeButton-icon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-modal-header-returnButton-icon-color\] {
+  fill: var(--k-modal-header-returnButton-icon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-modal-purposeList-purposeListItems-arrowIcon-color\] {
+  fill: var(--k-modal-purposeList-purposeListItems-arrowIcon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-modal-purposeList-purposeListItems-purposeLinks-color\] {
+  fill: var(--k-modal-purposeList-purposeListItems-purposeLinks-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-modal-purposeListHeader-title-color\] {
+  fill: var(--k-modal-purposeListHeader-title-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-preference-exitButton-iconColor-color\] {
+  fill: var(--k-preference-exitButton-iconColor-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-preference-navigation-layout-item-arrowIcon-color\] {
+  fill: var(--k-preference-navigation-layout-item-arrowIcon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-preference-tabs-purposes-purposeList-purposeListItems-arrowIcon-color\] {
+  fill: var(--k-preference-tabs-purposes-purposeList-purposeListItems-arrowIcon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-preference-tabs-purposes-purposeList-purposeListItems-purposeLinks-color\] {
+  fill: var(--k-preference-tabs-purposes-purposeList-purposeListItems-purposeLinks-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-preference-tabs-purposes-purposeListHeader-title-color\] {
+  fill: var(--k-preference-tabs-purposes-purposeListHeader-title-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-preference-tabs-requests-form-dropdown-arrow-icon-color\] {
+  fill: var(--k-preference-tabs-requests-form-dropdown-arrow-icon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-preference-tabs-requests-home-dsrPortalLink-arrowIcon-color\] {
+  fill: var(--k-preference-tabs-requests-home-dsrPortalLink-arrowIcon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-preference-tabs-requests-home-rightsList-item-arrowIcon-color\] {
+  fill: var(--k-preference-tabs-requests-home-rightsList-item-arrowIcon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-preference-tabs-requests-rightForm-header-returnButton-icon-color\] {
+  fill: var(--k-preference-tabs-requests-rightForm-header-returnButton-icon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-preference-tabs-requests-submitted-footer-actionButton-icon-color\] {
+  fill: var(--k-preference-tabs-requests-submitted-footer-actionButton-icon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-preference-tabs-requests-submitted-header-returnButton-icon-color\] {
+  fill: var(--k-preference-tabs-requests-submitted-header-returnButton-icon-color) !important;
+}
+#lanyard_root * .\!ketch-fill-\[--k-preference-tabs-welcome-quickLinks-link-color\] {
+  fill: var(--k-preference-tabs-welcome-quickLinks-link-color) !important;
+}
+#lanyard_root * .ketch-fill-\[--k-consentGate-actionBlock-footer-link-text-color\] {
+  fill: var(--k-consentGate-actionBlock-footer-link-text-color);
+}
+#lanyard_root * .ketch-fill-\[--k-preference-tabs-requests-form-error-text-color\] {
+  fill: var(--k-preference-tabs-requests-form-error-text-color);
+}
+#lanyard_root * .ketch-fill-\[--k-preference-welcome-quickLinks-link-color\] {
+  fill: var(--k-preference-welcome-quickLinks-link-color);
+}
+#lanyard_root * .ketch-fill-black {
+  fill: #000;
+}
+#lanyard_root * .ketch-fill-inherit {
+  fill: inherit;
+}
+#lanyard_root * .ketch-fill-ketch-black-black-100 {
+  fill: rgba(7, 26, 36, 1);
+}
+#lanyard_root * .ketch-fill-white {
+  fill: #fff;
+}
+#lanyard_root * .\!ketch-stroke-\[--k-preference-tabs-requests-form-dropdown-arrow-icon-color\] {
+  stroke: var(--k-preference-tabs-requests-form-dropdown-arrow-icon-color) !important;
+}
+#lanyard_root * .\!ketch-stroke-\[--k-preference-tabs-subscriptions-list-switchButton-off-icon-color\] {
+  stroke: var(--k-preference-tabs-subscriptions-list-switchButton-off-icon-color) !important;
+}
+#lanyard_root * .\!ketch-stroke-\[--k-preference-tabs-subscriptions-list-switchButton-on-icon-color\] {
+  stroke: var(--k-preference-tabs-subscriptions-list-switchButton-on-icon-color) !important;
+}
+#lanyard_root * .ketch-stroke-\[--k-preference-tabs-requests-form-error-text-color\] {
+  stroke: var(--k-preference-tabs-requests-form-error-text-color);
+}
+#lanyard_root * .ketch-stroke-black {
+  stroke: #000;
+}
+#lanyard_root * .ketch-stroke-current {
+  stroke: currentColor;
+}
+#lanyard_root * .ketch-stroke-white {
+  stroke: #fff;
+}
+#lanyard_root * .ketch-object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#lanyard_root * .\!ketch-p-0 {
+  padding: 0 !important;
+}
+#lanyard_root * .\!ketch-p-4 {
+  padding: 16px !important;
+}
+#lanyard_root * .ketch-p-0 {
+  padding: 0;
+}
+#lanyard_root * .ketch-p-2 {
+  padding: 8px;
+}
+#lanyard_root * .ketch-p-3 {
+  padding: 12px;
+}
+#lanyard_root * .ketch-p-4 {
+  padding: 16px;
+}
+#lanyard_root * .ketch-px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+#lanyard_root * .ketch-px-1 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+#lanyard_root * .ketch-px-1\.5 {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+#lanyard_root * .ketch-px-2 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+#lanyard_root * .ketch-px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+#lanyard_root * .ketch-px-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+#lanyard_root * .ketch-px-5 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#lanyard_root * .ketch-px-6 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+#lanyard_root * .ketch-px-8 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+#lanyard_root * .ketch-px-\[1px\] {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+#lanyard_root * .ketch-py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#lanyard_root * .ketch-py-0\.5 {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#lanyard_root * .ketch-py-1 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+#lanyard_root * .ketch-py-2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+#lanyard_root * .ketch-py-20 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+#lanyard_root * .ketch-py-3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+#lanyard_root * .ketch-py-4 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+#lanyard_root * .ketch-py-5 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#lanyard_root * .ketch-py-6 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+#lanyard_root * .ketch-py-\[1px\] {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+#lanyard_root * .ketch-pb-0 {
+  padding-bottom: 0;
+}
+#lanyard_root * .ketch-pb-1 {
+  padding-bottom: 4px;
+}
+#lanyard_root * .ketch-pb-2 {
+  padding-bottom: 8px;
+}
+#lanyard_root * .ketch-pb-3 {
+  padding-bottom: 12px;
+}
+#lanyard_root * .ketch-pb-4 {
+  padding-bottom: 16px;
+}
+#lanyard_root * .ketch-pb-6 {
+  padding-bottom: 24px;
+}
+#lanyard_root * .ketch-pb-8 {
+  padding-bottom: 32px;
+}
+#lanyard_root * .ketch-pb-\[--safe-area-inset-bottom\] {
+  padding-bottom: var(--safe-area-inset-bottom);
+}
+#lanyard_root * .ketch-pb-\[max\(16px\,var\(--safe-area-inset-bottom\)\)\] {
+  padding-bottom: max(16px,var(--safe-area-inset-bottom));
+}
+#lanyard_root * .ketch-pl-0 {
+  padding-left: 0;
+}
+#lanyard_root * .ketch-pl-1 {
+  padding-left: 4px;
+}
+#lanyard_root * .ketch-pl-10 {
+  padding-left: 40px;
+}
+#lanyard_root * .ketch-pl-2 {
+  padding-left: 8px;
+}
+#lanyard_root * .ketch-pl-3 {
+  padding-left: 12px;
+}
+#lanyard_root * .ketch-pl-4 {
+  padding-left: 16px;
+}
+#lanyard_root * .ketch-pl-5 {
+  padding-left: 20px;
+}
+#lanyard_root * .ketch-pl-6 {
+  padding-left: 24px;
+}
+#lanyard_root * .ketch-pl-\[--safe-area-inset-left\] {
+  padding-left: var(--safe-area-inset-left);
+}
+#lanyard_root * .ketch-pl-\[calc\(16px\+var\(--safe-area-inset-left\)\)\] {
+  padding-left: calc(16px + var(--safe-area-inset-left));
+}
+#lanyard_root * .ketch-pl-\[calc\(var\(--safe-area-inset-left\)\+4px\)\] {
+  padding-left: calc(var(--safe-area-inset-left) + 4px);
+}
+#lanyard_root * .ketch-pl-\[max\(16px\,var\(--safe-area-inset-left\)\)\] {
+  padding-left: max(16px,var(--safe-area-inset-left));
+}
+#lanyard_root * .ketch-pr-0 {
+  padding-right: 0;
+}
+#lanyard_root * .ketch-pr-14 {
+  padding-right: 56px;
+}
+#lanyard_root * .ketch-pr-3 {
+  padding-right: 12px;
+}
+#lanyard_root * .ketch-pr-6 {
+  padding-right: 24px;
+}
+#lanyard_root * .ketch-pr-8 {
+  padding-right: 32px;
+}
+#lanyard_root * .ketch-pr-\[--safe-area-inset-right\] {
+  padding-right: var(--safe-area-inset-right);
+}
+#lanyard_root * .ketch-pr-\[calc\(16px\+var\(--safe-area-inset-right\)\)\] {
+  padding-right: calc(16px + var(--safe-area-inset-right));
+}
+#lanyard_root * .ketch-pr-\[calc\(var\(--safe-area-inset-right\)\+4px\)\] {
+  padding-right: calc(var(--safe-area-inset-right) + 4px);
+}
+#lanyard_root * .ketch-pr-\[max\(16px\,var\(--safe-area-inset-right\)\)\] {
+  padding-right: max(16px,var(--safe-area-inset-right));
+}
+#lanyard_root * .ketch-pt-0\.5 {
+  padding-top: 2px;
+}
+#lanyard_root * .ketch-pt-1 {
+  padding-top: 4px;
+}
+#lanyard_root * .ketch-pt-2 {
+  padding-top: 8px;
+}
+#lanyard_root * .ketch-pt-3 {
+  padding-top: 12px;
+}
+#lanyard_root * .ketch-pt-4 {
+  padding-top: 16px;
+}
+#lanyard_root * .ketch-pt-5 {
+  padding-top: 20px;
+}
+#lanyard_root * .ketch-pt-8 {
+  padding-top: 32px;
+}
+#lanyard_root * .ketch-pt-\[--safe-area-inset-top\] {
+  padding-top: var(--safe-area-inset-top);
+}
+#lanyard_root * .ketch-pt-\[max\(16px\,var\(--safe-area-inset-top\)\)\] {
+  padding-top: max(16px,var(--safe-area-inset-top));
+}
+#lanyard_root * .ketch-text-left {
+  text-align: left;
+}
+#lanyard_root * .ketch-text-center {
+  text-align: center;
+}
+#lanyard_root * .\!ketch-text-ketch-h2 {
+  font-size: 20px !important;
+  line-height: 30px !important;
+}
+#lanyard_root * .\!ketch-text-ketch-l {
+  font-size: 14px !important;
+  line-height: 21px !important;
+}
+#lanyard_root * .ketch-text-ketch-h0 {
+  font-size: 32px;
+  line-height: 48px;
+}
+#lanyard_root * .ketch-text-ketch-h1 {
+  font-size: 28px;
+  line-height: 39px;
+}
+#lanyard_root * .ketch-text-ketch-h1-small {
+  font-size: 26px;
+  line-height: 36.4px;
+}
+#lanyard_root * .ketch-text-ketch-h2 {
+  font-size: 20px;
+  line-height: 30px;
+}
+#lanyard_root * .ketch-text-ketch-h3 {
+  font-size: 18px;
+  line-height: 22.5px;
+}
+#lanyard_root * .ketch-text-ketch-h4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+#lanyard_root * .ketch-text-ketch-l {
+  font-size: 14px;
+  line-height: 21px;
+}
+#lanyard_root * .ketch-text-ketch-lm {
+  font-size: 14px;
+  line-height: 21px;
+}
+#lanyard_root * .ketch-text-ketch-m {
+  font-size: 13px;
+  line-height: 16px;
+}
+#lanyard_root * .ketch-text-ketch-s {
+  font-size: 12px;
+  line-height: 15px;
+}
+#lanyard_root * .ketch-text-ketch-xs {
+  font-size: 10px;
+  line-height: 14.5px;
+  font-weight: 500;
+}
+#lanyard_root * .\!ketch-font-\[--k-banner-container-font\] {
+  font-weight: var(--k-banner-container-font) !important;
+}
+#lanyard_root * .\!ketch-font-\[--k-modal-container-font\] {
+  font-weight: var(--k-modal-container-font) !important;
+}
+#lanyard_root * .ketch-font-bold {
+  font-weight: 700;
+}
+#lanyard_root * .ketch-font-medium {
+  font-weight: 500;
+}
+#lanyard_root * .ketch-font-normal {
+  font-weight: 400;
+}
+#lanyard_root * .ketch-font-semibold {
+  font-weight: 600;
+}
+#lanyard_root * .ketch-font-weight-inherit {
+  font-weight: inherit;
+}
+#lanyard_root * .ketch-uppercase {
+  text-transform: uppercase;
+}
+#lanyard_root * .ketch-italic {
+  font-style: italic;
+}
+#lanyard_root * .ketch-leading-3 {
+  line-height: .75rem;
+}
+#lanyard_root * .ketch-leading-4 {
+  line-height: 1rem;
+}
+#lanyard_root * .ketch-tracking-\[-0\.12px\] {
+  letter-spacing: -0.12px;
+}
+#lanyard_root * .ketch-tracking-\[-0\.13px\] {
+  letter-spacing: -0.13px;
+}
+#lanyard_root * .ketch-tracking-\[-0\.14px\] {
+  letter-spacing: -0.14px;
+}
+#lanyard_root * .ketch-tracking-\[-0\.16px\] {
+  letter-spacing: -0.16px;
+}
+#lanyard_root * .ketch-tracking-\[-0\.18px\] {
+  letter-spacing: -0.18px;
+}
+#lanyard_root * .ketch-tracking-\[-0\.1px\] {
+  letter-spacing: -0.1px;
+}
+#lanyard_root * .ketch-tracking-\[-0\.26px\] {
+  letter-spacing: -0.26px;
+}
+#lanyard_root * .ketch-tracking-\[-0\.28px\] {
+  letter-spacing: -0.28px;
+}
+#lanyard_root * .ketch-tracking-\[-0\.2px\] {
+  letter-spacing: -0.2px;
+}
+#lanyard_root * .ketch-tracking-\[-0\.64px\] {
+  letter-spacing: -0.64px;
+}
+#lanyard_root * .\!ketch-text-\[--k-banner-buttons-primary-text-color\] {
+  color: var(--k-banner-buttons-primary-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-banner-buttons-secondary-text-color\] {
+  color: var(--k-banner-buttons-secondary-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-banner-buttons-tertiary-text-color\] {
+  color: var(--k-banner-buttons-tertiary-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-banner-description-link-color\] {
+  color: var(--k-banner-description-link-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-banner-description-text-color\] {
+  color: var(--k-banner-description-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-banner-gpcBanner-description-text-color\] {
+  color: var(--k-banner-gpcBanner-description-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-banner-gpcBanner-title-text-color\] {
+  color: var(--k-banner-gpcBanner-title-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-banner-header-returnButton-text-color\] {
+  color: var(--k-banner-header-returnButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-banner-header-title-color\] {
+  color: var(--k-banner-header-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-actionBlock-button-text-color\] {
+  color: var(--k-consentGate-actionBlock-button-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-actionBlock-footer-link-text-color\] {
+  color: var(--k-consentGate-actionBlock-footer-link-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-actionBlock-footer-teaser-text-color\] {
+  color: var(--k-consentGate-actionBlock-footer-teaser-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-actionBlock-header-description-color\] {
+  color: var(--k-consentGate-actionBlock-header-description-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-actionBlock-header-description-link-color\] {
+  color: var(--k-consentGate-actionBlock-header-description-link-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-actionBlock-header-title-color\] {
+  color: var(--k-consentGate-actionBlock-header-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-consentBlock-button-text-color\] {
+  color: var(--k-consentGate-consentBlock-button-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-consentBlock-footer-links-color\] {
+  color: var(--k-consentGate-consentBlock-footer-links-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-consentBlock-header-description-color\] {
+  color: var(--k-consentGate-consentBlock-header-description-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-consentBlock-header-description-link-color\] {
+  color: var(--k-consentGate-consentBlock-header-description-link-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-consentBlock-header-title-color\] {
+  color: var(--k-consentGate-consentBlock-header-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-consentBlock-purposes-list-bulkActionButtons-acceptAllButton-text-color\] {
+  color: var(--k-consentGate-consentBlock-purposes-list-bulkActionButtons-acceptAllButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-consentBlock-purposes-list-bulkActionButtons-rejectAllButton-text-color\] {
+  color: var(--k-consentGate-consentBlock-purposes-list-bulkActionButtons-rejectAllButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-consentBlock-purposes-list-header-title-color\] {
+  color: var(--k-consentGate-consentBlock-purposes-list-header-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-consentBlock-purposes-list-items-arrowIcon-color\] {
+  color: var(--k-consentGate-consentBlock-purposes-list-items-arrowIcon-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-consentBlock-purposes-list-items-purposeContent-color\] {
+  color: var(--k-consentGate-consentBlock-purposes-list-items-purposeContent-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-consentBlock-purposes-list-items-purposeLinks-color\] {
+  color: var(--k-consentGate-consentBlock-purposes-list-items-purposeLinks-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-consentBlock-purposes-list-switchButtons-off-text-color\] {
+  color: var(--k-consentGate-consentBlock-purposes-list-switchButtons-off-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-consentBlock-purposes-list-switchButtons-on-text-color\] {
+  color: var(--k-consentGate-consentBlock-purposes-list-switchButtons-on-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-header-closeButton-text-color\] {
+  color: var(--k-consentGate-header-closeButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-consentGate-header-title-color\] {
+  color: var(--k-consentGate-header-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-description-link-color\] {
+  color: var(--k-modal-description-link-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-description-text-color\] {
+  color: var(--k-modal-description-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-description-title-color\] {
+  color: var(--k-modal-description-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-footer-actionButton-text-color\] {
+  color: var(--k-modal-footer-actionButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-gpcBanner-description-text-color\] {
+  color: var(--k-modal-gpcBanner-description-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-gpcBanner-title-text-color\] {
+  color: var(--k-modal-gpcBanner-title-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-header-returnButton-text-color\] {
+  color: var(--k-modal-header-returnButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-header-title-color\] {
+  color: var(--k-modal-header-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-purposeList-purposeListItems-arrowIcon-color\] {
+  color: var(--k-modal-purposeList-purposeListItems-arrowIcon-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-purposeList-purposeListItems-purposeContent-color\] {
+  color: var(--k-modal-purposeList-purposeListItems-purposeContent-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-purposeList-purposeListItems-purposeLinks-color\] {
+  color: var(--k-modal-purposeList-purposeListItems-purposeLinks-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-purposeList-switchButtons-off-text-color\] {
+  color: var(--k-modal-purposeList-switchButtons-off-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-purposeList-switchButtons-on-text-color\] {
+  color: var(--k-modal-purposeList-switchButtons-on-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-purposeListHeader-acceptAllButton-text-color\] {
+  color: var(--k-modal-purposeListHeader-acceptAllButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-purposeListHeader-rejectAllButton-text-color\] {
+  color: var(--k-modal-purposeListHeader-rejectAllButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-modal-purposeListHeader-title-color\] {
+  color: var(--k-modal-purposeListHeader-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-exitButton-text-color\] {
+  color: var(--k-preference-exitButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-header-title-color\] {
+  color: var(--k-preference-header-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-navigation-layout-item-selectedText-color\] {
+  color: var(--k-preference-navigation-layout-item-selectedText-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-navigation-layout-item-unselectedText-color\] {
+  color: var(--k-preference-navigation-layout-item-unselectedText-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-footer-actionButton-text-color\] {
+  color: var(--k-preference-tabs-purposes-footer-actionButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-gpcBanner-description-text-color\] {
+  color: var(--k-preference-tabs-purposes-gpcBanner-description-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-gpcBanner-title-text-color\] {
+  color: var(--k-preference-tabs-purposes-gpcBanner-title-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-header-description-color\] {
+  color: var(--k-preference-tabs-purposes-header-description-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-header-link-color\] {
+  color: var(--k-preference-tabs-purposes-header-link-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-header-title-color\] {
+  color: var(--k-preference-tabs-purposes-header-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-purposeList-purposeListItems-arrowIcon-color\] {
+  color: var(--k-preference-tabs-purposes-purposeList-purposeListItems-arrowIcon-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-purposeList-purposeListItems-purposeContent-color\] {
+  color: var(--k-preference-tabs-purposes-purposeList-purposeListItems-purposeContent-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-purposeList-purposeListItems-purposeLinks-color\] {
+  color: var(--k-preference-tabs-purposes-purposeList-purposeListItems-purposeLinks-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-purposeList-switchButtons-off-text-color\] {
+  color: var(--k-preference-tabs-purposes-purposeList-switchButtons-off-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-purposeList-switchButtons-on-text-color\] {
+  color: var(--k-preference-tabs-purposes-purposeList-switchButtons-on-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-purposeListHeader-acceptAllButton-text-color\] {
+  color: var(--k-preference-tabs-purposes-purposeListHeader-acceptAllButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-purposeListHeader-rejectAllButton-text-color\] {
+  color: var(--k-preference-tabs-purposes-purposeListHeader-rejectAllButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-purposes-purposeListHeader-title-color\] {
+  color: var(--k-preference-tabs-purposes-purposeListHeader-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-form-error-text-color\] {
+  color: var(--k-preference-tabs-requests-form-error-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-home-dsrPortalLink-description-color\] {
+  color: var(--k-preference-tabs-requests-home-dsrPortalLink-description-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-home-dsrPortalLink-title-color\] {
+  color: var(--k-preference-tabs-requests-home-dsrPortalLink-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-home-header-description-color\] {
+  color: var(--k-preference-tabs-requests-home-header-description-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-home-header-link-color\] {
+  color: var(--k-preference-tabs-requests-home-header-link-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-home-header-title-color\] {
+  color: var(--k-preference-tabs-requests-home-header-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-home-rightsList-item-title-color\] {
+  color: var(--k-preference-tabs-requests-home-rightsList-item-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-home-rightsList-title-color\] {
+  color: var(--k-preference-tabs-requests-home-rightsList-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-rightForm-actionButton-text-color\] {
+  color: var(--k-preference-tabs-requests-rightForm-actionButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-rightForm-form-checkboxes-error-label-color\] {
+  color: var(--k-preference-tabs-requests-rightForm-form-checkboxes-error-label-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-rightForm-form-checkboxes-selected-label-color\] {
+  color: var(--k-preference-tabs-requests-rightForm-form-checkboxes-selected-label-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-rightForm-form-checkboxes-unselected-label-color\] {
+  color: var(--k-preference-tabs-requests-rightForm-form-checkboxes-unselected-label-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-rightForm-form-dividers-subtitle-color\] {
+  color: var(--k-preference-tabs-requests-rightForm-form-dividers-subtitle-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-rightForm-form-dividers-title-color\] {
+  color: var(--k-preference-tabs-requests-rightForm-form-dividers-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-rightForm-form-fields-fieldLabel-color\] {
+  color: var(--k-preference-tabs-requests-rightForm-form-fields-fieldLabel-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-rightForm-form-fields-hintText-color\] {
+  color: var(--k-preference-tabs-requests-rightForm-form-fields-hintText-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-rightForm-form-fields-inputText-color\] {
+  color: var(--k-preference-tabs-requests-rightForm-form-fields-inputText-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-rightForm-header-title-color\] {
+  color: var(--k-preference-tabs-requests-rightForm-header-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-submitted-footer-actionButton-text-color\] {
+  color: var(--k-preference-tabs-requests-submitted-footer-actionButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-submitted-header-title-color\] {
+  color: var(--k-preference-tabs-requests-submitted-header-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-submitted-text-description-color\] {
+  color: var(--k-preference-tabs-requests-submitted-text-description-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-requests-submitted-text-title-color\] {
+  color: var(--k-preference-tabs-requests-submitted-text-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-footer-actionButton-text-color\] {
+  color: var(--k-preference-tabs-subscriptions-footer-actionButton-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-header-description-color\] {
+  color: var(--k-preference-tabs-subscriptions-header-description-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-header-link-color\] {
+  color: var(--k-preference-tabs-subscriptions-header-link-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-header-title-color\] {
+  color: var(--k-preference-tabs-subscriptions-header-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-list-checkbox-selected-icon-color\] {
+  color: var(--k-preference-tabs-subscriptions-list-checkbox-selected-icon-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-list-checkbox-selected-label-color\] {
+  color: var(--k-preference-tabs-subscriptions-list-checkbox-selected-label-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-list-checkbox-text-color\] {
+  color: var(--k-preference-tabs-subscriptions-list-checkbox-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-list-checkbox-unselected-label-color\] {
+  color: var(--k-preference-tabs-subscriptions-list-checkbox-unselected-label-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-list-layout-link-color\] {
+  color: var(--k-preference-tabs-subscriptions-list-layout-link-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-list-layout-text-color\] {
+  color: var(--k-preference-tabs-subscriptions-list-layout-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-list-switchButton-off-text-color\] {
+  color: var(--k-preference-tabs-subscriptions-list-switchButton-off-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-list-switchButton-on-text-color\] {
+  color: var(--k-preference-tabs-subscriptions-list-switchButton-on-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-unsubscribeAll-switchButton-off-text-color\] {
+  color: var(--k-preference-tabs-subscriptions-unsubscribeAll-switchButton-off-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-unsubscribeAll-switchButton-on-text-color\] {
+  color: var(--k-preference-tabs-subscriptions-unsubscribeAll-switchButton-on-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-subscriptions-unsubscribeAll-text-color\] {
+  color: var(--k-preference-tabs-subscriptions-unsubscribeAll-text-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-welcome-about-link-color\] {
+  color: var(--k-preference-tabs-welcome-about-link-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-welcome-about-title-color\] {
+  color: var(--k-preference-tabs-welcome-about-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-welcome-quickLinks-link-color\] {
+  color: var(--k-preference-tabs-welcome-quickLinks-link-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-welcome-quickLinks-title-color\] {
+  color: var(--k-preference-tabs-welcome-quickLinks-title-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-welcome-welcomeMsg-link-color\] {
+  color: var(--k-preference-tabs-welcome-welcomeMsg-link-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-welcome-welcomeMsg-subtitle-color\] {
+  color: var(--k-preference-tabs-welcome-welcomeMsg-subtitle-color) !important;
+}
+#lanyard_root * .\!ketch-text-\[--k-preference-tabs-welcome-welcomeMsg-title-color\] {
+  color: var(--k-preference-tabs-welcome-welcomeMsg-title-color) !important;
+}
+#lanyard_root * .ketch-text-\[--k-preference-tabs-welcome-about-text-color\] {
+  color: var(--k-preference-tabs-welcome-about-text-color);
+}
+#lanyard_root * .ketch-text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+#lanyard_root * .ketch-text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+#lanyard_root * .ketch-text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+#lanyard_root * .ketch-text-inherit {
+  color: inherit;
+}
+#lanyard_root * .ketch-text-ketch-black-black-100 {
+  color: rgba(7, 26, 36, 1);
+}
+#lanyard_root * .ketch-text-ketch-black-black-48 {
+  color: rgba(7, 26, 36, 0.48);
+}
+#lanyard_root * .ketch-text-ketch-black-black-56 {
+  color: rgba(7, 26, 36, 0.56);
+}
+#lanyard_root * .ketch-text-ketch-error {
+  color: rgba(252, 60, 96, 1);
+}
+#lanyard_root * .ketch-text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+#lanyard_root * .ketch-text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+#lanyard_root * .\!ketch-underline {
+  text-decoration-line: underline !important;
+}
+#lanyard_root * .ketch-underline {
+  text-decoration-line: underline;
+}
+#lanyard_root * .ketch-no-underline {
+  text-decoration-line: none;
+}
+#lanyard_root * .ketch-placeholder-ketch-black-black-48::-moz-placeholder {
+  color: rgba(7, 26, 36, 0.48);
+}
+#lanyard_root * .ketch-placeholder-ketch-black-black-48::placeholder {
+  color: rgba(7, 26, 36, 0.48);
+}
+#lanyard_root * .ketch-opacity-0 {
+  opacity: 0;
+}
+#lanyard_root * .ketch-opacity-100 {
+  opacity: 1;
+}
+#lanyard_root * .ketch-opacity-50 {
+  opacity: 0.5;
+}
+#lanyard_root * .ketch-opacity-\[\.24\] {
+  opacity: .24;
+}
+#lanyard_root * .ketch-opacity-\[0\.48\] {
+  opacity: 0.48;
+}
+#lanyard_root * .ketch-opacity-\[0\.65\] {
+  opacity: 0.65;
+}
+#lanyard_root * .ketch-shadow-\[0px_3px_10px_1px_rgba\(7\,26\,36\,0\.24\)\] {
+  --tw-shadow: 0px 3px 10px 1px rgba(7,26,36,0.24);
+  --tw-shadow-colored: 0px 3px 10px 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+#lanyard_root * .ketch-shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+#lanyard_root * .ketch-shadow-none {
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+#lanyard_root * .ketch-outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+#lanyard_root * .\!ketch-outline-2 {
+  outline-width: 2px !important;
+}
+#lanyard_root * .\!ketch-outline-offset-2 {
+  outline-offset: 2px !important;
+}
+#lanyard_root * .\!ketch-outline-ketch-black-black-100 {
+  outline-color: rgba(7, 26, 36, 1) !important;
+}
+#lanyard_root * .\!ketch-outline-white {
+  outline-color: #fff !important;
+}
+#lanyard_root * .ketch-outline-default-outline {
+  outline-color: rgba(7, 26, 36, 0.48);
+}
+#lanyard_root * .ketch-transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+#lanyard_root * .ketch-transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+#lanyard_root * .ketch-transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+#lanyard_root * .ketch-duration-1000 {
+  transition-duration: 1000ms;
+}
+#lanyard_root * .ketch-duration-300 {
+  transition-duration: 300ms;
+}
+#lanyard_root * .ketch-ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@supports (padding: max(0px)) {
+  .banner-mobile-bottom {
+    bottom: 0px !important;
+  }
+
+  /* CSS Collision where text is uppercase */
+  #lanyard_root * {
+    text-transform: none;
+  }
+}
+#lanyard_root * .placeholder\:ketch-text-ketch-l::-moz-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+}
+#lanyard_root * .placeholder\:ketch-text-ketch-l::placeholder {
+  font-size: 14px;
+  line-height: 21px;
+}
+#lanyard_root * .placeholder\:\!ketch-text-\[--k-preference-tabs-requests-rightForm-form-fields-hintText-color\]::-moz-placeholder {
+  color: var(--k-preference-tabs-requests-rightForm-form-fields-hintText-color) !important;
+}
+#lanyard_root * .placeholder\:\!ketch-text-\[--k-preference-tabs-requests-rightForm-form-fields-hintText-color\]::placeholder {
+  color: var(--k-preference-tabs-requests-rightForm-form-fields-hintText-color) !important;
+}
+#lanyard_root * .before\:ketch-absolute::before {
+  content: var(--tw-content);
+  position: absolute;
+}
+#lanyard_root * .before\:ketch-left-1::before {
+  content: var(--tw-content);
+  left: 4px;
+}
+#lanyard_root * .before\:ketch-top-1::before {
+  content: var(--tw-content);
+  top: 4px;
+}
+#lanyard_root * .before\:ketch-h-2::before {
+  content: var(--tw-content);
+  height: 8px;
+}
+#lanyard_root * .before\:ketch-w-2::before {
+  content: var(--tw-content);
+  width: 8px;
+}
+#lanyard_root * .before\:ketch-rounded-full::before {
+  content: var(--tw-content);
+  border-radius: 9999px;
+}
+#lanyard_root * .before\:ketch-bg-white::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+#lanyard_root * .before\:ketch-opacity-0::before {
+  content: var(--tw-content);
+  opacity: 0;
+}
+#lanyard_root * .before\:ketch-content-\[\'\'\]::before {
+  --tw-content: '';
+  content: var(--tw-content);
+}
+#lanyard_root * .after\:ketch-absolute::after {
+  content: var(--tw-content);
+  position: absolute;
+}
+#lanyard_root * .after\:-ketch-left-0\.5::after {
+  content: var(--tw-content);
+  left: -2px;
+}
+#lanyard_root * .after\:-ketch-top-0\.5::after {
+  content: var(--tw-content);
+  top: -2px;
+}
+#lanyard_root * .after\:ketch-left-0::after {
+  content: var(--tw-content);
+  left: 0;
+}
+#lanyard_root * .after\:ketch-top-0::after {
+  content: var(--tw-content);
+  top: 0;
+}
+#lanyard_root * .after\:ketch-h-5::after {
+  content: var(--tw-content);
+  height: 20px;
+}
+#lanyard_root * .after\:ketch-w-5::after {
+  content: var(--tw-content);
+  width: 20px;
+}
+#lanyard_root * .after\:ketch-cursor-pointer::after {
+  content: var(--tw-content);
+  cursor: pointer;
+}
+#lanyard_root * .after\:ketch-rounded-\[3px\]::after {
+  content: var(--tw-content);
+  border-radius: 3px;
+}
+#lanyard_root * .after\:ketch-rounded-full::after {
+  content: var(--tw-content);
+  border-radius: 9999px;
+}
+#lanyard_root * .after\:ketch-content-\[\'\'\]::after {
+  --tw-content: '';
+  content: var(--tw-content);
+}
+#lanyard_root * .odd\:ketch-bg-white:nth-child(odd) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+#lanyard_root * .even\:ketch-bg-gray-100:nth-child(even) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+#lanyard_root * .autofill\:\!ketch-shadow-\[inset_0_0_0px_1000px_var\(--k-preference-tabs-requests-rightForm-form-fields-inactive-background-color\)\]:-webkit-autofill {
+  --tw-shadow: inset 0 0 0px 1000px var(--k-preference-tabs-requests-rightForm-form-fields-inactive-background-color) !important;
+  --tw-shadow-colored: inset 0 0 0px 1000px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+#lanyard_root * .autofill\:\!ketch-shadow-\[inset_0_0_0px_1000px_var\(--k-preference-tabs-requests-rightForm-form-fields-inactive-background-color\)\]:autofill {
+  --tw-shadow: inset 0 0 0px 1000px var(--k-preference-tabs-requests-rightForm-form-fields-inactive-background-color) !important;
+  --tw-shadow-colored: inset 0 0 0px 1000px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+#lanyard_root * .hover\:ketch-cursor-pointer:hover {
+  cursor: pointer;
+}
+#lanyard_root * .hover\:ketch-border-ketch-black-black-56:hover {
+  border-color: rgba(7, 26, 36, 0.56);
+}
+#lanyard_root * .hover\:ketch-bg-gradient-to-r:hover {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+#lanyard_root * .hover\:ketch-from-states-hover-darken:hover {
+  --tw-gradient-from: rgba(7, 26, 36, 0.10) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(7, 26, 36, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+#lanyard_root * .hover\:ketch-to-states-hover-darken:hover {
+  --tw-gradient-to: rgba(7, 26, 36, 0.10) var(--tw-gradient-to-position);
+}
+#lanyard_root * .hover\:ketch-text-inherit:hover {
+  color: inherit;
+}
+#lanyard_root * .focus\:ketch-border-none:focus {
+  border-style: none;
+}
+#lanyard_root * .focus\:ketch-outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+#lanyard_root * .focus-visible\:ketch-mb-1:focus-visible {
+  margin-bottom: 4px;
+}
+#lanyard_root * .focus-visible\:\!ketch-border-\[--k-preference-tabs-requests-rightForm-form-fields-active-outline-color\]:focus-visible {
+  border-color: var(--k-preference-tabs-requests-rightForm-form-fields-active-outline-color) !important;
+}
+#lanyard_root * .focus-visible\:ketch-border-blue-600:focus-visible {
+  --tw-border-opacity: 1;
+  border-color: rgb(37 99 235 / var(--tw-border-opacity));
+}
+#lanyard_root * .focus-visible\:\!ketch-bg-\[--k-preference-tabs-requests-rightForm-form-fields-active-background-color\]:focus-visible {
+  background-color: var(--k-preference-tabs-requests-rightForm-form-fields-active-background-color) !important;
+}
+#lanyard_root * .focus-visible\:ketch-bg-gradient-to-r:focus-visible {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+#lanyard_root * .focus-visible\:ketch-from-states-focus-darken:focus-visible {
+  --tw-gradient-from: rgba(7, 26, 36, 0.08) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(7, 26, 36, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+#lanyard_root * .focus-visible\:ketch-to-states-focus-darken:focus-visible {
+  --tw-gradient-to: rgba(7, 26, 36, 0.08) var(--tw-gradient-to-position);
+}
+#lanyard_root * .focus-visible\:ketch-outline-none:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+#lanyard_root * .focus-visible\:\!ketch-outline:focus-visible {
+  outline-style: solid !important;
+}
+#lanyard_root * .focus-visible\:ketch-outline:focus-visible {
+  outline-style: solid;
+}
+#lanyard_root * .focus-visible\:ketch-outline-2:focus-visible {
+  outline-width: 2px;
+}
+#lanyard_root * .focus-visible\:\!ketch-outline-offset-2:focus-visible {
+  outline-offset: 2px !important;
+}
+#lanyard_root * .focus-visible\:ketch-outline-offset-0:focus-visible {
+  outline-offset: 0px;
+}
+#lanyard_root * .focus-visible\:ketch-outline-offset-2:focus-visible {
+  outline-offset: 2px;
+}
+#lanyard_root * .focus-visible\:\!ketch-outline-\[--k-banner-header-returnButton-background-color\]:focus-visible {
+  outline-color: var(--k-banner-header-returnButton-background-color) !important;
+}
+#lanyard_root * .focus-visible\:\!ketch-outline-\[--k-preference-tabs-requests-submitted-footer-actionButton-outline-color\]:focus-visible {
+  outline-color: var(--k-preference-tabs-requests-submitted-footer-actionButton-outline-color) !important;
+}
+#lanyard_root * .focus-visible\:ketch-outline-default-outline:focus-visible {
+  outline-color: rgba(7, 26, 36, 0.48);
+}
+#lanyard_root * .focus-visible\:ketch-outline-inherit:focus-visible {
+  outline-color: inherit;
+}
+#lanyard_root * .focus-visible\:ketch-outline-ketch-black-black-100:focus-visible {
+  outline-color: rgba(7, 26, 36, 1);
+}
+#lanyard_root * .focus-visible\:ketch-outline-white:focus-visible {
+  outline-color: #fff;
+}
+#lanyard_root * .focus-visible\:-webkit-autofill\:\!ketch-shadow-\[inset_0_0_0px_1000px_var\(--k-preference-tabs-requests-rightForm-form-fields-active-background-color\)\]:-webkit-autofill:focus-visible {
+  --tw-shadow: inset 0 0 0px 1000px var(--k-preference-tabs-requests-rightForm-form-fields-active-background-color) !important;
+  --tw-shadow-colored: inset 0 0 0px 1000px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+#lanyard_root * .focus-visible\:autofill\:\!ketch-shadow-\[inset_0_0_0px_1000px_var\(--k-preference-tabs-requests-rightForm-form-fields-active-background-color\)\]:autofill:focus-visible {
+  --tw-shadow: inset 0 0 0px 1000px var(--k-preference-tabs-requests-rightForm-form-fields-active-background-color) !important;
+  --tw-shadow-colored: inset 0 0 0px 1000px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+#lanyard_root * .focus-visible\:-webkit-autofill\:\!ketch-shadow-\[inset_0_0_0px_1000px_var\(--k-preference-tabs-requests-rightForm-form-fields-error-background-color\)\]:-webkit-autofill:focus-visible {
+  --tw-shadow: inset 0 0 0px 1000px var(--k-preference-tabs-requests-rightForm-form-fields-error-background-color) !important;
+  --tw-shadow-colored: inset 0 0 0px 1000px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+#lanyard_root * .focus-visible\:autofill\:\!ketch-shadow-\[inset_0_0_0px_1000px_var\(--k-preference-tabs-requests-rightForm-form-fields-error-background-color\)\]:autofill:focus-visible {
+  --tw-shadow: inset 0 0 0px 1000px var(--k-preference-tabs-requests-rightForm-form-fields-error-background-color) !important;
+  --tw-shadow-colored: inset 0 0 0px 1000px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+#lanyard_root * .active\:ketch-bg-gradient-to-r:active {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+#lanyard_root * .active\:ketch-from-states-pressed-darken:active {
+  --tw-gradient-from: rgba(7, 26, 36, 0.24) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(7, 26, 36, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+#lanyard_root * .active\:ketch-to-states-pressed-darken:active {
+  --tw-gradient-to: rgba(7, 26, 36, 0.24) var(--tw-gradient-to-position);
+}
+#lanyard_root * .disabled\:ketch-pointer-events-none:disabled {
+  pointer-events: none;
+}
+#lanyard_root * .disabled\:ketch-cursor-not-allowed:disabled {
+  cursor: not-allowed;
+}
+#lanyard_root * .disabled\:ketch-select-none:disabled {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#lanyard_root * .disabled\:ketch-opacity-\[\.24\]:disabled {
+  opacity: .24;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:ketch-flex) {
+  display: flex;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:ketch-inline-flex) {
+  display: inline-flex;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:ketch-hidden) {
+  display: none;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:ketch-rounded-\[3px\]) {
+  border-radius: 3px;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:ketch-rounded-full) {
+  border-radius: 9999px;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:\!ketch-border-\[--k-consentGate-consentBlock-purposes-list-switchButtons-on-background-color\]) {
+  border-color: var(--k-consentGate-consentBlock-purposes-list-switchButtons-on-background-color) !important;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:\!ketch-border-\[--k-modal-purposeList-switchButtons-on-background-color\]) {
+  border-color: var(--k-modal-purposeList-switchButtons-on-background-color) !important;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:\!ketch-border-\[--k-preference-tabs-purposes-purposeList-switchButtons-on-background-color\]) {
+  border-color: var(--k-preference-tabs-purposes-purposeList-switchButtons-on-background-color) !important;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:\!ketch-border-\[--k-preference-tabs-requests-rightForm-form-checkboxes-selected-background-color\]) {
+  border-color: var(--k-preference-tabs-requests-rightForm-form-checkboxes-selected-background-color) !important;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:\!ketch-border-\[--k-preference-tabs-subscriptions-list-checkbox-selected-background-color\]) {
+  border-color: var(--k-preference-tabs-subscriptions-list-checkbox-selected-background-color) !important;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:ketch-border-black) {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:\!ketch-bg-\[--k-consentGate-consentBlock-purposes-list-switchButtons-on-background-color\]) {
+  background-color: var(--k-consentGate-consentBlock-purposes-list-switchButtons-on-background-color) !important;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:\!ketch-bg-\[--k-modal-purposeList-switchButtons-on-background-color\]) {
+  background-color: var(--k-modal-purposeList-switchButtons-on-background-color) !important;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:\!ketch-bg-\[--k-preference-tabs-purposes-purposeList-switchButtons-on-background-color\]) {
+  background-color: var(--k-preference-tabs-purposes-purposeList-switchButtons-on-background-color) !important;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:\!ketch-bg-\[--k-preference-tabs-requests-rightForm-form-checkboxes-selected-background-color\]) {
+  background-color: var(--k-preference-tabs-requests-rightForm-form-checkboxes-selected-background-color) !important;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:\!ketch-bg-\[--k-preference-tabs-subscriptions-list-checkbox-selected-background-color\]) {
+  background-color: var(--k-preference-tabs-subscriptions-list-checkbox-selected-background-color) !important;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:\!ketch-bg-\[--k-preference-tabs-subscriptions-list-switchButton-on-background-color\]) {
+  background-color: var(--k-preference-tabs-subscriptions-list-switchButton-on-background-color) !important;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:\!ketch-bg-\[--k-preference-tabs-subscriptions-unsubscribeAll-switchButton-on-background-color\]) {
+  background-color: var(--k-preference-tabs-subscriptions-unsubscribeAll-switchButton-on-background-color) !important;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:ketch-bg-black) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:ketch-font-semibold) {
+  font-weight: 600;
+}
+#lanyard_root * :is(.ketch-peer:checked ~ .peer-checked\:before\:ketch-opacity-100)::before {
+  content: var(--tw-content);
+  opacity: 1;
+}
+#lanyard_root * :is(.ketch-peer:hover ~ .peer-hover\:ketch-bg-gradient-to-r) {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+#lanyard_root * :is(.ketch-peer:hover ~ .peer-hover\:ketch-from-states-hover-darken) {
+  --tw-gradient-from: rgba(7, 26, 36, 0.10) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(7, 26, 36, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+#lanyard_root * :is(.ketch-peer:hover ~ .peer-hover\:ketch-to-states-hover-darken) {
+  --tw-gradient-to: rgba(7, 26, 36, 0.10) var(--tw-gradient-to-position);
+}
+#lanyard_root * :is(.ketch-peer:hover ~ .peer-hover\:after\:ketch-bg-gradient-to-r)::after {
+  content: var(--tw-content);
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+#lanyard_root * :is(.ketch-peer:hover ~ .peer-hover\:after\:ketch-from-states-hover-darken)::after {
+  content: var(--tw-content);
+  --tw-gradient-from: rgba(7, 26, 36, 0.10) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(7, 26, 36, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+#lanyard_root * :is(.ketch-peer:hover ~ .peer-hover\:after\:ketch-to-states-hover-darken)::after {
+  content: var(--tw-content);
+  --tw-gradient-to: rgba(7, 26, 36, 0.10) var(--tw-gradient-to-position);
+}
+#lanyard_root * :is(.ketch-peer:focus-visible ~ .peer-focus-visible\:ketch-bg-gradient-to-r) {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+#lanyard_root * :is(.ketch-peer:focus-visible ~ .peer-focus-visible\:ketch-from-states-focus-darken) {
+  --tw-gradient-from: rgba(7, 26, 36, 0.08) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(7, 26, 36, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+#lanyard_root * :is(.ketch-peer:focus-visible ~ .peer-focus-visible\:ketch-to-states-focus-darken) {
+  --tw-gradient-to: rgba(7, 26, 36, 0.08) var(--tw-gradient-to-position);
+}
+#lanyard_root * :is(.ketch-peer:focus-visible ~ .peer-focus-visible\:ketch-outline) {
+  outline-style: solid;
+}
+#lanyard_root * :is(.ketch-peer:focus-visible ~ .peer-focus-visible\:ketch-outline-2) {
+  outline-width: 2px;
+}
+#lanyard_root * :is(.ketch-peer:focus-visible ~ .peer-focus-visible\:ketch-outline-offset-2) {
+  outline-offset: 2px;
+}
+#lanyard_root * :is(.ketch-peer:focus-visible ~ .peer-focus-visible\:ketch-outline-default-outline) {
+  outline-color: rgba(7, 26, 36, 0.48);
+}
+#lanyard_root * :is(.ketch-peer:focus-visible:checked ~ .peer-focus-visible\:peer-checked\:ketch-outline-black) {
+  outline-color: #000;
+}
+#lanyard_root * :is(.ketch-peer:focus-visible:checked ~ .peer-focus-visible\:peer-checked\:ketch-outline-default-outline) {
+  outline-color: rgba(7, 26, 36, 0.48);
+}
+#lanyard_root * :is(.ketch-peer:checked:focus-visible ~ .peer-checked\:peer-focus-visible\:after\:ketch-bg-gradient-to-r)::after {
+  content: var(--tw-content);
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+#lanyard_root * :is(.ketch-peer:checked:focus-visible ~ .peer-checked\:peer-focus-visible\:after\:ketch-from-states-focus-darken)::after {
+  content: var(--tw-content);
+  --tw-gradient-from: rgba(7, 26, 36, 0.08) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(7, 26, 36, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+#lanyard_root * :is(.ketch-peer:checked:focus-visible ~ .peer-checked\:peer-focus-visible\:after\:ketch-to-states-focus-darken)::after {
+  content: var(--tw-content);
+  --tw-gradient-to: rgba(7, 26, 36, 0.08) var(--tw-gradient-to-position);
+}
+#lanyard_root * :is(.ketch-peer:active ~ .peer-active\:ketch-bg-gradient-to-r) {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+#lanyard_root * :is(.ketch-peer:active ~ .peer-active\:ketch-from-states-pressed-darken) {
+  --tw-gradient-from: rgba(7, 26, 36, 0.24) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(7, 26, 36, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+#lanyard_root * :is(.ketch-peer:active ~ .peer-active\:ketch-to-states-pressed-darken) {
+  --tw-gradient-to: rgba(7, 26, 36, 0.24) var(--tw-gradient-to-position);
+}
+#lanyard_root * :is(.ketch-peer:checked:active ~ .peer-checked\:peer-active\:after\:ketch-bg-gradient-to-r)::after {
+  content: var(--tw-content);
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+#lanyard_root * :is(.ketch-peer:checked:active ~ .peer-checked\:peer-active\:after\:ketch-from-states-pressed-darken)::after {
+  content: var(--tw-content);
+  --tw-gradient-from: rgba(7, 26, 36, 0.24) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(7, 26, 36, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+#lanyard_root * :is(.ketch-peer:checked:active ~ .peer-checked\:peer-active\:after\:ketch-to-states-pressed-darken)::after {
+  content: var(--tw-content);
+  --tw-gradient-to: rgba(7, 26, 36, 0.24) var(--tw-gradient-to-position);
+}
+#lanyard_root * :is(.ketch-peer:disabled ~ .peer-disabled\:ketch-pointer-events-none) {
+  pointer-events: none;
+}
+#lanyard_root * :is(.ketch-peer:disabled ~ .peer-disabled\:ketch-cursor-not-allowed) {
+  cursor: not-allowed;
+}
+#lanyard_root * :is(.ketch-peer:disabled ~ .peer-disabled\:ketch-select-none) {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#lanyard_root * :is(.ketch-peer:disabled ~ .peer-disabled\:ketch-opacity-\[\.24\]) {
+  opacity: .24;
+}
+#lanyard_root * :is(.ketch-peer:disabled:hover ~ .peer-disabled\:peer-hover\:ketch-bg-none) {
+  background-image: none;
+}
+#lanyard_root * :is(.ketch-peer:disabled:hover ~ .peer-disabled\:peer-hover\:after\:ketch-bg-none)::after {
+  content: var(--tw-content);
+  background-image: none;
+}
+#lanyard_root * :is(.ketch-peer:disabled:focus-visible ~ .peer-disabled\:peer-focus-visible\:ketch-bg-none) {
+  background-image: none;
+}
+#lanyard_root * :is(.ketch-peer:disabled:focus-visible ~ .peer-disabled\:peer-focus-visible\:after\:ketch-bg-none)::after {
+  content: var(--tw-content);
+  background-image: none;
+}
+#lanyard_root * :is(.ketch-peer:disabled:active ~ .peer-disabled\:peer-active\:ketch-bg-none) {
+  background-image: none;
+}
+#lanyard_root * :is(.ketch-peer:disabled:active ~ .peer-disabled\:peer-active\:after\:ketch-bg-none)::after {
+  content: var(--tw-content);
+  background-image: none;
+}
+#lanyard_root * .aria-selected\:\!ketch-bg-\[--k-preference-navigation-layout-item-selectedBackground-color\][aria-selected="true"] {
+  background-color: var(--k-preference-navigation-layout-item-selectedBackground-color) !important;
+}
+#lanyard_root * .aria-selected\:\!ketch-text-\[--k-preference-navigation-layout-item-selectedText-color\][aria-selected="true"] {
+  color: var(--k-preference-navigation-layout-item-selectedText-color) !important;
+}
+#lanyard_root * .aria-selected\:ketch-underline[aria-selected="true"] {
+  text-decoration-line: underline;
+}
+@media not all and (min-width: 480px) {
+  #lanyard_root * .max-sm\:ketch-overflow-y-scroll {
+    overflow-y: scroll;
+  }
+}
+@media (min-width: 420px) {
+  #lanyard_root * .xs\:ketch-bottom-1 {
+    bottom: 4px;
+  }
+  #lanyard_root * .xs\:ketch-right-1 {
+    right: 4px;
+  }
+  #lanyard_root * .xs\:ketch-right-auto {
+    right: auto;
+  }
+  #lanyard_root * .xs\:ketch-top-1 {
+    top: 4px;
+  }
+  #lanyard_root * .xs\:ketch-flex {
+    display: flex;
+  }
+  #lanyard_root * .xs\:ketch-hidden {
+    display: none;
+  }
+  #lanyard_root * .xs\:ketch-max-h-\[calc\(100dvh-8px\)\] {
+    max-height: calc(100dvh - 8px);
+  }
+  #lanyard_root * .xs\:ketch-min-h-\[calc\(100dvh-8px\)\] {
+    min-height: calc(100dvh - 8px);
+  }
+  #lanyard_root * .xs\:ketch-w-\[420px\] {
+    width: 420px;
+  }
+  #lanyard_root * .xs\:ketch-w-\[calc\(100\%-8px\)\] {
+    width: calc(100% - 8px);
+  }
+  #lanyard_root * .xs\:ketch-w-auto {
+    width: auto;
+  }
+  #lanyard_root * .xs\:ketch-w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #lanyard_root * .xs\:ketch-w-full {
+    width: 100%;
+  }
+  #lanyard_root * .xs\:ketch-max-w-\[184px\] {
+    max-width: 184px;
+  }
+  #lanyard_root * .xs\:ketch-translate-y-0 {
+    --tw-translate-y: 0;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+  #lanyard_root * .xs\:ketch-flex-row {
+    flex-direction: row;
+  }
+  #lanyard_root * .xs\:ketch-items-center {
+    align-items: center;
+  }
+  #lanyard_root * .xs\:ketch-gap-0 {
+    gap: 0;
+  }
+  #lanyard_root * .xs\:ketch-px-6 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  #lanyard_root * .xs\:ketch-py-5 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #lanyard_root * .xs\:ketch-text-ketch-h1-small {
+    font-size: 26px;
+    line-height: 36.4px;
+  }
+}
+@media (min-width: 480px) {
+  #lanyard_root * .sm\:ketch-left-2\/4 {
+    left: 50%;
+  }
+  #lanyard_root * .sm\:ketch-flex {
+    display: flex;
+  }
+  #lanyard_root * .sm\:ketch-hidden {
+    display: none;
+  }
+  #lanyard_root * .sm\:ketch-max-h-\[calc\(100dvh-8px\)\] {
+    max-height: calc(100dvh - 8px);
+  }
+  #lanyard_root * .sm\:ketch-max-h-dvh {
+    max-height: 100dvh;
+  }
+  #lanyard_root * .sm\:ketch-w-\[730px\] {
+    width: 730px;
+  }
+  #lanyard_root * .sm\:ketch-w-auto {
+    width: auto;
+  }
+  #lanyard_root * .sm\:ketch-w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #lanyard_root * .sm\:ketch-w-full {
+    width: 100%;
+  }
+  #lanyard_root * .sm\:\!ketch-max-w-\[calc\(75\%\+var\(--safe-area-inset-left\)\+var\(--safe-area-inset-right\)\)\] {
+    max-width: calc(75% + var(--safe-area-inset-left) + var(--safe-area-inset-right)) !important;
+  }
+  #lanyard_root * .sm\:ketch-max-w-\[184px\] {
+    max-width: 184px;
+  }
+  #lanyard_root * .sm\:ketch-max-w-\[328px\] {
+    max-width: 328px;
+  }
+  #lanyard_root * .sm\:ketch-max-w-\[40\%\] {
+    max-width: 40%;
+  }
+  #lanyard_root * .sm\:ketch-max-w-\[calc\(100\%-8px\)\] {
+    max-width: calc(100% - 8px);
+  }
+  #lanyard_root * .sm\:ketch-max-w-\[calc\(80\%\+var\(--safe-area-inset-left\)\+var\(--safe-area-inset-right\)\)\] {
+    max-width: calc(80% + var(--safe-area-inset-left) + var(--safe-area-inset-right));
+  }
+  #lanyard_root * .sm\:-ketch-translate-x-2\/4 {
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+  #lanyard_root * .sm\:ketch-flex-row {
+    flex-direction: row;
+  }
+  #lanyard_root * .sm\:ketch-flex-col {
+    flex-direction: column;
+  }
+  #lanyard_root * .sm\:ketch-items-end {
+    align-items: flex-end;
+  }
+  #lanyard_root * .sm\:ketch-items-center {
+    align-items: center;
+  }
+  #lanyard_root * .sm\:ketch-items-stretch {
+    align-items: stretch;
+  }
+  #lanyard_root * .sm\:ketch-gap-0 {
+    gap: 0;
+  }
+  #lanyard_root * .sm\:ketch-gap-6 {
+    gap: 24px;
+  }
+  #lanyard_root * .sm\:ketch-gap-8 {
+    gap: 32px;
+  }
+  #lanyard_root * .sm\:ketch-overflow-visible {
+    overflow: visible;
+  }
+  #lanyard_root * .sm\:ketch-overflow-y-scroll {
+    overflow-y: scroll;
+  }
+  #lanyard_root * .sm\:ketch-px-6 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  #lanyard_root * .sm\:ketch-py-5 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #lanyard_root * .sm\:ketch-text-center {
+    text-align: center;
+  }
+  #lanyard_root * .sm\:ketch-text-ketch-h1-small {
+    font-size: 26px;
+    line-height: 36.4px;
+  }
+}
+@media (min-width: 769px) {
+  #lanyard_root * .md\:ketch-mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #lanyard_root * .md\:ketch-block {
+    display: block;
+  }
+  #lanyard_root * .md\:ketch-inline-block {
+    display: inline-block;
+  }
+  #lanyard_root * .md\:ketch-flex {
+    display: flex;
+  }
+  #lanyard_root * .md\:ketch-inline-flex {
+    display: inline-flex;
+  }
+  #lanyard_root * .md\:ketch-hidden {
+    display: none;
+  }
+  #lanyard_root * .md\:ketch-h-16 {
+    height: 64px;
+  }
+  #lanyard_root * .md\:ketch-max-h-80 {
+    max-height: 320px;
+  }
+  #lanyard_root * .md\:ketch-max-w-\[50\%\] {
+    max-width: 50%;
+  }
+  #lanyard_root * .md\:ketch-grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  #lanyard_root * .md\:ketch-grid-cols-\[160px_1fr\] {
+    grid-template-columns: 160px 1fr;
+  }
+  #lanyard_root * .md\:ketch-grid-cols-\[328px_1fr\] {
+    grid-template-columns: 328px 1fr;
+  }
+  #lanyard_root * .md\:ketch-flex-row {
+    flex-direction: row;
+  }
+  #lanyard_root * .md\:ketch-flex-col {
+    flex-direction: column;
+  }
+  #lanyard_root * .md\:ketch-items-start {
+    align-items: flex-start;
+  }
+  #lanyard_root * .md\:ketch-items-center {
+    align-items: center;
+  }
+  #lanyard_root * .md\:ketch-justify-between {
+    justify-content: space-between;
+  }
+  #lanyard_root * .md\:ketch-gap-4 {
+    gap: 16px;
+  }
+  #lanyard_root * .md\:ketch-gap-6 {
+    gap: 24px;
+  }
+  #lanyard_root * .md\:ketch-gap-8 {
+    gap: 32px;
+  }
+  #lanyard_root * .md\:ketch-px-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #lanyard_root * .md\:ketch-px-4 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  #lanyard_root * .md\:ketch-px-8 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  #lanyard_root * .md\:ketch-pb-0 {
+    padding-bottom: 0;
+  }
+  #lanyard_root * .md\:ketch-pb-6 {
+    padding-bottom: 24px;
+  }
+  #lanyard_root * .md\:ketch-pl-8 {
+    padding-left: 32px;
+  }
+  #lanyard_root * .md\:ketch-pr-0 {
+    padding-right: 0;
+  }
+  #lanyard_root * .md\:ketch-pr-3 {
+    padding-right: 12px;
+  }
+  #lanyard_root * .md\:ketch-pr-4 {
+    padding-right: 16px;
+  }
+  #lanyard_root * .md\:ketch-pt-8 {
+    padding-top: 32px;
+  }
+  #lanyard_root * .md\:ketch-text-center {
+    text-align: center;
+  }
+  #lanyard_root * .md\:ketch-text-ketch-m {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  #lanyard_root * .lm\:ketch-col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+  #lanyard_root * .lm\:ketch-max-h-\[90\%\] {
+    max-height: 90%;
+  }
+  #lanyard_root * .lm\:ketch-min-h-0 {
+    min-height: 0;
+  }
+  #lanyard_root * .lm\:ketch-min-h-10 {
+    min-height: 40px;
+  }
+  #lanyard_root * .lm\:ketch-min-h-12 {
+    min-height: 48px;
+  }
+  #lanyard_root * .lm\:ketch-px-4 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  #lanyard_root * .lm\:ketch-text-ketch-h4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #lanyard_root * .lm\:ketch-text-ketch-l {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  #lanyard_root * .lm\:ketch-text-ketch-lm {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+@media (min-width: 1440px) {
+  #lanyard_root * .lg\:ketch-mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #lanyard_root * .lg\:ketch-max-h-\[480px\] {
+    max-height: 480px;
+  }
+  #lanyard_root * .lg\:ketch-px-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #lanyard_root * .lg\:ketch-pr-0 {
+    padding-right: 0;
+  }
+  #lanyard_root * .lg\:ketch-pr-14 {
+    padding-right: 56px;
+  }
+  #lanyard_root * .lg\:ketch-pr-\[72px\] {
+    padding-right: 72px;
+  }
+}
+#lanyard_root * :is(.\[\&_b\]\:\!ketch-text-inherit b) {
+  color: inherit !important;
+}
+#lanyard_root * :is(.\[\&_strong\]\:\!ketch-text-inherit strong) {
+  color: inherit !important;
+}
+</style><style>@media (min-width: 1920px) {
+  #lanyard_root[data-screen*="TIZEN"] {
+    /* Zoom in fonts for high res TV screens */
+    zoom: 110%;
+  }
+
+    /* TIZEN has partial support for outline-color & focus-visible */
+    @supports not (outline-color: #9c63ff) {
+  #lanyard_root[data-screen*="TIZEN"] {
+      /* Remove :focus styles when running on modern browsers with support for :focus-visible */
+  }
+      #lanyard_root[data-screen*="TIZEN"] *:focus { border: 3px solid #9c63ff; }
+      #lanyard_root[data-screen*="TIZEN"] *:focus:not(:focus-visible) { border: none; }
+      #lanyard_root[data-screen*="TIZEN"] *:focus-visible { border: 3px solid #9c63ff; }
+    }
+    @supports (outline-color: #9c63ff) {
+  #lanyard_root[data-screen*="TIZEN"] {
+      /* Remove :focus styles when running on modern browsers with support for :focus-visible */
+  }
+      #lanyard_root[data-screen*="TIZEN"] *:focus { outline: 3px solid #9c63ff; }
+      #lanyard_root[data-screen*="TIZEN"] *:focus:not(:focus-visible) { outline: none; }
+      #lanyard_root[data-screen*="TIZEN"] *:focus-visible { outline: 3px solid #9c63ff; }
+    }
+}
+</style><style>.root__A7aXF{text-align:left}.root__A7aXF *{-webkit-box-sizing:border-box;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;font-weight:normal}</style><style>.root__H_E27{margin:0;position:fixed;width:48px;height:48px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;border:none;border-radius:50%;-webkit-box-shadow:none;box-shadow:none;cursor:pointer;overflow:hidden;-webkit-transition:opacity .25s linear;transition:opacity .25s linear;z-index:2147483647}.root__H_E27:hover{opacity:.9}.icon__HrAtF{max-width:32px;max-height:32px}.bottomRight__ILequ{right:16px;bottom:16px}.bottomLeft__iB1Ik{left:16px;bottom:16px}</style><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/Landing-Bxe9qaC3.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/EventLinkFooter.vue_vue_type_style_index_0_lang-D_-ezkuv.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/index-CNSt_zIV.js"><link rel="stylesheet" crossorigin="" href="r4_files/EventLinkFooter-1HPHisjz.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/Logo.vue_vue_type_style_index_0_lang-DSpRjfLl.js"><link rel="stylesheet" crossorigin="" href="r4_files/Logo-C2VElyVy.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/PersistentBanner.vue_vue_type_style_index_0_lang-D-1bGRQt.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/EventLinkConfirmModal.vue_vue_type_style_index_0_lang-BL1ujxtQ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/EventLinkModal.vue_vue_type_style_index_0_lang-DNVs7UMR.js"><link rel="stylesheet" crossorigin="" href="r4_files/EventLinkModal-B1LEMOTA.css"><link rel="stylesheet" crossorigin="" href="r4_files/EventLinkConfirmModal-d6RfVBrL.css"><link rel="stylesheet" crossorigin="" href="r4_files/PersistentBanner-DIBEYFg6.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/floating-ui.vue-DrI3ZkXJ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/_plugin-vue_export-helper-DlAUqK2U.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/StoreList.vue_vue_type_style_index_0_lang-g4siBIu_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useCalendar-NN6qaUis.js"><link rel="stylesheet" crossorigin="" href="r4_files/StoreList-BWIMvhgD.css"><link rel="stylesheet" crossorigin="" href="r4_files/Landing-24p5q9gR.css"><title>EventLink - Round 4 of Faraos Cigarer Lyngby Pauper Tournament true</title><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/Default-t7mWIk9E.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useRouteParam-4Pd7vT_d.js"><link rel="stylesheet" crossorigin="" href="r4_files/Default-dztZyhQn.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/Store-hzfP4Z2X.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/Loading-D8iJejVP.js"><link rel="stylesheet" crossorigin="" href="r4_files/Loading-BJ5QVVnn.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/StoreNavbar.vue_vue_type_style_index_0_lang-Cx30dOYZ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/working-CHg2wdxG.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/ElTextarea.vue_vue_type_script_setup_true_lang-DMRI1ejW.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/CircleExclamation.vue_vue_type_script_setup_true_lang-GWohuWrG.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useEventListeners-BT9endYZ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/ClipboardIcon.vue_vue_type_style_index_0_lang-CzC-zvvN.js"><link rel="stylesheet" crossorigin="" href="r4_files/ClipboardIcon-Df9g_-qM.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useResponsive-ASRmkEpH.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/CrossedSwordsIcon-DZDyln76.js"><link rel="stylesheet" crossorigin="" href="r4_files/CrossedSwordsIcon-DOL1sm48.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/MegaphoneIcon.vue_vue_type_script_setup_true_lang-DyLKHZJ9.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/TrophyIcon.vue_vue_type_style_index_0_lang-BlallOez.js"><link rel="stylesheet" crossorigin="" href="r4_files/TrophyIcon-DJcLHc0m.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/EventLinkMenu.vue_vue_type_style_index_0_lang-CT8eKg0r.js"><link rel="stylesheet" crossorigin="" href="r4_files/EventLinkMenu-D0pll5_Z.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/providers-DgCO3yIv.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/HintIcon.vue_vue_type_style_index_0_lang-BeBOw8TC.js"><link rel="stylesheet" crossorigin="" href="r4_files/HintIcon-CkyepltQ.css"><link rel="stylesheet" crossorigin="" href="r4_files/StoreNavbar-BGb8YhA1.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useGetOrganizationQuery-B2I2pIlx.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/categoryFields-BIzakfw_.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useFeatureFlags-BNyXlMF3.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/featureFlag-DqozToyv.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/graphqlEnums-Bj_5u8p6.js"><link rel="stylesheet" crossorigin="" href="r4_files/Store-Bq4rtehO.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/Calendar-EJnWh12X.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useNavigation-B6C7Vx6c.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/ElSearchSelect.vue_vue_type_script_setup_true_lang-C_KnW8xO.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/DropdownIcon-D3auEN50.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/ElInput.vue_vue_type_script_setup_true_lang-D0hXFl-E.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/arrays-AVkOxhmh.js"><link rel="stylesheet" crossorigin="" href="r4_files/arrays-nLjA2g8B.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/navigation-dyFJHskr.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/forms-lV8ir8kR.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useRouteHelpers-Dqq_sWqx.js"><link rel="stylesheet" crossorigin="" href="r4_files/forms-MlbKyuXh.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/updateStoreEventLocations-ClibD4qN.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/EventLinkTooltip-31XQJoVb.js"><link rel="stylesheet" crossorigin="" href="r4_files/EventLinkTooltip-VgP_4oaZ.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useGameStateQuery-Chw8xFcp.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/cache-y2ecUsri.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/gameState-BielQCR6.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useRegistrationMutations-CAEFyKfq.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/index-zZ7T1eT4.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/index-AmYA4W1V.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/CirclePlusIcon.vue_vue_type_style_index_0_lang-BubJLLsh.js"><link rel="stylesheet" crossorigin="" href="r4_files/CirclePlusIcon-rUsk6NjN.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/CloseIcon-aUM6CSqO.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/ConfirmMenu.vue_vue_type_style_index_0_lang-SM9ZkKIA.js"><link rel="stylesheet" crossorigin="" href="r4_files/ConfirmMenu-UZiIO-Rz.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/ElCheckbox.vue_vue_type_script_setup_true_lang-C17z6Gs2.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/MinusIcon-CaGJKBNm.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/PlusIcon-DgdDdt0R.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/ElNumber.vue_vue_type_script_setup_true_lang-CcHk7-wj.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useNumberStepper-BXf7LOoG.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/scalars-D0J_PfbY.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/ClassicLoading-Ba8gxYgE.js"><link rel="stylesheet" crossorigin="" href="r4_files/ClassicLoading-DkY6hz2S.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/SimpleSearch.vue_vue_type_style_index_0_lang-C1ksBIJ2.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/SearchIcon.vue_vue_type_script_setup_true_lang-D5OxHNLM.js"><link rel="stylesheet" crossorigin="" href="r4_files/SimpleSearch-CLDJd_Ox.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/gameRoundCreatedSubscription-CiIfeSup.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useResponsiveElement-C2WtD5ZM.js"><link rel="stylesheet" crossorigin="" href="r4_files/Calendar-B0-o399u.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/EventView-DIV8l8S-.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/HamburgerButton.vue_vue_type_style_index_0_lang-DCQfXlX0.js"><link rel="stylesheet" crossorigin="" href="r4_files/HamburgerButton-B8guCcMz.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/names-B2sRxCVD.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useRoundName-CTsk94Ya.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/PodCard.vue_vue_type_style_index_0_lang-BCbgptEb.js"><link rel="stylesheet" crossorigin="" href="r4_files/PodCard-CCGbQip7.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/pairingTool-B22hIuoF.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/queues-C9qblm80.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/timer-C1acTBVV.js"><link rel="stylesheet" crossorigin="" href="r4_files/EventView-eXeOz66t.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/Registration-DhyISI4W.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/EventLinkTabs.vue_vue_type_style_index_0_lang-JIrGMYe-.js"><link rel="stylesheet" crossorigin="" href="r4_files/EventLinkTabs-IzwYGG4M.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/LoadingRing-BjJT7wF2.js"><link rel="stylesheet" crossorigin="" href="r4_files/LoadingRing-BahjoUKZ.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/EventPageHeader.vue_vue_type_style_index_0_lang-DFT9SVUI.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useGameStateHelpers-BwVtcL5U.js"><link rel="stylesheet" crossorigin="" href="r4_files/EventPageHeader-DqwvRxzp.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/papaparse.min-B5u3t1TT.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/DeleteIcon.vue_vue_type_style_index_0_lang-vVbBazC-.js"><link rel="stylesheet" crossorigin="" href="r4_files/DeleteIcon-BFdMqK0y.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/TableLockIcon.vue_vue_type_style_index_0_lang-BJqQT2m0.js"><link rel="stylesheet" crossorigin="" href="r4_files/TableLockIcon-B4ESD89o.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useCreateFirstRoundMutation-BSoLSnCg.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useTimer-CAz0rX7s.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/notifications-Cme57x4b.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/teamUpdatedSubscription-CnjLClNi.js"><link rel="stylesheet" crossorigin="" href="r4_files/Registration-DX4ihl-q.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/Round-DlQccO8O.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/BetterNotifications.vue_vue_type_style_index_0_lang-B8k930K0.js"><link rel="stylesheet" crossorigin="" href="r4_files/BetterNotifications-B9z-bJkk.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/RoundTimer.vue_vue_type_style_index_0_lang-kemXAgsc.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/ConfirmIcon-CbrmYPY3.js"><link rel="stylesheet" crossorigin="" href="r4_files/RoundTimer-l4KF-bIl.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/StickyActionBar-DRfzfK_n.js"><link rel="stylesheet" crossorigin="" href="r4_files/StickyActionBar-BDZHw0zp.css"><link rel="stylesheet" crossorigin="" href="r4_files/Round-DdEgmfZV.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/Standings-5rmbl__H.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/useRoundTransitionMutations-36aLnSfS.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/PenaltyCreate.vue_vue_type_script_setup_true_lang-lq4jCqzl.js"><link rel="stylesheet" crossorigin="" href="r4_files/PenaltyCreate-BBvBWa9L.css"><link rel="stylesheet" crossorigin="" href="r4_files/Standings-BiEmdC7G.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/Pairings-Dfp1dQ4X.js"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/Team.vue_vue_type_style_index_0_lang-D4o-eTvV.js"><link rel="stylesheet" crossorigin="" href="r4_files/Team-D_XiRK5g.css"><link rel="modulepreload" as="script" crossorigin="" href="https://eventlink.wizards.com/assets/EditIcon.vue_vue_type_style_index_0_lang-CVUvxqmM.js"><link rel="stylesheet" crossorigin="" href="r4_files/EditIcon-C1XLDqKV.css"><link rel="stylesheet" crossorigin="" href="r4_files/Pairings-CiO-tWWv.css"></head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N95QB9XL"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <noscript>
+      <strong
+        >We're sorry but this site doesn't work properly without JavaScript enabled. Please enable
+        it to continue.</strong
+      >
+    </noscript>
+    <div id="app" data-v-app=""><div id="app"><!----><div class="default-layout"><div class="store" eventid="11168708" roundnumber="4"><!----><div class="store-content" roundnumber="4"><div class="event-view"><!----><div class="hamburger-nav"><div class="store-navbar"><a href="https://eventlink.wizards.com/" class="store-navbar__logo"><svg class="planeswalker-logo-icon" width="27" height="50" viewBox="0 0 27 50" xmlns="http://www.w3.org/2000/svg"><defs><filter id="shadow"><feDropShadow dx="1" dy="1"></feDropShadow></filter></defs><path d="M0 25.1916L0.0672477 24.1986H0.0336238L0.0672477 24.1812L1.05915 11.0279C1.05915 11.0279 1.56351 20.122 3.04296 22.7526C3.68181 22.4913 4.32066 22.2648 4.97633 22.0557C6.57346 17.7178 7.14507 4.82578 7.14507 4.82578C7.14507 4.82578 7.51493 16.5679 8.92713 21.1324C9.70048 21.0105 10.4906 20.9233 11.2808 20.8711C12.7434 15.2613 13.1301 0 13.1301 0C13.1301 0 13.6177 15.2962 15.0467 20.8885C15.8032 20.9408 16.5597 21.0279 17.2995 21.1498C18.6949 16.6028 19.2497 4.80836 19.2497 4.80836C19.2497 4.80836 19.7036 17.77 21.1494 22.0732C21.7883 22.2822 22.4103 22.5087 23.0323 22.77C24.6463 20.1742 25.2179 11.0453 25.2179 11.0453L25.9912 24.1986L26.0249 24.216H25.9912L26.0417 25.1916C26.0417 25.1916 13.1301 29.547 13.1301 50C13.1301 29.6516 0 25.1916 0 25.1916Z"></path><!----></svg></a><div class="primary"><a href="https://eventlink.wizards.com/stores/11738/events?starting=2026-06&amp;view=month" class="" data-testid="sidebar-calendar"><div class="our-nav-item"><svg class="calendar-page-icon our-nav-item__icon our-nav-item__primary" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg"><rect y="4.86475" x="1" width="88" height="84" rx="2"></rect><path d="M1.21484 25.5403H88.7824"></path><rect x="14.5957" y="36.4868" width="12.5719" height="13.2432"></rect><rect x="38.7148" y="36.4868" width="12.5719" height="13.2432"></rect><rect x="62.834" y="36.4868" width="12.5719" height="13.2432"></rect><rect x="14.5957" y="58.3784" width="12.5719" height="13.2432"></rect><rect x="38.7148" y="58.3779" width="12.5719" height="13.2432"></rect><rect x="62.834" y="58.3779" width="12.5719" height="13.2432"></rect><path d="M26.7559 0V13.3784"></path><path d="M63.2441 0V13.3784"></path></svg><div class="our-nav-item__label our-nav-item__label-word-break">Calendar</div></div></a></div><!----><!----><div class="primary"><a href="https://wpn.collaterate.com/content/loginOrRegister" target="_blank" data-testid="sidebar-marketing-portal"><div class="our-nav-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="our-nav-item__icon our-nav-item__primary"><path d="M5 16.1992C5 17.0814 5.71741 17.7997 6.59961 17.7998H11.3994C12.2817 17.7998 13 17.0815 13 16.1992V11H5V16.1992ZM4.59961 11.0645L3.6709 10.998C3.186 10.9637 2.7998 10.556 2.7998 10.0605C2.79985 9.91733 2.83422 9.77004 2.90039 9.6377L5.0293 5.37598C5.26916 4.89846 5.75386 4.59961 6.28516 4.59961H17.7188C18.2478 4.59968 18.7333 4.89998 18.9688 5.37305V5.37402L21.0986 9.6377H21.0996C21.1662 9.77093 21.2001 9.91457 21.2002 10.0605C21.2002 10.556 20.814 10.9637 20.3291 10.998L19.3994 11.0645V19.1992C19.3994 19.3106 19.3115 19.3992 19.2002 19.3994C19.0887 19.3994 19 19.3107 19 19.1992V11H13.3994V18.5996C13.3994 19.0411 13.0411 19.3994 12.5996 19.3994H5.39941C4.95813 19.3992 4.59961 19.0409 4.59961 18.5996V11.0645Z" stroke="white" stroke-width="1"></path></svg><div class="our-nav-item__label our-nav-item__label-word-break">Marketing Portal</div></div></a></div><!----><div class="bottom"><div class="eventlink-menu store-help" style="position: relative;"><div class="eventlink-menu__button"><button class="help-link" data-testid="sidebar-help"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon--hint"><path d="M9 16H11V14H9V16ZM10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18ZM10 4C7.79 4 6 5.79 6 8H8C8 6.9 8.9 6 10 6C11.1 6 12 6.9 12 8C12 10 9 9.75 9 13H11C11 10.75 14 10.5 14 8C14 5.79 12.21 4 10 4Z" fill="#FFFFFF"></path></svg> Help</button></div><div style="position: absolute; left: 0px; top: 0px; transform: translate(64px, 29px);" class="eventlink-menu__menu store-help-menu"><!----></div></div><!----><!----><div class="feedback-button__container store-navbar__text-link" id="feedback" data-testid="sidebar-feedback"><a class="feedback-button" role="button">Submit Feedback</a><div class="feedback-modal"></div></div><button class="store-navbar__text-link logout-link" data-testid="sidebar-logout">Log out</button></div><div class="sm-bottom-nav"><span></span><span></span><span></span></div></div><div class="event-navbar"><div class="event-navbar__phases"><div class="hamburger-btn"><span class="icon"></span><span class="icon"></span><span class="icon"></span></div><a href="https://eventlink.wizards.com/stores/11738/events/11168708/registration" class=""><div class="our-nav-item"><svg width="15" height="17" viewBox="0 0 45 47" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon--clipboard white our-nav-item__icon our-nav-item__secondary"><path d="M7 8.22229H14.1964H38.75C39.3022 8.22229 39.75 8.67001 39.75 9.22229V45C39.75 45.5523 39.3022 46 38.75 46H7C6.44772 46 6 45.5523 6 45V9.22229C6 8.67001 6.44772 8.22229 7 8.22229Z" stroke="white" vector-effect="non-scaling-stroke"></path><path d="M33.5629 8.22221H12.7505V5.8889C12.7505 5.33661 13.1982 4.88889 13.7505 4.88889L19.063 4.88896C19.6152 4.88896 20.0674 4.43988 20.1644 3.89617C20.3699 2.74396 20.9921 1 22.8755 1C24.7589 1 25.381 2.74391 25.5866 3.8961C25.6836 4.4398 26.1357 4.88888 26.688 4.88888H32.5629C33.1152 4.88888 33.5629 5.3366 33.5629 5.88888V8.22221Z" stroke="white" vector-effect="non-scaling-stroke"></path><path d="M11.625 16.5554H34.125" stroke="white" stroke-linecap="round" vector-effect="non-scaling-stroke"></path><path d="M11.625 23.2219H34.125" stroke="white" stroke-linecap="round" vector-effect="non-scaling-stroke"></path><path d="M11.625 29.8888H34.125" stroke="white" stroke-linecap="round" vector-effect="non-scaling-stroke"></path><path d="M11.625 36.5554H34.125" stroke="white" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg><div class="our-nav-item__label">Registration</div></div></a><a href="https://eventlink.wizards.com/stores/11738/events/11168708/rounds/1/standings" class=""><div class="our-nav-item"><svg class="crossed-swords-icon our-nav-item__icon our-nav-item__secondary" viewBox="0 0 48 45" xmlns="http://www.w3.org/2000/svg"><path d="M4.44333 36.7308L1.29896 39.9245C1.00974 40.2182 0.930416 40.6594 1.09918 41.0355L1.89914 42.8182C2.02449 43.0976 2.27092 43.3041 2.56789 43.3787L4.32273 43.8195C4.66665 43.9059 5.0306 43.8037 5.27926 43.5509L8.25785 40.5227C8.64288 40.1313 8.64028 39.5026 8.25204 39.1143L5.86302 36.7253C5.47034 36.3326 4.83294 36.3351 4.44333 36.7308Z"></path><path d="M2.12762 32.4305C2.81017 33.8341 5.24728 36.0909 5.24728 36.0909L9.15888 40.0025C9.15888 40.0025 12.5489 43.3925 13.3409 43.6437C14.5287 44.0205 16.5592 41.9901 16.5592 41.9901L3.52051 28.9514C3.52051 28.9514 1.44507 31.0269 2.12762 32.4305Z"></path><path d="M40.9073 36.7308L44.0516 39.9245C44.3408 40.2182 44.4202 40.6594 44.2514 41.0355L43.4514 42.8182C43.3261 43.0976 43.0797 43.3041 42.7827 43.3787L41.0279 43.8195C40.6839 43.9059 40.32 43.8037 40.0713 43.5509L37.0927 40.5227C36.7077 40.1313 36.7103 39.5026 37.0986 39.1143L39.4876 36.7253C39.8802 36.3326 40.5177 36.3351 40.9073 36.7308Z"></path><path d="M43.2239 32.4305C42.5414 33.8341 40.1043 36.0909 40.1043 36.0909L36.1927 40.0025C36.1927 40.0025 32.8027 43.3925 32.0107 43.6437C30.8229 44.0205 28.7924 41.9901 28.7924 41.9901L41.8311 28.9514C41.8311 28.9514 43.9065 31.0269 43.2239 32.4305Z"></path><path d="M10.7094 2.94471L39.1453 31.6043L31.9231 38.8595L2.87286 10.6349L3.85597 3.90868L10.7094 2.94471Z"></path><path d="M15.5835 23.0049L6.8457 32.2539L13.4275 38.6369L22.7045 29.8706L15.5835 23.0049Z"></path><path d="M42.4846 10.6273L30.1458 22.5257L23.0254 15.3585L34.9146 3.01978L41.5102 3.89104L42.4846 10.6273Z"></path></svg><div class="our-nav-item__label">Round 1</div></div></a><a href="https://eventlink.wizards.com/stores/11738/events/11168708/rounds/2/standings" class=""><div class="our-nav-item"><svg class="crossed-swords-icon our-nav-item__icon our-nav-item__secondary" viewBox="0 0 48 45" xmlns="http://www.w3.org/2000/svg"><path d="M4.44333 36.7308L1.29896 39.9245C1.00974 40.2182 0.930416 40.6594 1.09918 41.0355L1.89914 42.8182C2.02449 43.0976 2.27092 43.3041 2.56789 43.3787L4.32273 43.8195C4.66665 43.9059 5.0306 43.8037 5.27926 43.5509L8.25785 40.5227C8.64288 40.1313 8.64028 39.5026 8.25204 39.1143L5.86302 36.7253C5.47034 36.3326 4.83294 36.3351 4.44333 36.7308Z"></path><path d="M2.12762 32.4305C2.81017 33.8341 5.24728 36.0909 5.24728 36.0909L9.15888 40.0025C9.15888 40.0025 12.5489 43.3925 13.3409 43.6437C14.5287 44.0205 16.5592 41.9901 16.5592 41.9901L3.52051 28.9514C3.52051 28.9514 1.44507 31.0269 2.12762 32.4305Z"></path><path d="M40.9073 36.7308L44.0516 39.9245C44.3408 40.2182 44.4202 40.6594 44.2514 41.0355L43.4514 42.8182C43.3261 43.0976 43.0797 43.3041 42.7827 43.3787L41.0279 43.8195C40.6839 43.9059 40.32 43.8037 40.0713 43.5509L37.0927 40.5227C36.7077 40.1313 36.7103 39.5026 37.0986 39.1143L39.4876 36.7253C39.8802 36.3326 40.5177 36.3351 40.9073 36.7308Z"></path><path d="M43.2239 32.4305C42.5414 33.8341 40.1043 36.0909 40.1043 36.0909L36.1927 40.0025C36.1927 40.0025 32.8027 43.3925 32.0107 43.6437C30.8229 44.0205 28.7924 41.9901 28.7924 41.9901L41.8311 28.9514C41.8311 28.9514 43.9065 31.0269 43.2239 32.4305Z"></path><path d="M10.7094 2.94471L39.1453 31.6043L31.9231 38.8595L2.87286 10.6349L3.85597 3.90868L10.7094 2.94471Z"></path><path d="M15.5835 23.0049L6.8457 32.2539L13.4275 38.6369L22.7045 29.8706L15.5835 23.0049Z"></path><path d="M42.4846 10.6273L30.1458 22.5257L23.0254 15.3585L34.9146 3.01978L41.5102 3.89104L42.4846 10.6273Z"></path></svg><div class="our-nav-item__label">Round 2</div></div></a><a href="https://eventlink.wizards.com/stores/11738/events/11168708/rounds/3/standings" class=""><div class="our-nav-item"><svg class="crossed-swords-icon our-nav-item__icon our-nav-item__secondary" viewBox="0 0 48 45" xmlns="http://www.w3.org/2000/svg"><path d="M4.44333 36.7308L1.29896 39.9245C1.00974 40.2182 0.930416 40.6594 1.09918 41.0355L1.89914 42.8182C2.02449 43.0976 2.27092 43.3041 2.56789 43.3787L4.32273 43.8195C4.66665 43.9059 5.0306 43.8037 5.27926 43.5509L8.25785 40.5227C8.64288 40.1313 8.64028 39.5026 8.25204 39.1143L5.86302 36.7253C5.47034 36.3326 4.83294 36.3351 4.44333 36.7308Z"></path><path d="M2.12762 32.4305C2.81017 33.8341 5.24728 36.0909 5.24728 36.0909L9.15888 40.0025C9.15888 40.0025 12.5489 43.3925 13.3409 43.6437C14.5287 44.0205 16.5592 41.9901 16.5592 41.9901L3.52051 28.9514C3.52051 28.9514 1.44507 31.0269 2.12762 32.4305Z"></path><path d="M40.9073 36.7308L44.0516 39.9245C44.3408 40.2182 44.4202 40.6594 44.2514 41.0355L43.4514 42.8182C43.3261 43.0976 43.0797 43.3041 42.7827 43.3787L41.0279 43.8195C40.6839 43.9059 40.32 43.8037 40.0713 43.5509L37.0927 40.5227C36.7077 40.1313 36.7103 39.5026 37.0986 39.1143L39.4876 36.7253C39.8802 36.3326 40.5177 36.3351 40.9073 36.7308Z"></path><path d="M43.2239 32.4305C42.5414 33.8341 40.1043 36.0909 40.1043 36.0909L36.1927 40.0025C36.1927 40.0025 32.8027 43.3925 32.0107 43.6437C30.8229 44.0205 28.7924 41.9901 28.7924 41.9901L41.8311 28.9514C41.8311 28.9514 43.9065 31.0269 43.2239 32.4305Z"></path><path d="M10.7094 2.94471L39.1453 31.6043L31.9231 38.8595L2.87286 10.6349L3.85597 3.90868L10.7094 2.94471Z"></path><path d="M15.5835 23.0049L6.8457 32.2539L13.4275 38.6369L22.7045 29.8706L15.5835 23.0049Z"></path><path d="M42.4846 10.6273L30.1458 22.5257L23.0254 15.3585L34.9146 3.01978L41.5102 3.89104L42.4846 10.6273Z"></path></svg><div class="our-nav-item__label">Round 3</div></div></a><a href="https://eventlink.wizards.com/stores/11738/events/11168708/rounds/4/standings" class="router-link-active"><div class="our-nav-item"><svg class="crossed-swords-icon our-nav-item__icon our-nav-item__secondary" viewBox="0 0 48 45" xmlns="http://www.w3.org/2000/svg"><path d="M4.44333 36.7308L1.29896 39.9245C1.00974 40.2182 0.930416 40.6594 1.09918 41.0355L1.89914 42.8182C2.02449 43.0976 2.27092 43.3041 2.56789 43.3787L4.32273 43.8195C4.66665 43.9059 5.0306 43.8037 5.27926 43.5509L8.25785 40.5227C8.64288 40.1313 8.64028 39.5026 8.25204 39.1143L5.86302 36.7253C5.47034 36.3326 4.83294 36.3351 4.44333 36.7308Z"></path><path d="M2.12762 32.4305C2.81017 33.8341 5.24728 36.0909 5.24728 36.0909L9.15888 40.0025C9.15888 40.0025 12.5489 43.3925 13.3409 43.6437C14.5287 44.0205 16.5592 41.9901 16.5592 41.9901L3.52051 28.9514C3.52051 28.9514 1.44507 31.0269 2.12762 32.4305Z"></path><path d="M40.9073 36.7308L44.0516 39.9245C44.3408 40.2182 44.4202 40.6594 44.2514 41.0355L43.4514 42.8182C43.3261 43.0976 43.0797 43.3041 42.7827 43.3787L41.0279 43.8195C40.6839 43.9059 40.32 43.8037 40.0713 43.5509L37.0927 40.5227C36.7077 40.1313 36.7103 39.5026 37.0986 39.1143L39.4876 36.7253C39.8802 36.3326 40.5177 36.3351 40.9073 36.7308Z"></path><path d="M43.2239 32.4305C42.5414 33.8341 40.1043 36.0909 40.1043 36.0909L36.1927 40.0025C36.1927 40.0025 32.8027 43.3925 32.0107 43.6437C30.8229 44.0205 28.7924 41.9901 28.7924 41.9901L41.8311 28.9514C41.8311 28.9514 43.9065 31.0269 43.2239 32.4305Z"></path><path d="M10.7094 2.94471L39.1453 31.6043L31.9231 38.8595L2.87286 10.6349L3.85597 3.90868L10.7094 2.94471Z"></path><path d="M15.5835 23.0049L6.8457 32.2539L13.4275 38.6369L22.7045 29.8706L15.5835 23.0049Z"></path><path d="M42.4846 10.6273L30.1458 22.5257L23.0254 15.3585L34.9146 3.01978L41.5102 3.89104L42.4846 10.6273Z"></path></svg><div class="our-nav-item__label">Round 4</div></div></a></div><div class="event-navbar__event-actions"><a href="https://eventlink.wizards.com/stores/11738/events/11168708/penalties" class="event-navbar__event-action"><div class="our-nav-item"><svg class="gavel-icon our-nav-item__icon our-nav-item__primary" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg"><path d="M54.5638 7.53122L54.4231 7.67093L82.9164 35.9624L83.3122 35.5695C84.8421 34.0504 87.3226 34.0504 88.8526 35.5695C90.3825 37.0886 90.3825 39.5515 88.8526 41.0706L70.6485 59.1458C69.1185 60.6649 66.638 60.6649 65.1081 59.1458C63.5782 57.6267 63.5782 55.1637 65.1081 53.6446L65.5038 53.2517L56.7975 44.6071L12.3338 88.7558C10.6631 90.4147 7.95418 90.4148 6.28339 88.7558L1.25309 83.7611C-0.417697 82.1022 -0.417695 79.4125 1.25309 77.7535L45.7168 33.6048L37.0105 24.9602L36.8698 25.0999C35.199 26.7588 32.4901 26.7588 30.8193 25.0999L30.5379 24.8205C28.8671 23.1615 28.8671 20.4718 30.5379 18.8129L48.2319 1.24421C49.9027 -0.414738 52.6116 -0.414737 54.2824 1.24421L54.5638 1.52364C56.2346 3.18258 56.2346 5.87227 54.5638 7.53122Z"></path><path d="M54.4231 7.67093L54.5638 7.53122C56.2346 5.87227 56.2346 3.18258 54.5638 1.52364L54.2824 1.24421C52.6116 -0.414737 49.9027 -0.414738 48.2319 1.24421L30.5379 18.8129C28.8671 20.4718 28.8671 23.1615 30.5379 24.8205L30.8193 25.0999C32.4901 26.7588 35.199 26.7588 36.8698 25.0999L37.0105 24.9602M54.4231 7.67093L82.9164 35.9624M54.4231 7.67093L37.0105 24.9602M37.0105 24.9602L45.7168 33.6048M65.5038 53.2517L65.1081 53.6446C63.5782 55.1637 63.5782 57.6267 65.1081 59.1458C66.638 60.6649 69.1185 60.6649 70.6485 59.1458L88.8526 41.0706C90.3825 39.5515 90.3825 37.0886 88.8526 35.5695C87.3226 34.0504 84.8421 34.0504 83.3122 35.5695L82.9164 35.9624M65.5038 53.2517L56.7975 44.6071M65.5038 53.2517L82.9164 35.9624M45.7168 33.6048L1.25309 77.7535C-0.417695 79.4125 -0.417697 82.1022 1.25309 83.7611L6.28339 88.7558C7.95418 90.4148 10.6631 90.4147 12.3338 88.7558L56.7975 44.6071M45.7168 33.6048L56.7975 44.6071"></path></svg><div class="our-nav-item__label">Penalties</div></div></a><div class="event-navbar__event-options"><div class="our-nav-item"><svg class="gear-icon our-nav-item__icon our-nav-item__primary" width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.6675 5.67672L14.2227 7.15358L8.79172 6.11392L5.26072 9.8878L6.82446 15.0604L5.57494 18.5313L0.999991 21.638L1.17083 26.8042L5.93289 29.3557L7.42381 32.3011L6.20588 37.6966L9.85968 41.3517L15.0794 39.9593L18.5059 41.3233L21.4586 46H26.6258L29.3325 41.3233L32.7772 39.8468L38.2083 40.8861L41.7393 37.1122L40.1755 31.9396L41.425 28.4687L46 25.362L45.8292 20.1958L41.0671 17.6443L39.5762 14.6989L40.7941 9.30338L37.1403 5.64834L31.9206 7.04074L28.4941 5.67672L25.5414 1H20.3742L17.6675 5.67672Z"></path><path d="M31.9956 23.8913C31.9956 28.6582 28.2405 32.4986 23.6374 32.4986C19.0344 32.4986 15.2793 28.6582 15.2793 23.8913C15.2793 19.1245 19.0344 15.284 23.6374 15.284C28.2405 15.284 31.9956 19.1245 31.9956 23.8913Z"></path></svg><div class="our-nav-item__label">Options</div></div></div></div></div></div><div><!----><!----><!----><div class="delete-round-modal eventlink-confirm-modal delete-round-modal"></div><!----></div><div class="event-view__content"><div class="round event-view__route event-content" storeid="11738" eventid="11168708" roundnumber="4" queues=""><div class="event-page-header"><div class="event-page-header__row"><div class="hamburger-btn mobile"><span class="icon"></span><span class="icon"></span><span class="icon"></span></div><div class="event-page-header__primary"><h1 class="event-page-header__title">Faraos Cigarer Lyngby Pau…</h1></div><div class="event-page-header__actions"><nav class="event-page-header__standings-switcher"><div class="button-group"><a href="https://eventlink.wizards.com/stores/11738/events/11168708/rounds/4/pairings" class="router-link-active router-link-exact-active button active" aria-current="page">Pairings</a><a href="https://eventlink.wizards.com/stores/11738/events/11168708/rounds/4/standings" class="button">Standings</a></div><div class="grid-margin-right"></div></nav><!----><!----><!----><div class="event-page-header__timer"><div><div class="round-timer"><div class="round-timer__complete">Complete</div><div class="round-timer__round-number">Round 4</div></div><!----><div><!----></div></div></div></div></div><div class="event-page-header__row"><div class="event-page-header__reminder"><span class="event-page-header__reminder-round">Round 4</span><span class="event-page-header__reminder-text">Match pairings and results are set for this round.</span></div></div><!----></div><!----><div class="pairings round__content" eventid="11168708" roundnumber="4"><div class="pairings__actions"><div class="pairings__search theme-white"><div class="simple-search pairings-filter__search__input simple-search__background pairings-filter__search__input"><svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9181 16C15.1272 16 16.9181 14.2091 16.9181 12C16.9181 9.79086 15.1272 8 12.9181 8C10.709 8 8.91809 9.79086 8.91809 12C8.91809 14.2091 10.709 16 12.9181 16Z" stroke="#5168e0"></path><path d="M16.6181 12C16.6181 14.0435 14.9615 15.7 12.9181 15.7C10.8746 15.7 9.21809 14.0435 9.21809 12C9.21809 9.95655 10.8746 8.3 12.9181 8.3C14.9615 8.3 16.6181 9.95655 16.6181 12Z" stroke="#5168e0" stroke-width="0.6"></path><path d="M15.4181 15.0556L18.4181 18.0556" stroke="#5168e0" stroke-width="1.1" stroke-linecap="round"></path></svg><input placeholder="Search" autofocus="" type="search" class=""></div><div class="el-form-group el-checkbox pairings-outstanding__matches__checkbox pairings-outstanding__matches__checkbox"><input id="el-component__inprogress-checkbox" type="checkbox"><label for="el-component__inprogress-checkbox">Only Show In-Progress Matches</label></div></div><!----></div><div class="pairings__container"><!----><table class="pairings-table"><thead><tr><th class="pairings-table__header pairings-table__header--table-num">Table</th><th class="pairings-table__header pairings-table__header--left-icon"></th><th class="pairings-table__header pairings-table__header--left">Player #1</th><th class="pairings-table__header pairings-table__header--result">Match Results</th><th class="pairings-table__header pairings-table__header--right">Player #2</th><th class="pairings-table__header pairings-table__header--right-icon"></th></tr></thead><tbody><tr class=""><td class="pairings-table__cell pairings-table__cell--table-num">1</td><td class="pairings-table__cell pairings-table__cell--left-icon"><!----><!----></td><td class="pairings-table__cell pairings-table__cell--left"><div class="team"><div class="team__display-name"><!----><span class="team__text no-penalties-text"><span>Gregoire  Sanguinetti </span></span><!----></div><div class="team__info"><span class="team__record">2–2–0</span></div></div></td><td class="pairings-table__cell pairings-table__cell--result"><div class="match-result"><div class="box-score winner">2</div><!----><div class="box-score loser">0</div></div></td><td class="pairings-table__cell pairings-table__cell--right"><div class="team team__lost"><div class="team__display-name"><!----><span class="team__text no-penalties-text"><span>Jonathan Mohr</span></span><!----></div><div class="team__info"><span class="team__record">1–3–0</span></div></div></td><td class="pairings-table__cell pairings-table__cell--right-icon"><!----><!----></td></tr><!----><tr class=""><td class="pairings-table__cell pairings-table__cell--table-num">2</td><td class="pairings-table__cell pairings-table__cell--left-icon"><!----><!----></td><td class="pairings-table__cell pairings-table__cell--left"><div class="team"><div class="team__display-name"><!----><span class="team__text no-penalties-text"><span>Olav Joergensen</span></span><!----></div><div class="team__info"><span class="team__record">4–0–0</span></div></div></td><td class="pairings-table__cell pairings-table__cell--result"><div class="match-result"><div class="box-score winner">2</div><!----><div class="box-score loser">1</div></div></td><td class="pairings-table__cell pairings-table__cell--right"><div class="team team__lost"><div class="team__display-name"><!----><span class="team__text no-penalties-text"><span>Alexander Graulund</span></span><!----></div><div class="team__info"><span class="team__record">3–1–0</span></div></div></td><td class="pairings-table__cell pairings-table__cell--right-icon"><!----><!----></td></tr><!----><tr class=""><td class="pairings-table__cell pairings-table__cell--table-num">3</td><td class="pairings-table__cell pairings-table__cell--left-icon"><!----><!----></td><td class="pairings-table__cell pairings-table__cell--left"><div class="team team__lost"><div class="team__display-name"><!----><span class="team__text no-penalties-text"><span>Mads Dupont</span></span><!----></div><div class="team__info"><span class="team__record">2–2–0</span></div></div></td><td class="pairings-table__cell pairings-table__cell--result"><div class="match-result"><div class="box-score loser">0</div><!----><div class="box-score winner">2</div></div></td><td class="pairings-table__cell pairings-table__cell--right"><div class="team"><div class="team__display-name"><!----><span class="team__text no-penalties-text"><span>Stefan Leone</span></span><!----></div><div class="team__info"><span class="team__record">2–2–0</span></div></div></td><td class="pairings-table__cell pairings-table__cell--right-icon"><!----><!----></td></tr><!----><tr class=""><td class="pairings-table__cell pairings-table__cell--table-num">4</td><td class="pairings-table__cell pairings-table__cell--left-icon"><!----><!----></td><td class="pairings-table__cell pairings-table__cell--left"><div class="team"><div class="team__display-name"><!----><span class="team__text no-penalties-text"><span>Esben Roenne Green</span></span><!----></div><div class="team__info"><span class="team__record">2–2–0</span></div></div></td><td class="pairings-table__cell pairings-table__cell--result"><div class="match-result"><div class="box-score winner">2</div><!----><div class="box-score loser">0</div></div></td><td class="pairings-table__cell pairings-table__cell--right"><div class="team team__lost"><div class="team__display-name"><!----><span class="team__text no-penalties-text"><span>Eva Østerby</span></span><!----></div><div class="team__info"><span class="team__record">1–3–0</span></div></div></td><td class="pairings-table__cell pairings-table__cell--right-icon"><!----><!----></td></tr><!----><tr class=""><td class="pairings-table__cell pairings-table__cell--table-num">6</td><td class="pairings-table__cell pairings-table__cell--left-icon"><!----><!----></td><td class="pairings-table__cell pairings-table__cell--left"><div class="team"><div class="team__display-name"><!----><span class="team__text no-penalties-text"><span>Thor Weis</span></span><!----></div><div class="team__info"><span class="team__record">3–1–0</span></div></div></td><td class="pairings-table__cell pairings-table__cell--result"><div class="match-result"><div class="box-score winner">2</div><!----><div class="box-score loser">0</div></div></td><td class="pairings-table__cell pairings-table__cell--right"><div class="team team__lost"><div class="team__display-name"><!----><span class="team__text no-penalties-text"><span>Erika C</span></span><!----></div><div class="team__info"><span class="team__record">2–2–0</span></div></div></td><td class="pairings-table__cell pairings-table__cell--right-icon"><!----><svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="icon icon--table-lock white"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 7.9541H12V10H19V11C19 11.5523 18.5523 12 18 12H17V19C17 19.5523 16.5523 20 16 20H14C13.4477 20 13 19.5523 13 19V12H6V19C6 19.5523 5.55228 20 5 20H3C2.44772 20 2 19.5523 2 19V12H1C0.447715 12 0 11.5523 0 11V8.9541C0 8.40182 0.447715 7.9541 1 7.9541Z"></path><path d="M16.5 1C15.2108 1 14.1667 2.02286 14.1667 3.28571V4.42857H13V9H20V4.42857H18.8333V3.28571C18.8333 2.02286 17.7892 1 16.5 1ZM16.5 2.14286C17.1942 2.14286 17.6667 2.60571 17.6667 3.28571V4.42857H15.3333V3.28571C15.3333 2.60571 15.8058 2.14286 16.5 2.14286Z"></path></svg></td></tr><!----><tr class=""><td class="pairings-table__cell pairings-table__cell--table-num"></td><td class="pairings-table__cell pairings-table__cell--left-icon"><!----><svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="icon icon--table-lock white"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 7.9541H12V10H19V11C19 11.5523 18.5523 12 18 12H17V19C17 19.5523 16.5523 20 16 20H14C13.4477 20 13 19.5523 13 19V12H6V19C6 19.5523 5.55228 20 5 20H3C2.44772 20 2 19.5523 2 19V12H1C0.447715 12 0 11.5523 0 11V8.9541C0 8.40182 0.447715 7.9541 1 7.9541Z"></path><path d="M16.5 1C15.2108 1 14.1667 2.02286 14.1667 3.28571V4.42857H13V9H20V4.42857H18.8333V3.28571C18.8333 2.02286 17.7892 1 16.5 1ZM16.5 2.14286C17.1942 2.14286 17.6667 2.60571 17.6667 3.28571V4.42857H15.3333V3.28571C15.3333 2.60571 15.8058 2.14286 16.5 2.14286Z"></path></svg></td><td class="pairings-table__cell pairings-table__cell--left"><div class="team"><div class="team__display-name"><!----><span class="team__text no-penalties-text"><span>Erik Christensen</span></span><!----></div><div class="team__info"><span class="team__record">1–3–0</span></div></div></td><td class="pairings-table__cell pairings-table__cell--result"><div class="match-result"><div class="box-score winner">2</div><!----><div class="box-score loser">0</div></div></td><td class="pairings-table__cell pairings-table__cell--right"><div class="bye" data-testid="pairing-bye">Bye</div></td><td class="pairings-table__cell pairings-table__cell--right-icon"><!----><!----></td></tr><!----></tbody></table></div><!----><!----><div class="confirm-edit-pairings-modal"></div></div><div data-v-d5b1f257="" class="action-bar absolute" style="top: 904.2px; left: 0px; right: 0px;"><div class="better-notifications" style="height: 0px;"><!----><div class="notifications-scroll-container"></div></div></div></div><div id="footer" class="eventlink-footer eventlink-footer__default event-view__footer"><div class="legal-links-container legal-links-container__default eventlink-footer__footer-links"><div class="legal-links"><a id="legal-link-terms" href="https://company.wizards.com/legal/terms" class="legal-links__options">Terms</a><a id="legal-link-code-of-conduct" class="legal-links__options" href="https://company.wizards.com/legal/code-conduct">Code of Conduct</a><a id="legal-link-privacy-policy" class="legal-links__options" href="https://company.wizards.com/legal/wizards-coasts-privacy-policy">Privacy Policy</a><a id="legal-link-customer-support" class="legal-links__options" href="https://magic-support.wizards.com/hc/en-us/requests/new">Customer Support</a><a id="legal-link-privacy-settings" class="legal-links__options" href="#">Your Privacy Choices</a><a id="legal-link-fan-content" class="legal-links__options" href="https://company.wizards.com/fancontentpolicy">Fan Content Policy</a><a id="legal-link-do-not-sell" class="legal-links__options" href="#">Do Not Sell or Share My Personal Information</a></div></div><span class="eventlink-footer__copyright">© 1995-2026 Wizards of the Coast LLC, Hasbro, Inc. All Rights Reserved.</span></div></div><!----></div><div></div><!----><!----><div class="eventlink-confirm-modal"></div></div></div></div></div></div>
+  
+
+<!----><!----><!----><!----><!----></body></html>
